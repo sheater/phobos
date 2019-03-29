@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libglm_static.a  CMakeFiles/glm_static.dir/detail/glm.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libglm_static.a

@@ -1,0 +1,114 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_15c2c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_15c2c.dir/build.make CMakeFiles/cmTC_15c2c.dir/build
+make[1]: Entering directory '/home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_15c2c.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_15c2c.dir/CheckSymbolExists.c.o   -c /home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_15c2c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15c2c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_15c2c.dir/CheckSymbolExists.c.o  -o cmTC_15c2c 
+CMakeFiles/cmTC_15c2c.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_15c2c.dir/build.make:97: recipe for target 'cmTC_15c2c' failed
+make[1]: *** [cmTC_15c2c] Error 1
+make[1]: Leaving directory '/home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_15c2c/fast' failed
+make: *** [cmTC_15c2c/fast] Error 2
+
+File /home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_16b77/fast"
+/usr/bin/make -f CMakeFiles/cmTC_16b77.dir/build.make CMakeFiles/cmTC_16b77.dir/build
+make[1]: Entering directory '/home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16b77.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_16b77.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_16b77
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16b77.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_16b77.dir/CheckFunctionExists.c.o  -o cmTC_16b77 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_16b77.dir/build.make:97: recipe for target 'cmTC_16b77' failed
+make[1]: *** [cmTC_16b77] Error 1
+make[1]: Leaving directory '/home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_16b77/fast' failed
+make: *** [cmTC_16b77/fast] Error 2
+
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_59902/fast"
+make: Warning: File 'Makefile' has modification time 774 s in the future
+/usr/bin/make -f CMakeFiles/cmTC_59902.dir/build.make CMakeFiles/cmTC_59902.dir/build
+make[1]: Entering directory '/home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_59902.dir/flags.make' has modification time 774 s in the future
+Building C object CMakeFiles/cmTC_59902.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_59902.dir/CheckSymbolExists.c.o   -c /home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_59902
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59902.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_59902.dir/CheckSymbolExists.c.o  -o cmTC_59902 
+CMakeFiles/cmTC_59902.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_59902.dir/build.make:97: recipe for target 'cmTC_59902' failed
+make[1]: *** [cmTC_59902] Error 1
+make[1]: Leaving directory '/home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_59902/fast' failed
+make: *** [cmTC_59902/fast] Error 2
+
+File /home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2309d/fast"
+make: Warning: File 'Makefile' has modification time 773 s in the future
+/usr/bin/make -f CMakeFiles/cmTC_2309d.dir/build.make CMakeFiles/cmTC_2309d.dir/build
+make[1]: Entering directory '/home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_2309d.dir/flags.make' has modification time 773 s in the future
+Building C object CMakeFiles/cmTC_2309d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2309d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2309d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2309d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_2309d.dir/CheckFunctionExists.c.o  -o cmTC_2309d -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2309d.dir/build.make:97: recipe for target 'cmTC_2309d' failed
+make[1]: *** [cmTC_2309d] Error 1
+make[1]: Leaving directory '/home/hovnozrout/fi/pv112/project/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2309d/fast' failed
+make: *** [cmTC_2309d/fast] Error 2
+
+

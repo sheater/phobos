@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/stepanskovajsa/fi/pv112/project/libs/glm/test/core/core_func_integer_bit_count.cpp
+stdio.h
+-
+stdlib.h
+-
+ctime
+-
+
