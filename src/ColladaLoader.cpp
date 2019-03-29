@@ -314,7 +314,6 @@ Asset *ColladaLoader::loadAsset(const std::string &path)
       materialIt != materials.end();
       materialIt++)
     {
-      std::cout << "it: " << it->materialId << "; mat: " << materialIt->id << std::endl;
       if (it->materialId == materialIt->id)
       {
         materialPtr = &*materialIt;
@@ -324,7 +323,6 @@ Asset *ColladaLoader::loadAsset(const std::string &path)
 
     if (materialPtr)
     {
-      std::cout << "KOKOKT" << std::endl;
       mesh->material = new Material();
       mesh->material->diffuseColor = materialPtr->effect->diffuseColor;
     }

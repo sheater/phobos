@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Scene.h"
 
 Scene::Scene(Renderer* renderer, AssetsManager* assetsMgr)
@@ -5,4 +7,5 @@ Scene::Scene(Renderer* renderer, AssetsManager* assetsMgr)
 {
   m_renderer = renderer;
   m_assetsMgr = assetsMgr;
+  m_scene = this;
 }
