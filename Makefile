@@ -651,410 +651,545 @@ libs/glew/src/glew.c.s:
 	$(MAKE) -f CMakeFiles/glew.dir/build.make CMakeFiles/glew.dir/libs/glew/src/glew.c.s
 .PHONY : libs/glew/src/glew.c.s
 
-src/Application.o: src/Application.cpp.o
+src/engine/Application.o: src/engine/Application.cpp.o
 
-.PHONY : src/Application.o
-
-# target to build an object file
-src/Application.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Application.cpp.o
-.PHONY : src/Application.cpp.o
-
-src/Application.i: src/Application.cpp.i
-
-.PHONY : src/Application.i
-
-# target to preprocess a source file
-src/Application.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Application.cpp.i
-.PHONY : src/Application.cpp.i
-
-src/Application.s: src/Application.cpp.s
-
-.PHONY : src/Application.s
-
-# target to generate assembly for a file
-src/Application.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Application.cpp.s
-.PHONY : src/Application.cpp.s
-
-src/AssetsManager.o: src/AssetsManager.cpp.o
-
-.PHONY : src/AssetsManager.o
+.PHONY : src/engine/Application.o
 
 # target to build an object file
-src/AssetsManager.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.o
-.PHONY : src/AssetsManager.cpp.o
+src/engine/Application.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.o
+.PHONY : src/engine/Application.cpp.o
 
-src/AssetsManager.i: src/AssetsManager.cpp.i
+src/engine/Application.i: src/engine/Application.cpp.i
 
-.PHONY : src/AssetsManager.i
+.PHONY : src/engine/Application.i
 
 # target to preprocess a source file
-src/AssetsManager.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.i
-.PHONY : src/AssetsManager.cpp.i
+src/engine/Application.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.i
+.PHONY : src/engine/Application.cpp.i
 
-src/AssetsManager.s: src/AssetsManager.cpp.s
+src/engine/Application.s: src/engine/Application.cpp.s
 
-.PHONY : src/AssetsManager.s
+.PHONY : src/engine/Application.s
 
 # target to generate assembly for a file
-src/AssetsManager.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.s
-.PHONY : src/AssetsManager.cpp.s
+src/engine/Application.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.s
+.PHONY : src/engine/Application.cpp.s
 
-src/BoxNode.o: src/BoxNode.cpp.o
+src/engine/AssetsManager.o: src/engine/AssetsManager.cpp.o
 
-.PHONY : src/BoxNode.o
+.PHONY : src/engine/AssetsManager.o
 
 # target to build an object file
-src/BoxNode.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.o
-.PHONY : src/BoxNode.cpp.o
+src/engine/AssetsManager.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.o
+.PHONY : src/engine/AssetsManager.cpp.o
 
-src/BoxNode.i: src/BoxNode.cpp.i
+src/engine/AssetsManager.i: src/engine/AssetsManager.cpp.i
 
-.PHONY : src/BoxNode.i
+.PHONY : src/engine/AssetsManager.i
 
 # target to preprocess a source file
-src/BoxNode.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.i
-.PHONY : src/BoxNode.cpp.i
+src/engine/AssetsManager.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.i
+.PHONY : src/engine/AssetsManager.cpp.i
 
-src/BoxNode.s: src/BoxNode.cpp.s
+src/engine/AssetsManager.s: src/engine/AssetsManager.cpp.s
 
-.PHONY : src/BoxNode.s
+.PHONY : src/engine/AssetsManager.s
 
 # target to generate assembly for a file
-src/BoxNode.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.s
-.PHONY : src/BoxNode.cpp.s
+src/engine/AssetsManager.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.s
+.PHONY : src/engine/AssetsManager.cpp.s
 
-src/ColladaLoader.o: src/ColladaLoader.cpp.o
+src/engine/BoundingBox.o: src/engine/BoundingBox.cpp.o
 
-.PHONY : src/ColladaLoader.o
+.PHONY : src/engine/BoundingBox.o
 
 # target to build an object file
-src/ColladaLoader.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.o
-.PHONY : src/ColladaLoader.cpp.o
+src/engine/BoundingBox.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.o
+.PHONY : src/engine/BoundingBox.cpp.o
 
-src/ColladaLoader.i: src/ColladaLoader.cpp.i
+src/engine/BoundingBox.i: src/engine/BoundingBox.cpp.i
 
-.PHONY : src/ColladaLoader.i
+.PHONY : src/engine/BoundingBox.i
 
 # target to preprocess a source file
-src/ColladaLoader.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.i
-.PHONY : src/ColladaLoader.cpp.i
+src/engine/BoundingBox.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.i
+.PHONY : src/engine/BoundingBox.cpp.i
 
-src/ColladaLoader.s: src/ColladaLoader.cpp.s
+src/engine/BoundingBox.s: src/engine/BoundingBox.cpp.s
 
-.PHONY : src/ColladaLoader.s
+.PHONY : src/engine/BoundingBox.s
 
 # target to generate assembly for a file
-src/ColladaLoader.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.s
-.PHONY : src/ColladaLoader.cpp.s
+src/engine/BoundingBox.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.s
+.PHONY : src/engine/BoundingBox.cpp.s
 
-src/Geometry.o: src/Geometry.cpp.o
+src/engine/BoxNode.o: src/engine/BoxNode.cpp.o
 
-.PHONY : src/Geometry.o
+.PHONY : src/engine/BoxNode.o
 
 # target to build an object file
-src/Geometry.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.o
-.PHONY : src/Geometry.cpp.o
+src/engine/BoxNode.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.o
+.PHONY : src/engine/BoxNode.cpp.o
 
-src/Geometry.i: src/Geometry.cpp.i
+src/engine/BoxNode.i: src/engine/BoxNode.cpp.i
 
-.PHONY : src/Geometry.i
+.PHONY : src/engine/BoxNode.i
 
 # target to preprocess a source file
-src/Geometry.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.i
-.PHONY : src/Geometry.cpp.i
+src/engine/BoxNode.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.i
+.PHONY : src/engine/BoxNode.cpp.i
 
-src/Geometry.s: src/Geometry.cpp.s
+src/engine/BoxNode.s: src/engine/BoxNode.cpp.s
 
-.PHONY : src/Geometry.s
+.PHONY : src/engine/BoxNode.s
 
 # target to generate assembly for a file
-src/Geometry.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.s
-.PHONY : src/Geometry.cpp.s
+src/engine/BoxNode.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.s
+.PHONY : src/engine/BoxNode.cpp.s
 
-src/GpuProgram.o: src/GpuProgram.cpp.o
+src/engine/ColladaLoader.o: src/engine/ColladaLoader.cpp.o
 
-.PHONY : src/GpuProgram.o
+.PHONY : src/engine/ColladaLoader.o
 
 # target to build an object file
-src/GpuProgram.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.o
-.PHONY : src/GpuProgram.cpp.o
+src/engine/ColladaLoader.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.o
+.PHONY : src/engine/ColladaLoader.cpp.o
 
-src/GpuProgram.i: src/GpuProgram.cpp.i
+src/engine/ColladaLoader.i: src/engine/ColladaLoader.cpp.i
 
-.PHONY : src/GpuProgram.i
+.PHONY : src/engine/ColladaLoader.i
 
 # target to preprocess a source file
-src/GpuProgram.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.i
-.PHONY : src/GpuProgram.cpp.i
+src/engine/ColladaLoader.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.i
+.PHONY : src/engine/ColladaLoader.cpp.i
 
-src/GpuProgram.s: src/GpuProgram.cpp.s
+src/engine/ColladaLoader.s: src/engine/ColladaLoader.cpp.s
 
-.PHONY : src/GpuProgram.s
+.PHONY : src/engine/ColladaLoader.s
 
 # target to generate assembly for a file
-src/GpuProgram.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.s
-.PHONY : src/GpuProgram.cpp.s
+src/engine/ColladaLoader.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.s
+.PHONY : src/engine/ColladaLoader.cpp.s
 
-src/Model.o: src/Model.cpp.o
+src/engine/Geometry.o: src/engine/Geometry.cpp.o
 
-.PHONY : src/Model.o
+.PHONY : src/engine/Geometry.o
 
 # target to build an object file
-src/Model.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Model.cpp.o
-.PHONY : src/Model.cpp.o
+src/engine/Geometry.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.o
+.PHONY : src/engine/Geometry.cpp.o
 
-src/Model.i: src/Model.cpp.i
+src/engine/Geometry.i: src/engine/Geometry.cpp.i
 
-.PHONY : src/Model.i
+.PHONY : src/engine/Geometry.i
 
 # target to preprocess a source file
-src/Model.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Model.cpp.i
-.PHONY : src/Model.cpp.i
+src/engine/Geometry.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.i
+.PHONY : src/engine/Geometry.cpp.i
 
-src/Model.s: src/Model.cpp.s
+src/engine/Geometry.s: src/engine/Geometry.cpp.s
 
-.PHONY : src/Model.s
+.PHONY : src/engine/Geometry.s
 
 # target to generate assembly for a file
-src/Model.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Model.cpp.s
-.PHONY : src/Model.cpp.s
+src/engine/Geometry.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.s
+.PHONY : src/engine/Geometry.cpp.s
 
-src/ModelNode.o: src/ModelNode.cpp.o
+src/engine/GpuProgram.o: src/engine/GpuProgram.cpp.o
 
-.PHONY : src/ModelNode.o
+.PHONY : src/engine/GpuProgram.o
 
 # target to build an object file
-src/ModelNode.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.o
-.PHONY : src/ModelNode.cpp.o
+src/engine/GpuProgram.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.o
+.PHONY : src/engine/GpuProgram.cpp.o
 
-src/ModelNode.i: src/ModelNode.cpp.i
+src/engine/GpuProgram.i: src/engine/GpuProgram.cpp.i
 
-.PHONY : src/ModelNode.i
+.PHONY : src/engine/GpuProgram.i
 
 # target to preprocess a source file
-src/ModelNode.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.i
-.PHONY : src/ModelNode.cpp.i
+src/engine/GpuProgram.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.i
+.PHONY : src/engine/GpuProgram.cpp.i
 
-src/ModelNode.s: src/ModelNode.cpp.s
+src/engine/GpuProgram.s: src/engine/GpuProgram.cpp.s
 
-.PHONY : src/ModelNode.s
+.PHONY : src/engine/GpuProgram.s
 
 # target to generate assembly for a file
-src/ModelNode.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.s
-.PHONY : src/ModelNode.cpp.s
+src/engine/GpuProgram.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.s
+.PHONY : src/engine/GpuProgram.cpp.s
 
-src/Renderer.o: src/Renderer.cpp.o
+src/engine/InputHandler.o: src/engine/InputHandler.cpp.o
 
-.PHONY : src/Renderer.o
+.PHONY : src/engine/InputHandler.o
 
 # target to build an object file
-src/Renderer.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.o
-.PHONY : src/Renderer.cpp.o
+src/engine/InputHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.o
+.PHONY : src/engine/InputHandler.cpp.o
 
-src/Renderer.i: src/Renderer.cpp.i
+src/engine/InputHandler.i: src/engine/InputHandler.cpp.i
 
-.PHONY : src/Renderer.i
+.PHONY : src/engine/InputHandler.i
 
 # target to preprocess a source file
-src/Renderer.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.i
-.PHONY : src/Renderer.cpp.i
+src/engine/InputHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.i
+.PHONY : src/engine/InputHandler.cpp.i
 
-src/Renderer.s: src/Renderer.cpp.s
+src/engine/InputHandler.s: src/engine/InputHandler.cpp.s
 
-.PHONY : src/Renderer.s
+.PHONY : src/engine/InputHandler.s
 
 # target to generate assembly for a file
-src/Renderer.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.s
-.PHONY : src/Renderer.cpp.s
+src/engine/InputHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.s
+.PHONY : src/engine/InputHandler.cpp.s
 
-src/Scene.o: src/Scene.cpp.o
+src/engine/Model.o: src/engine/Model.cpp.o
 
-.PHONY : src/Scene.o
+.PHONY : src/engine/Model.o
 
 # target to build an object file
-src/Scene.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Scene.cpp.o
-.PHONY : src/Scene.cpp.o
+src/engine/Model.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.o
+.PHONY : src/engine/Model.cpp.o
 
-src/Scene.i: src/Scene.cpp.i
+src/engine/Model.i: src/engine/Model.cpp.i
 
-.PHONY : src/Scene.i
+.PHONY : src/engine/Model.i
 
 # target to preprocess a source file
-src/Scene.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Scene.cpp.i
-.PHONY : src/Scene.cpp.i
+src/engine/Model.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.i
+.PHONY : src/engine/Model.cpp.i
 
-src/Scene.s: src/Scene.cpp.s
+src/engine/Model.s: src/engine/Model.cpp.s
 
-.PHONY : src/Scene.s
+.PHONY : src/engine/Model.s
 
 # target to generate assembly for a file
-src/Scene.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Scene.cpp.s
-.PHONY : src/Scene.cpp.s
+src/engine/Model.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.s
+.PHONY : src/engine/Model.cpp.s
 
-src/SceneGroup.o: src/SceneGroup.cpp.o
+src/engine/ModelNode.o: src/engine/ModelNode.cpp.o
 
-.PHONY : src/SceneGroup.o
+.PHONY : src/engine/ModelNode.o
 
 # target to build an object file
-src/SceneGroup.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.o
-.PHONY : src/SceneGroup.cpp.o
+src/engine/ModelNode.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.o
+.PHONY : src/engine/ModelNode.cpp.o
 
-src/SceneGroup.i: src/SceneGroup.cpp.i
+src/engine/ModelNode.i: src/engine/ModelNode.cpp.i
 
-.PHONY : src/SceneGroup.i
+.PHONY : src/engine/ModelNode.i
 
 # target to preprocess a source file
-src/SceneGroup.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.i
-.PHONY : src/SceneGroup.cpp.i
+src/engine/ModelNode.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.i
+.PHONY : src/engine/ModelNode.cpp.i
 
-src/SceneGroup.s: src/SceneGroup.cpp.s
+src/engine/ModelNode.s: src/engine/ModelNode.cpp.s
 
-.PHONY : src/SceneGroup.s
+.PHONY : src/engine/ModelNode.s
 
 # target to generate assembly for a file
-src/SceneGroup.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.s
-.PHONY : src/SceneGroup.cpp.s
+src/engine/ModelNode.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.s
+.PHONY : src/engine/ModelNode.cpp.s
 
-src/SceneNode.o: src/SceneNode.cpp.o
+src/engine/Particle.o: src/engine/Particle.cpp.o
 
-.PHONY : src/SceneNode.o
+.PHONY : src/engine/Particle.o
 
 # target to build an object file
-src/SceneNode.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.o
-.PHONY : src/SceneNode.cpp.o
+src/engine/Particle.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.o
+.PHONY : src/engine/Particle.cpp.o
 
-src/SceneNode.i: src/SceneNode.cpp.i
+src/engine/Particle.i: src/engine/Particle.cpp.i
 
-.PHONY : src/SceneNode.i
+.PHONY : src/engine/Particle.i
 
 # target to preprocess a source file
-src/SceneNode.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.i
-.PHONY : src/SceneNode.cpp.i
+src/engine/Particle.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.i
+.PHONY : src/engine/Particle.cpp.i
 
-src/SceneNode.s: src/SceneNode.cpp.s
+src/engine/Particle.s: src/engine/Particle.cpp.s
 
-.PHONY : src/SceneNode.s
+.PHONY : src/engine/Particle.s
 
 # target to generate assembly for a file
-src/SceneNode.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.s
-.PHONY : src/SceneNode.cpp.s
+src/engine/Particle.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.s
+.PHONY : src/engine/Particle.cpp.s
 
-src/Texture.o: src/Texture.cpp.o
+src/engine/ParticleSystem.o: src/engine/ParticleSystem.cpp.o
 
-.PHONY : src/Texture.o
+.PHONY : src/engine/ParticleSystem.o
 
 # target to build an object file
-src/Texture.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Texture.cpp.o
-.PHONY : src/Texture.cpp.o
+src/engine/ParticleSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.o
+.PHONY : src/engine/ParticleSystem.cpp.o
 
-src/Texture.i: src/Texture.cpp.i
+src/engine/ParticleSystem.i: src/engine/ParticleSystem.cpp.i
 
-.PHONY : src/Texture.i
+.PHONY : src/engine/ParticleSystem.i
 
 # target to preprocess a source file
-src/Texture.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Texture.cpp.i
-.PHONY : src/Texture.cpp.i
+src/engine/ParticleSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.i
+.PHONY : src/engine/ParticleSystem.cpp.i
 
-src/Texture.s: src/Texture.cpp.s
+src/engine/ParticleSystem.s: src/engine/ParticleSystem.cpp.s
 
-.PHONY : src/Texture.s
+.PHONY : src/engine/ParticleSystem.s
 
 # target to generate assembly for a file
-src/Texture.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/Texture.cpp.s
-.PHONY : src/Texture.cpp.s
+src/engine/ParticleSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.s
+.PHONY : src/engine/ParticleSystem.cpp.s
 
-src/TextureLoader.o: src/TextureLoader.cpp.o
+src/engine/Renderer.o: src/engine/Renderer.cpp.o
 
-.PHONY : src/TextureLoader.o
+.PHONY : src/engine/Renderer.o
 
 # target to build an object file
-src/TextureLoader.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.o
-.PHONY : src/TextureLoader.cpp.o
+src/engine/Renderer.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.o
+.PHONY : src/engine/Renderer.cpp.o
 
-src/TextureLoader.i: src/TextureLoader.cpp.i
+src/engine/Renderer.i: src/engine/Renderer.cpp.i
 
-.PHONY : src/TextureLoader.i
+.PHONY : src/engine/Renderer.i
 
 # target to preprocess a source file
-src/TextureLoader.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.i
-.PHONY : src/TextureLoader.cpp.i
+src/engine/Renderer.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.i
+.PHONY : src/engine/Renderer.cpp.i
 
-src/TextureLoader.s: src/TextureLoader.cpp.s
+src/engine/Renderer.s: src/engine/Renderer.cpp.s
 
-.PHONY : src/TextureLoader.s
+.PHONY : src/engine/Renderer.s
 
 # target to generate assembly for a file
-src/TextureLoader.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.s
-.PHONY : src/TextureLoader.cpp.s
+src/engine/Renderer.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.s
+.PHONY : src/engine/Renderer.cpp.s
 
-src/VertexBuffer.o: src/VertexBuffer.cpp.o
+src/engine/Scene.o: src/engine/Scene.cpp.o
 
-.PHONY : src/VertexBuffer.o
+.PHONY : src/engine/Scene.o
 
 # target to build an object file
-src/VertexBuffer.cpp.o:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.o
-.PHONY : src/VertexBuffer.cpp.o
+src/engine/Scene.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.o
+.PHONY : src/engine/Scene.cpp.o
 
-src/VertexBuffer.i: src/VertexBuffer.cpp.i
+src/engine/Scene.i: src/engine/Scene.cpp.i
 
-.PHONY : src/VertexBuffer.i
+.PHONY : src/engine/Scene.i
 
 # target to preprocess a source file
-src/VertexBuffer.cpp.i:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.i
-.PHONY : src/VertexBuffer.cpp.i
+src/engine/Scene.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.i
+.PHONY : src/engine/Scene.cpp.i
 
-src/VertexBuffer.s: src/VertexBuffer.cpp.s
+src/engine/Scene.s: src/engine/Scene.cpp.s
 
-.PHONY : src/VertexBuffer.s
+.PHONY : src/engine/Scene.s
 
 # target to generate assembly for a file
-src/VertexBuffer.cpp.s:
-	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.s
-.PHONY : src/VertexBuffer.cpp.s
+src/engine/Scene.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.s
+.PHONY : src/engine/Scene.cpp.s
+
+src/engine/SceneNode.o: src/engine/SceneNode.cpp.o
+
+.PHONY : src/engine/SceneNode.o
+
+# target to build an object file
+src/engine/SceneNode.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.o
+.PHONY : src/engine/SceneNode.cpp.o
+
+src/engine/SceneNode.i: src/engine/SceneNode.cpp.i
+
+.PHONY : src/engine/SceneNode.i
+
+# target to preprocess a source file
+src/engine/SceneNode.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.i
+.PHONY : src/engine/SceneNode.cpp.i
+
+src/engine/SceneNode.s: src/engine/SceneNode.cpp.s
+
+.PHONY : src/engine/SceneNode.s
+
+# target to generate assembly for a file
+src/engine/SceneNode.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.s
+.PHONY : src/engine/SceneNode.cpp.s
+
+src/engine/Texture.o: src/engine/Texture.cpp.o
+
+.PHONY : src/engine/Texture.o
+
+# target to build an object file
+src/engine/Texture.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.o
+.PHONY : src/engine/Texture.cpp.o
+
+src/engine/Texture.i: src/engine/Texture.cpp.i
+
+.PHONY : src/engine/Texture.i
+
+# target to preprocess a source file
+src/engine/Texture.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.i
+.PHONY : src/engine/Texture.cpp.i
+
+src/engine/Texture.s: src/engine/Texture.cpp.s
+
+.PHONY : src/engine/Texture.s
+
+# target to generate assembly for a file
+src/engine/Texture.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.s
+.PHONY : src/engine/Texture.cpp.s
+
+src/engine/TextureLoader.o: src/engine/TextureLoader.cpp.o
+
+.PHONY : src/engine/TextureLoader.o
+
+# target to build an object file
+src/engine/TextureLoader.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.o
+.PHONY : src/engine/TextureLoader.cpp.o
+
+src/engine/TextureLoader.i: src/engine/TextureLoader.cpp.i
+
+.PHONY : src/engine/TextureLoader.i
+
+# target to preprocess a source file
+src/engine/TextureLoader.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.i
+.PHONY : src/engine/TextureLoader.cpp.i
+
+src/engine/TextureLoader.s: src/engine/TextureLoader.cpp.s
+
+.PHONY : src/engine/TextureLoader.s
+
+# target to generate assembly for a file
+src/engine/TextureLoader.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.s
+.PHONY : src/engine/TextureLoader.cpp.s
+
+src/engine/VertexBuffer.o: src/engine/VertexBuffer.cpp.o
+
+.PHONY : src/engine/VertexBuffer.o
+
+# target to build an object file
+src/engine/VertexBuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.o
+.PHONY : src/engine/VertexBuffer.cpp.o
+
+src/engine/VertexBuffer.i: src/engine/VertexBuffer.cpp.i
+
+.PHONY : src/engine/VertexBuffer.i
+
+# target to preprocess a source file
+src/engine/VertexBuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.i
+.PHONY : src/engine/VertexBuffer.cpp.i
+
+src/engine/VertexBuffer.s: src/engine/VertexBuffer.cpp.s
+
+.PHONY : src/engine/VertexBuffer.s
+
+# target to generate assembly for a file
+src/engine/VertexBuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.s
+.PHONY : src/engine/VertexBuffer.cpp.s
+
+src/engine/utils.o: src/engine/utils.cpp.o
+
+.PHONY : src/engine/utils.o
+
+# target to build an object file
+src/engine/utils.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.o
+.PHONY : src/engine/utils.cpp.o
+
+src/engine/utils.i: src/engine/utils.cpp.i
+
+.PHONY : src/engine/utils.i
+
+# target to preprocess a source file
+src/engine/utils.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.i
+.PHONY : src/engine/utils.cpp.i
+
+src/engine/utils.s: src/engine/utils.cpp.s
+
+.PHONY : src/engine/utils.s
+
+# target to generate assembly for a file
+src/engine/utils.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.s
+.PHONY : src/engine/utils.cpp.s
+
+src/game/Background.o: src/game/Background.cpp.o
+
+.PHONY : src/game/Background.o
+
+# target to build an object file
+src/game/Background.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.o
+.PHONY : src/game/Background.cpp.o
+
+src/game/Background.i: src/game/Background.cpp.i
+
+.PHONY : src/game/Background.i
+
+# target to preprocess a source file
+src/game/Background.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.i
+.PHONY : src/game/Background.cpp.i
+
+src/game/Background.s: src/game/Background.cpp.s
+
+.PHONY : src/game/Background.s
+
+# target to generate assembly for a file
+src/game/Background.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.s
+.PHONY : src/game/Background.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -1134,51 +1269,66 @@ help:
 	@echo "... libs/glew/src/glew.o"
 	@echo "... libs/glew/src/glew.i"
 	@echo "... libs/glew/src/glew.s"
-	@echo "... src/Application.o"
-	@echo "... src/Application.i"
-	@echo "... src/Application.s"
-	@echo "... src/AssetsManager.o"
-	@echo "... src/AssetsManager.i"
-	@echo "... src/AssetsManager.s"
-	@echo "... src/BoxNode.o"
-	@echo "... src/BoxNode.i"
-	@echo "... src/BoxNode.s"
-	@echo "... src/ColladaLoader.o"
-	@echo "... src/ColladaLoader.i"
-	@echo "... src/ColladaLoader.s"
-	@echo "... src/Geometry.o"
-	@echo "... src/Geometry.i"
-	@echo "... src/Geometry.s"
-	@echo "... src/GpuProgram.o"
-	@echo "... src/GpuProgram.i"
-	@echo "... src/GpuProgram.s"
-	@echo "... src/Model.o"
-	@echo "... src/Model.i"
-	@echo "... src/Model.s"
-	@echo "... src/ModelNode.o"
-	@echo "... src/ModelNode.i"
-	@echo "... src/ModelNode.s"
-	@echo "... src/Renderer.o"
-	@echo "... src/Renderer.i"
-	@echo "... src/Renderer.s"
-	@echo "... src/Scene.o"
-	@echo "... src/Scene.i"
-	@echo "... src/Scene.s"
-	@echo "... src/SceneGroup.o"
-	@echo "... src/SceneGroup.i"
-	@echo "... src/SceneGroup.s"
-	@echo "... src/SceneNode.o"
-	@echo "... src/SceneNode.i"
-	@echo "... src/SceneNode.s"
-	@echo "... src/Texture.o"
-	@echo "... src/Texture.i"
-	@echo "... src/Texture.s"
-	@echo "... src/TextureLoader.o"
-	@echo "... src/TextureLoader.i"
-	@echo "... src/TextureLoader.s"
-	@echo "... src/VertexBuffer.o"
-	@echo "... src/VertexBuffer.i"
-	@echo "... src/VertexBuffer.s"
+	@echo "... src/engine/Application.o"
+	@echo "... src/engine/Application.i"
+	@echo "... src/engine/Application.s"
+	@echo "... src/engine/AssetsManager.o"
+	@echo "... src/engine/AssetsManager.i"
+	@echo "... src/engine/AssetsManager.s"
+	@echo "... src/engine/BoundingBox.o"
+	@echo "... src/engine/BoundingBox.i"
+	@echo "... src/engine/BoundingBox.s"
+	@echo "... src/engine/BoxNode.o"
+	@echo "... src/engine/BoxNode.i"
+	@echo "... src/engine/BoxNode.s"
+	@echo "... src/engine/ColladaLoader.o"
+	@echo "... src/engine/ColladaLoader.i"
+	@echo "... src/engine/ColladaLoader.s"
+	@echo "... src/engine/Geometry.o"
+	@echo "... src/engine/Geometry.i"
+	@echo "... src/engine/Geometry.s"
+	@echo "... src/engine/GpuProgram.o"
+	@echo "... src/engine/GpuProgram.i"
+	@echo "... src/engine/GpuProgram.s"
+	@echo "... src/engine/InputHandler.o"
+	@echo "... src/engine/InputHandler.i"
+	@echo "... src/engine/InputHandler.s"
+	@echo "... src/engine/Model.o"
+	@echo "... src/engine/Model.i"
+	@echo "... src/engine/Model.s"
+	@echo "... src/engine/ModelNode.o"
+	@echo "... src/engine/ModelNode.i"
+	@echo "... src/engine/ModelNode.s"
+	@echo "... src/engine/Particle.o"
+	@echo "... src/engine/Particle.i"
+	@echo "... src/engine/Particle.s"
+	@echo "... src/engine/ParticleSystem.o"
+	@echo "... src/engine/ParticleSystem.i"
+	@echo "... src/engine/ParticleSystem.s"
+	@echo "... src/engine/Renderer.o"
+	@echo "... src/engine/Renderer.i"
+	@echo "... src/engine/Renderer.s"
+	@echo "... src/engine/Scene.o"
+	@echo "... src/engine/Scene.i"
+	@echo "... src/engine/Scene.s"
+	@echo "... src/engine/SceneNode.o"
+	@echo "... src/engine/SceneNode.i"
+	@echo "... src/engine/SceneNode.s"
+	@echo "... src/engine/Texture.o"
+	@echo "... src/engine/Texture.i"
+	@echo "... src/engine/Texture.s"
+	@echo "... src/engine/TextureLoader.o"
+	@echo "... src/engine/TextureLoader.i"
+	@echo "... src/engine/TextureLoader.s"
+	@echo "... src/engine/VertexBuffer.o"
+	@echo "... src/engine/VertexBuffer.i"
+	@echo "... src/engine/VertexBuffer.s"
+	@echo "... src/engine/utils.o"
+	@echo "... src/engine/utils.i"
+	@echo "... src/engine/utils.s"
+	@echo "... src/game/Background.o"
+	@echo "... src/game/Background.i"
+	@echo "... src/game/Background.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -57,204 +57,269 @@ include CMakeFiles/PhobosDemo.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/PhobosDemo.dir/flags.make
 
-CMakeFiles/PhobosDemo.dir/src/Application.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/Application.cpp.o: src/Application.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PhobosDemo.dir/src/Application.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/Application.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/Application.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.o: src/engine/Application.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/Application.cpp
 
-CMakeFiles/PhobosDemo.dir/src/Application.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/Application.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/Application.cpp > CMakeFiles/PhobosDemo.dir/src/Application.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/Application.cpp > CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/Application.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/Application.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/Application.cpp -o CMakeFiles/PhobosDemo.dir/src/Application.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/Application.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.o: src/AssetsManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/AssetsManager.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.o: src/engine/AssetsManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/AssetsManager.cpp
 
-CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/AssetsManager.cpp > CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/AssetsManager.cpp > CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/AssetsManager.cpp -o CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/AssetsManager.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.o: src/BoxNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/BoxNode.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.o: src/engine/BoundingBox.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/BoundingBox.cpp
 
-CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/BoxNode.cpp > CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/BoundingBox.cpp > CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/BoxNode.cpp -o CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/BoundingBox.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.o: src/ColladaLoader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/ColladaLoader.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.o: src/engine/BoxNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/BoxNode.cpp
 
-CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/ColladaLoader.cpp > CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/BoxNode.cpp > CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/ColladaLoader.cpp -o CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/BoxNode.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.o: src/Geometry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/Geometry.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.o: src/engine/ColladaLoader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/ColladaLoader.cpp
 
-CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/Geometry.cpp > CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/ColladaLoader.cpp > CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/Geometry.cpp -o CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/ColladaLoader.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.o: src/GpuProgram.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/GpuProgram.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.o: src/engine/Geometry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/Geometry.cpp
 
-CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/GpuProgram.cpp > CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/Geometry.cpp > CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/GpuProgram.cpp -o CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/Geometry.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/Model.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/Model.cpp.o: src/Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PhobosDemo.dir/src/Model.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/Model.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/Model.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.o: src/engine/GpuProgram.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/GpuProgram.cpp
 
-CMakeFiles/PhobosDemo.dir/src/Model.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/Model.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/Model.cpp > CMakeFiles/PhobosDemo.dir/src/Model.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/GpuProgram.cpp > CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/Model.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/Model.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/Model.cpp -o CMakeFiles/PhobosDemo.dir/src/Model.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/GpuProgram.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.o: src/ModelNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/ModelNode.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.o: src/engine/InputHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/InputHandler.cpp
 
-CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/ModelNode.cpp > CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/InputHandler.cpp > CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/ModelNode.cpp -o CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/InputHandler.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.o: src/Renderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/Renderer.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.o: src/engine/Model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/Model.cpp
 
-CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/Renderer.cpp > CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/Model.cpp > CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/Renderer.cpp -o CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/Model.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/Scene.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/Scene.cpp.o: src/Scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PhobosDemo.dir/src/Scene.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/Scene.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/Scene.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.o: src/engine/ModelNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/ModelNode.cpp
 
-CMakeFiles/PhobosDemo.dir/src/Scene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/Scene.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/Scene.cpp > CMakeFiles/PhobosDemo.dir/src/Scene.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/ModelNode.cpp > CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/Scene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/Scene.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/Scene.cpp -o CMakeFiles/PhobosDemo.dir/src/Scene.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/ModelNode.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.o: src/SceneGroup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/SceneGroup.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.o: src/engine/Particle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/Particle.cpp
 
-CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/SceneGroup.cpp > CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/Particle.cpp > CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/SceneGroup.cpp -o CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/Particle.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.o: src/SceneNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/SceneNode.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.o: src/engine/ParticleSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/ParticleSystem.cpp
 
-CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/SceneNode.cpp > CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/ParticleSystem.cpp > CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/SceneNode.cpp -o CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/ParticleSystem.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/Texture.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/Texture.cpp.o: src/Texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/PhobosDemo.dir/src/Texture.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/Texture.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/Texture.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.o: src/engine/Renderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/Renderer.cpp
 
-CMakeFiles/PhobosDemo.dir/src/Texture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/Texture.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/Texture.cpp > CMakeFiles/PhobosDemo.dir/src/Texture.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/Renderer.cpp > CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/Texture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/Texture.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/Texture.cpp -o CMakeFiles/PhobosDemo.dir/src/Texture.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/Renderer.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.o: src/TextureLoader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/TextureLoader.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.o: src/engine/Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/Scene.cpp
 
-CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/TextureLoader.cpp > CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/Scene.cpp > CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/TextureLoader.cpp -o CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/Scene.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.s
 
-CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
-CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.o: src/VertexBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/VertexBuffer.cpp
+CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.o: src/engine/SceneNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/SceneNode.cpp
 
-CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/VertexBuffer.cpp > CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.i
+CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/SceneNode.cpp > CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.i
 
-CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/VertexBuffer.cpp -o CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.s
+CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/SceneNode.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.s
+
+CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.o: src/engine/Texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/Texture.cpp
+
+CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/Texture.cpp > CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.i
+
+CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/Texture.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.s
+
+CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.o: src/engine/TextureLoader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/TextureLoader.cpp
+
+CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/TextureLoader.cpp > CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.i
+
+CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/TextureLoader.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.s
+
+CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.o: src/engine/VertexBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/VertexBuffer.cpp
+
+CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/VertexBuffer.cpp > CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.i
+
+CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/VertexBuffer.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.s
+
+CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.o: src/engine/utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/engine/utils.cpp
+
+CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/engine/utils.cpp > CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.i
+
+CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/engine/utils.cpp -o CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.s
+
+CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
+CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.o: src/game/Background.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/game/Background.cpp
+
+CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/stepanskovajsa/fi/pv112/project/src/game/Background.cpp > CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.i
+
+CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/stepanskovajsa/fi/pv112/project/src/game/Background.cpp -o CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.s
 
 CMakeFiles/PhobosDemo.dir/src/main.cpp.o: CMakeFiles/PhobosDemo.dir/flags.make
 CMakeFiles/PhobosDemo.dir/src/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/PhobosDemo.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/PhobosDemo.dir/src/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PhobosDemo.dir/src/main.cpp.o -c /Users/stepanskovajsa/fi/pv112/project/src/main.cpp
 
 CMakeFiles/PhobosDemo.dir/src/main.cpp.i: cmake_force
@@ -267,41 +332,51 @@ CMakeFiles/PhobosDemo.dir/src/main.cpp.s: cmake_force
 
 # Object files for target PhobosDemo
 PhobosDemo_OBJECTS = \
-"CMakeFiles/PhobosDemo.dir/src/Application.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/Model.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/Scene.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/Texture.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.o" \
-"CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.o" \
+"CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.o" \
 "CMakeFiles/PhobosDemo.dir/src/main.cpp.o"
 
 # External object files for target PhobosDemo
 PhobosDemo_EXTERNAL_OBJECTS =
 
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/Application.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/AssetsManager.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/BoxNode.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/ColladaLoader.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/Geometry.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/GpuProgram.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/Model.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/ModelNode.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/Renderer.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/Scene.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/SceneGroup.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/SceneNode.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/Texture.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/TextureLoader.cpp.o
-PhobosDemo: CMakeFiles/PhobosDemo.dir/src/VertexBuffer.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/Application.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/AssetsManager.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/Model.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/ModelNode.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/Particle.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/ParticleSystem.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/Renderer.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/Scene.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.o
+PhobosDemo: CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.o
 PhobosDemo: CMakeFiles/PhobosDemo.dir/src/main.cpp.o
 PhobosDemo: CMakeFiles/PhobosDemo.dir/build.make
 PhobosDemo: libs/glfw/src/libglfw3.a
@@ -309,7 +384,7 @@ PhobosDemo: libglew.a
 PhobosDemo: libs/FreeImage/libFreeImage.a
 PhobosDemo: libs/tinyxml2/libtinyxml2.a
 PhobosDemo: CMakeFiles/PhobosDemo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable PhobosDemo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/stepanskovajsa/fi/pv112/project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable PhobosDemo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PhobosDemo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

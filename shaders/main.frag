@@ -17,7 +17,7 @@ void main()
     vec3 lightDir = normalize(lightPos - FragPos);
 
     float cosTheta = max(dot(norm, lightDir), 0.0);
-    vec4 diffuseColor = materialDiffuseColor * cosTheta * lightColor;
+    vec4 diffuseColor = materialDiffuseColor;// * cosTheta * lightColor;
     // vec4 diffuseColor = cosTheta * lightColor;
 
     // vec3 result = (ambient + diffuse) * 1;//texture(ourTexture, TexCoord);

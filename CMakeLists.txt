@@ -17,7 +17,7 @@ set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libs")
 # set(SOURCES "${SRC_DIR}/main.cpp")
 
-FILE(GLOB SOURCES "${SRC_DIR}/*.cpp")
+FILE(GLOB_RECURSE SOURCES "${SRC_DIR}/*.cpp")
 # Executable definition and properties
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE "${SRC_DIR}")
