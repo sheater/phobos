@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "../engine/utils.h"
+#include "../engine/BoundingBox.h"
 #include "Spaceship.h"
 #include "Projectile.h"
 
@@ -23,7 +24,6 @@ enum PlayerKeyboardActions
 class Player : public Spaceship
 {
 private:
-  glm::vec3 m_position;
   float m_tiltAngle;
   float m_sparkTimer;
   float m_shootTimer;
@@ -33,8 +33,6 @@ public:
   Player(Scene *scene)
       : Spaceship(scene, "assets/models/spaceship2/model.dae", getPreprocessTransform())
   {
-    m_position = glm::vec3(0.0f, 0.0f, -5.0f);
-    m_tiltAngle = 0.0f;
     m_sparkTimer = 0.0f;
     m_shootTimer = 0.0f;
 
@@ -44,8 +42,10 @@ public:
 
   static glm::mat4 getPreprocessTransform()
   {
-    glm::mat4 transform = glm::rotate(
-        glm::mat4(1.0f), glm::radians(90.0f),
+    glm::mat4 transform = glm::translate(glm::mat4(1.0f), glm::vec3(0.08f, 0.0f, 0.0f));
+
+    transform = glm::rotate(
+        transform, glm::radians(90.0f),
         glm::vec3(0.0f, 0.0f, 1.0f));
 
     return glm::scale(transform, glm::vec3(0.0012f));
@@ -56,8 +56,6 @@ public:
   {
     glm::vec3 moveVec(0.0f);
     InputHandler *input = getScene()->getInputHandler();
-
-    Spaceship::update(timeDelta);
 
     if (input->isActionKeyPressed(PLAYER_ACTION_MOVE_UP))
       moveVec.y = PLAYER_SPEED * timeDelta;
@@ -89,28 +87,31 @@ public:
     if (moveVec.y != 0.0f && m_sparkTimer > 0.005f)
     {
       m_sparkTimer = 0.0f;
-      ParticleSystem *particleSystem = getScene()->getParticleSystem();
-      for (int i = 0; i < 7; i++)
-      {
-        Particle *particle = particleSystem->emitParticle();
-
-        particle->texture = m_sparkTexture;
-        particle->position = m_position + glm::vec3(0.0f, -0.3f, 0.0f);
-        particle->life = 1.0f;
-        particle->velocity = glm::vec3(
-            randomFloatInterval(-0.3f, 0.3f),
-            randomFloatInterval(-0.5f, -1.0f),
-            0.0f);
-        particle->size = glm::vec2(0.015f, 0.015f);
-        particle->color = glm::vec4(1.0f, 1.0f, 1.0f, 0.7f);
-      }
+      emitSparks(0.15f);
+      emitSparks(-0.15f);
     }
 
-    localTransform = glm::translate(glm::mat4(1.0f), m_position);
-    localTransform = glm::rotate(
-        localTransform,
-        glm::radians(m_tiltAngle),
-        glm::vec3(0.0f, 1.0f, 0.0f));
+    Spaceship::update(timeDelta);
+  }
+
+  void emitSparks(float align)
+  {
+    ParticleSystem *particleSystem = getScene()->getParticleSystem();
+    for (int i = 0; i < 7; i++)
+    {
+      Particle *particle = particleSystem->emitParticle();
+
+      particle->texture = m_sparkTexture;
+      particle->position = m_position + glm::vec3(align, -0.3f, 0.0f);
+      particle->life = 1.0f;
+      particle->agingRate = 0.8f;
+      particle->velocity = glm::vec3(
+          randomFloatInterval(-0.3f, 0.3f),
+          randomFloatInterval(-0.5f, -1.0f),
+          0.0f);
+      particle->size = glm::vec2(0.015f, 0.015f);
+      particle->color = glm::vec4(1.0f, 1.0f, 1.0f, 0.7f);
+    }
   }
 
   void shoot()

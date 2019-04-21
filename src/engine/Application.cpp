@@ -53,16 +53,13 @@ Application::Application(unsigned int width, unsigned int height)
     throw std::runtime_error("Could not create a glew!");
   }
 
-  m_renderer = new Renderer();
-  m_renderer->setViewport(width, height);
+  m_renderer = new Renderer(width, height);
 
   m_assetsMgr = new AssetsManager(m_renderer);
   m_assetsMgr->addLoader(new ColladaLoader());
   m_assetsMgr->addLoader(new TextureLoader());
 
   m_inputHandler = new InputHandler();
-
-  // m_scene = new Scene(m_renderer, m_assetsMgr, m_inputHandler);
 
   glfwSetWindowUserPointer(m_window, this);
   glfwSetWindowSizeCallback(m_window, on_resize);
@@ -80,7 +77,7 @@ Application::~Application()
   glfwTerminate();
 }
 
-void Application::run(Scene* scene)
+void Application::run(Scene *scene)
 {
   double currentTime = 0;
   double prevTime = 0;
@@ -100,7 +97,9 @@ void Application::run(Scene* scene)
     glfwSwapBuffers(m_window);
 
     glfwPollEvents();
+#ifdef __APPLE__
     fix_render_on_mac(m_window);
+#endif
     prevTime = currentTime;
   }
 }

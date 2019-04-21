@@ -69,10 +69,6 @@ void ParticleSystem::createArrayObject()
 
   glDeleteBuffers(1, &vbo);
   glDeleteBuffers(1, &ibo);
-
-  Particle *particle = new Particle(this);
-
-  m_particles.push_back(particle);
 }
 
 ParticleSystem::~ParticleSystem()
@@ -92,9 +88,13 @@ void ParticleSystem::render()
 
   glBindVertexArray(m_vao);
 
-  // glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+  glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
+  m_gpuProgram->setUniformMatrix("projectionMat", m_renderer->getProjectionMatrix());
+  m_gpuProgram->setUniformMatrix("viewMat", m_renderer->getViewMatrix());
 
   for (
       std::vector<Particle *>::iterator it = m_particles.begin();
@@ -113,8 +113,6 @@ void ParticleSystem::render()
 
     float opacity = (*it)->life == INFINITY ? 1.0f : (*it)->life;
 
-    m_gpuProgram->setUniformMatrix("projectionMat", m_renderer->m_projectionMatrix);
-    m_gpuProgram->setUniformMatrix("viewMat", m_renderer->m_viewMatrix);
     m_gpuProgram->setUniformMatrix("modelMat", modelMatrix);
     m_gpuProgram->setUniformVec4("color", (*it)->color);
     m_gpuProgram->setUniformFloat("opacity", opacity);

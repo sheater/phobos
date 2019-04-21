@@ -3,6 +3,7 @@
 #include "Texture.h"
 
 Texture::Texture(unsigned int width, unsigned int height, void *pixels)
+    : m_width(width), m_height(height)
 {
   glGenTextures(1, &m_id);
   glActiveTexture(GL_TEXTURE0);

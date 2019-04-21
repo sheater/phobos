@@ -786,6 +786,33 @@ src/engine/ColladaLoader.cpp.s:
 	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.s
 .PHONY : src/engine/ColladaLoader.cpp.s
 
+src/engine/Font.o: src/engine/Font.cpp.o
+
+.PHONY : src/engine/Font.o
+
+# target to build an object file
+src/engine/Font.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Font.cpp.o
+.PHONY : src/engine/Font.cpp.o
+
+src/engine/Font.i: src/engine/Font.cpp.i
+
+.PHONY : src/engine/Font.i
+
+# target to preprocess a source file
+src/engine/Font.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Font.cpp.i
+.PHONY : src/engine/Font.cpp.i
+
+src/engine/Font.s: src/engine/Font.cpp.s
+
+.PHONY : src/engine/Font.s
+
+# target to generate assembly for a file
+src/engine/Font.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/Font.cpp.s
+.PHONY : src/engine/Font.cpp.s
+
 src/engine/Geometry.o: src/engine/Geometry.cpp.o
 
 .PHONY : src/engine/Geometry.o
@@ -1110,6 +1137,114 @@ src/engine/TextureLoader.cpp.s:
 	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.s
 .PHONY : src/engine/TextureLoader.cpp.s
 
+src/engine/UIImage.o: src/engine/UIImage.cpp.o
+
+.PHONY : src/engine/UIImage.o
+
+# target to build an object file
+src/engine/UIImage.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UIImage.cpp.o
+.PHONY : src/engine/UIImage.cpp.o
+
+src/engine/UIImage.i: src/engine/UIImage.cpp.i
+
+.PHONY : src/engine/UIImage.i
+
+# target to preprocess a source file
+src/engine/UIImage.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UIImage.cpp.i
+.PHONY : src/engine/UIImage.cpp.i
+
+src/engine/UIImage.s: src/engine/UIImage.cpp.s
+
+.PHONY : src/engine/UIImage.s
+
+# target to generate assembly for a file
+src/engine/UIImage.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UIImage.cpp.s
+.PHONY : src/engine/UIImage.cpp.s
+
+src/engine/UILabel.o: src/engine/UILabel.cpp.o
+
+.PHONY : src/engine/UILabel.o
+
+# target to build an object file
+src/engine/UILabel.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UILabel.cpp.o
+.PHONY : src/engine/UILabel.cpp.o
+
+src/engine/UILabel.i: src/engine/UILabel.cpp.i
+
+.PHONY : src/engine/UILabel.i
+
+# target to preprocess a source file
+src/engine/UILabel.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UILabel.cpp.i
+.PHONY : src/engine/UILabel.cpp.i
+
+src/engine/UILabel.s: src/engine/UILabel.cpp.s
+
+.PHONY : src/engine/UILabel.s
+
+# target to generate assembly for a file
+src/engine/UILabel.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UILabel.cpp.s
+.PHONY : src/engine/UILabel.cpp.s
+
+src/engine/UIManager.o: src/engine/UIManager.cpp.o
+
+.PHONY : src/engine/UIManager.o
+
+# target to build an object file
+src/engine/UIManager.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UIManager.cpp.o
+.PHONY : src/engine/UIManager.cpp.o
+
+src/engine/UIManager.i: src/engine/UIManager.cpp.i
+
+.PHONY : src/engine/UIManager.i
+
+# target to preprocess a source file
+src/engine/UIManager.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UIManager.cpp.i
+.PHONY : src/engine/UIManager.cpp.i
+
+src/engine/UIManager.s: src/engine/UIManager.cpp.s
+
+.PHONY : src/engine/UIManager.s
+
+# target to generate assembly for a file
+src/engine/UIManager.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UIManager.cpp.s
+.PHONY : src/engine/UIManager.cpp.s
+
+src/engine/UINode.o: src/engine/UINode.cpp.o
+
+.PHONY : src/engine/UINode.o
+
+# target to build an object file
+src/engine/UINode.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UINode.cpp.o
+.PHONY : src/engine/UINode.cpp.o
+
+src/engine/UINode.i: src/engine/UINode.cpp.i
+
+.PHONY : src/engine/UINode.i
+
+# target to preprocess a source file
+src/engine/UINode.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UINode.cpp.i
+.PHONY : src/engine/UINode.cpp.i
+
+src/engine/UINode.s: src/engine/UINode.cpp.s
+
+.PHONY : src/engine/UINode.s
+
+# target to generate assembly for a file
+src/engine/UINode.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/engine/UINode.cpp.s
+.PHONY : src/engine/UINode.cpp.s
+
 src/engine/VertexBuffer.o: src/engine/VertexBuffer.cpp.o
 
 .PHONY : src/engine/VertexBuffer.o
@@ -1190,6 +1325,33 @@ src/game/Background.s: src/game/Background.cpp.s
 src/game/Background.cpp.s:
 	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.s
 .PHONY : src/game/Background.cpp.s
+
+src/game/Hud.o: src/game/Hud.cpp.o
+
+.PHONY : src/game/Hud.o
+
+# target to build an object file
+src/game/Hud.cpp.o:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/game/Hud.cpp.o
+.PHONY : src/game/Hud.cpp.o
+
+src/game/Hud.i: src/game/Hud.cpp.i
+
+.PHONY : src/game/Hud.i
+
+# target to preprocess a source file
+src/game/Hud.cpp.i:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/game/Hud.cpp.i
+.PHONY : src/game/Hud.cpp.i
+
+src/game/Hud.s: src/game/Hud.cpp.s
+
+.PHONY : src/game/Hud.s
+
+# target to generate assembly for a file
+src/game/Hud.cpp.s:
+	$(MAKE) -f CMakeFiles/PhobosDemo.dir/build.make CMakeFiles/PhobosDemo.dir/src/game/Hud.cpp.s
+.PHONY : src/game/Hud.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -1284,6 +1446,9 @@ help:
 	@echo "... src/engine/ColladaLoader.o"
 	@echo "... src/engine/ColladaLoader.i"
 	@echo "... src/engine/ColladaLoader.s"
+	@echo "... src/engine/Font.o"
+	@echo "... src/engine/Font.i"
+	@echo "... src/engine/Font.s"
 	@echo "... src/engine/Geometry.o"
 	@echo "... src/engine/Geometry.i"
 	@echo "... src/engine/Geometry.s"
@@ -1320,6 +1485,18 @@ help:
 	@echo "... src/engine/TextureLoader.o"
 	@echo "... src/engine/TextureLoader.i"
 	@echo "... src/engine/TextureLoader.s"
+	@echo "... src/engine/UIImage.o"
+	@echo "... src/engine/UIImage.i"
+	@echo "... src/engine/UIImage.s"
+	@echo "... src/engine/UILabel.o"
+	@echo "... src/engine/UILabel.i"
+	@echo "... src/engine/UILabel.s"
+	@echo "... src/engine/UIManager.o"
+	@echo "... src/engine/UIManager.i"
+	@echo "... src/engine/UIManager.s"
+	@echo "... src/engine/UINode.o"
+	@echo "... src/engine/UINode.i"
+	@echo "... src/engine/UINode.s"
 	@echo "... src/engine/VertexBuffer.o"
 	@echo "... src/engine/VertexBuffer.i"
 	@echo "... src/engine/VertexBuffer.s"
@@ -1329,6 +1506,9 @@ help:
 	@echo "... src/game/Background.o"
 	@echo "... src/game/Background.i"
 	@echo "... src/game/Background.s"
+	@echo "... src/game/Hud.o"
+	@echo "... src/game/Hud.i"
+	@echo "... src/game/Hud.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

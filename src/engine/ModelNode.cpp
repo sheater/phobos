@@ -6,12 +6,6 @@
 #include "BoundingBox.h"
 #include "ColladaLoader.h"
 
-// ModelNode::ModelNode(const std::string &path)
-//     : SceneNode(),
-//       m_path(path),
-//       m_preprocessTransformMatrix(glm::mat4(1.0f))
-// {
-// }
 ModelNode::ModelNode(
     Scene *scene,
     const std::string &path,
@@ -33,16 +27,6 @@ ModelNode::~ModelNode()
     delete m_collisionHull;
 }
 
-// void ModelNode::initialise()
-// {
-//   AssetsManager* assetsMgr = getScene()->getAssetsManager();
-//   ColladaLoader *loader = static_cast<ColladaLoader *>(assetsMgr->getLoader(m_path));
-//   loader->setPreprocessTransformMatrix(m_preprocessTransformMatrix);
-//   m_model = static_cast<Model *>(assetsMgr->getAsset(m_path));
-
-//   createBoundingBox();
-// }
-
 void ModelNode::render()
 {
   if (!m_model)
@@ -52,16 +36,10 @@ void ModelNode::render()
 
   SceneNode::render();
   m_model->render(finalTransform);
-
-  if (m_collisionHull)
-  {
-    m_collisionHull->render(getScene()->getRenderer());
-  }
 }
 
 void ModelNode::createBoundingBox()
 {
-  // m_collisionHull = new BoundingBox();
   BoundingBox *bbox = new BoundingBox();
 
   for (

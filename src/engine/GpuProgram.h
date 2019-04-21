@@ -28,6 +28,7 @@ public:
   void use();
 
   void setUniformMatrix(const std::string &name, const glm::mat4 &matrix);
+  void setUniformVec2(const std::string &name, const glm::vec2 &vec);
   void setUniformVec3(const std::string &name, const glm::vec3 &vec);
   void setUniformVec4(const std::string &name, const glm::vec4 &vec);
   void setUniformFloat(const std::string &name, float value);

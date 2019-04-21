@@ -18,6 +18,7 @@ public:
   glm::vec4 color;
   glm::vec2 size;
   float life;
+  float agingRate;
 
   Texture *texture;
 

@@ -33,6 +33,8 @@ public:
     m_particle->position = m_position;
     m_particle->texture = m_fireballTexture;
     m_particle->size = glm::vec2(0.03f, 0.03f);
+
+    m_collisionHull = new BoundingBox(glm::vec3(-0.05), glm::vec3(0.05));
   }
 
   ~Projectile()
@@ -49,6 +51,8 @@ public:
     float shift = timeDelta * PROJECTILE_SPEED;
     position.x += cos(glm::radians(m_direction)) * shift;
     position.y += sin(glm::radians(m_direction)) * shift;
+
+    m_collisionHull->transform(glm::translate(glm::mat4(1.0f), position));
 
     if (
         position.x > PROJECTILE_X_THRESHOLD ||

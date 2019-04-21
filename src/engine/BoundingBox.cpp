@@ -6,11 +6,11 @@
 #include "Geometry.h"
 #include "VertexBuffer.h"
 
-BoundingBox::BoundingBox()
-    : m_absoluteMin(glm::vec3(INFINITY)),
-      m_absoluteMax(glm::vec3(-INFINITY)),
-      m_relativeMin(glm::vec3(INFINITY)),
-      m_relativeMax(glm::vec3(-INFINITY))
+BoundingBox::BoundingBox(const glm::vec3 &min, const glm::vec3 &max)
+    : m_absoluteMin(min),
+      m_absoluteMax(max),
+      m_relativeMin(min),
+      m_relativeMax(max)
 {
 }
 
@@ -22,11 +22,13 @@ void BoundingBox::render(Renderer *renderer)
   glm::mat4 transform = glm::translate(
       glm::mat4(1.0f),
       glm::vec3(m_absoluteMin + size * 0.5f));
+  Material *material = new Material();
+  material->polygonMode = POLYGON_MODE_LINES;
 
-  vertexBuffer->render(transform, nullptr);
+  vertexBuffer->render(transform, material);
 }
 
-bool BoundingBox::isColliding(CollisionHull *hull)
+bool BoundingBox::isCollision(CollisionHull *hull)
 {
   if (BoundingBox *box = dynamic_cast<BoundingBox *>(hull))
   {
@@ -64,12 +66,15 @@ void BoundingBox::maybeExpand(const glm::vec3 &position)
 
 void BoundingBox::transform(const glm::mat4 &matrix)
 {
-  const glm::vec3 max = glm::vec3(matrix * glm::vec4(m_relativeMax, 1.0f));
-  const glm::vec3 min = glm::vec3(matrix * glm::vec4(m_relativeMin, 1.0f));
+  // const glm::vec3 max = glm::vec3(matrix * glm::vec4(m_relativeMax, 1.0f));
+  // const glm::vec3 min = glm::vec3(matrix * glm::vec4(m_relativeMin, 1.0f));
 
-  for (int i = 0; i < 3; i++)
-  {
-    m_absoluteMax[i] = std::max(m_absoluteMax[i], max[i]);
-    m_absoluteMin[i] = std::min(m_absoluteMin[i], min[i]);
-  }
+  m_absoluteMax = glm::vec3(matrix * glm::vec4(m_relativeMax, 1.0f));
+  m_absoluteMin = glm::vec3(matrix * glm::vec4(m_relativeMin, 1.0f));
+
+  // for (int i = 0; i < 3; i++)
+  // {
+  //   m_absoluteMax[i] = std::max(m_absoluteMax[i], max[i]);
+  //   m_absoluteMin[i] = std::min(m_absoluteMin[i], min[i]);
+  // }
 }

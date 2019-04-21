@@ -3,10 +3,12 @@
 
 #include "Renderer.h"
 
-Renderer::Renderer()
+Renderer::Renderer(unsigned int width, unsigned int height)
 {
   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
   glEnable(GL_DEPTH_TEST);
+
+  setViewport(width, height);
 
   GpuProgramFactory *programFactory = new GpuProgramFactory();
   programFactory->attachShader(Shader::createFromFile("shaders/main.vert", GL_VERTEX_SHADER));
@@ -94,11 +96,35 @@ void Renderer::useBaseProgram(const glm::mat4 &modelMatrix, Material *material)
   m_baseProgram->setUniformVec4("materialDiffuseColor", diffuseColor);
 }
 
+void Renderer::updateProjectionMatrix()
+{
+  switch (m_projectionType)
+  {
+  case PROJECTION_TYPE_PERSPECTIVE:
+    m_projectionMatrix = glm::perspective(
+        70.0f,
+        (float)m_width / (float)m_height,
+        0.1f,
+        100.0f);
+    break;
+
+  case PROJECTION_TYPE_ORTHO:
+    m_projectionMatrix = glm::ortho(
+        0.0f,
+        static_cast<float>(m_width),
+        static_cast<float>(m_height),
+        0.0f,
+        0.0f,
+        100.0f);
+    break;
+  }
+}
+
 void Renderer::setViewport(unsigned int width, unsigned int height)
 {
   m_width = width;
   m_height = height;
-  m_projectionMatrix = glm::perspective(70.0f, (float)m_width / (float)m_height, 0.1f, 100.0f);
+  updateProjectionMatrix();
 
   glViewport(0, 0, m_width, m_height);
 }

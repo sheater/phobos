@@ -67,12 +67,20 @@ void GpuProgram::setUniformMatrix(const std::string &name, const glm::mat4 &matr
   glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(matrix));
 }
 
-void GpuProgram::setUniformVec3(const std::string &name, const glm::vec3 &vec) {
+void GpuProgram::setUniformVec2(const std::string &name, const glm::vec2 &vec)
+{
+  GLint location = glGetUniformLocation(m_id, name.c_str());
+  glUniform2fv(location, 1, glm::value_ptr(vec));
+}
+
+void GpuProgram::setUniformVec3(const std::string &name, const glm::vec3 &vec)
+{
   GLint location = glGetUniformLocation(m_id, name.c_str());
   glUniform3fv(location, 1, glm::value_ptr(vec));
 }
 
-void GpuProgram::setUniformVec4(const std::string &name, const glm::vec4 &vec) {
+void GpuProgram::setUniformVec4(const std::string &name, const glm::vec4 &vec)
+{
   GLint location = glGetUniformLocation(m_id, name.c_str());
   glUniform4fv(location, 1, glm::value_ptr(vec));
 }

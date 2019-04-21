@@ -11,7 +11,7 @@ class SceneGroup;
 class SceneNode
 {
 public:
-  SceneNode(Scene* scene);
+  SceneNode(Scene *scene);
   ~SceneNode();
 
   virtual void render();
@@ -22,6 +22,9 @@ public:
 
   void move(const glm::vec3 &vec);
   void rotate(float angle, const glm::vec3 &vec);
+
+  // void checkCollision(SceneNode *other);
+  virtual void onCollision(SceneNode *other) {}
 
   glm::mat4 localTransform;
 

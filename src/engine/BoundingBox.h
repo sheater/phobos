@@ -8,15 +8,15 @@
 class BoundingBox : public CollisionHull
 {
 public:
-  BoundingBox();
+  BoundingBox(const glm::vec3 &min = glm::vec3(-1.0f), const glm::vec3 &max = glm::vec3(1.0f));
 
   void render(Renderer *renderer);
-  bool isColliding(CollisionHull *hull);
+  bool isCollision(CollisionHull *hull);
 
   void maybeExpand(const glm::vec3 &position);
   void transform(const glm::mat4 &matrix);
 
-// private:
+  // private:
   glm::vec3 m_relativeMin;
   glm::vec3 m_relativeMax;
 

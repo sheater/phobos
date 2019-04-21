@@ -7,6 +7,8 @@
 #include "InputHandler.h"
 #include "ParticleSystem.h"
 #include "SceneNode.h"
+#include "UIManager.h"
+#include "UILabel.h"
 
 class Scene : public SceneNode
 {
@@ -15,6 +17,7 @@ public:
       Renderer *renderer,
       AssetsManager *assetsMgr,
       InputHandler *inputHandler);
+  ~Scene();
 
   void render();
   void update(float timeDelta);
@@ -39,9 +42,23 @@ public:
     return m_particleSystem;
   }
 
+  inline UIManager *getUIManager()
+  {
+    return m_uiMgr;
+  }
+
+  bool renderCollisionHulls = false;
+
+protected:
+  void checkCollisions();
+
 private:
   Renderer *m_renderer;
   AssetsManager *m_assetsMgr;
   InputHandler *m_inputHandler;
   ParticleSystem *m_particleSystem;
+  UIManager *m_uiMgr;
+
+  UILabel* m_fpsLabel;
+  float m_fpsUpdateCounter;
 };

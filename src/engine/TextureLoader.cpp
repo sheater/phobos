@@ -23,5 +23,4 @@ Asset *TextureLoader::loadAsset(const std::string &path)
   FreeImage_Unload(pImage);
 
   return texture;
-  // return nullptr;
 }

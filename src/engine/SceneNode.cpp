@@ -1,6 +1,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #include "SceneNode.h"
+#include "Scene.h"
 
 SceneNode::SceneNode(Scene *scene)
     : m_scene(scene),
@@ -46,6 +47,11 @@ void SceneNode::rotate(float angle, const glm::vec3 &vec)
 
 void SceneNode::render()
 {
+  Scene *scene = getScene();
+
+  if (m_collisionHull && scene->renderCollisionHulls)
+    m_collisionHull->render(scene->getRenderer());
+
   for (std::vector<SceneNode *>::iterator it = m_nodes.begin(); it != m_nodes.end();)
   {
     (*it)->render();
@@ -55,10 +61,36 @@ void SceneNode::render()
 
 void SceneNode::update(float timeDelta)
 {
+  int i, j;
   // NOTE: cannot use iterators due to iterators invalidation when array is reallocated
-  for (int i = 0; i < m_nodes.size(); i++)
+  for (i = 0; i < m_nodes.size(); i++)
+  {
     m_nodes[i]->update(timeDelta);
+
+  //   // m_nodes[i]->checkCollision();
+
+  //   for (j = 0; j < m_nodes.size(); j++)
+  //   {
+  //     if (i == j)
+  //       continue;
+
+  //     checkCollision(m_nodes[j]);
+  //     // isCollision(m_nodes[j])
+  //   }
+  }
 }
+
+// void SceneNode::checkCollision(SceneNode *other)
+// {
+//   if (m_collisionHull->isCollision(other->m_collisionHull))
+//     onCollision(other);
+
+//   for (
+//       std::vector<SceneNode *>::iterator it = m_nodes.begin();
+//       it != m_nodes.end();
+//       it++)
+//     it->checkCollision(other);
+// }
 
 glm::mat4 SceneNode::getAbsoluteTransform()
 {

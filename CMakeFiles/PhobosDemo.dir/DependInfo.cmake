@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/BoundingBox.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/BoundingBox.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/BoxNode.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/BoxNode.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/ColladaLoader.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/ColladaLoader.cpp.o"
+  "/Users/stepanskovajsa/fi/pv112/project/src/engine/Font.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/Font.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/Geometry.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/Geometry.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/GpuProgram.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/GpuProgram.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/InputHandler.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/InputHandler.cpp.o"
@@ -21,9 +22,14 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/SceneNode.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/SceneNode.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/Texture.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/Texture.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/TextureLoader.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/TextureLoader.cpp.o"
+  "/Users/stepanskovajsa/fi/pv112/project/src/engine/UIImage.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/UIImage.cpp.o"
+  "/Users/stepanskovajsa/fi/pv112/project/src/engine/UILabel.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/UILabel.cpp.o"
+  "/Users/stepanskovajsa/fi/pv112/project/src/engine/UIManager.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/UIManager.cpp.o"
+  "/Users/stepanskovajsa/fi/pv112/project/src/engine/UINode.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/UINode.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/VertexBuffer.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/VertexBuffer.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/engine/utils.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/engine/utils.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/game/Background.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/game/Background.cpp.o"
+  "/Users/stepanskovajsa/fi/pv112/project/src/game/Hud.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/game/Hud.cpp.o"
   "/Users/stepanskovajsa/fi/pv112/project/src/main.cpp" "/Users/stepanskovajsa/fi/pv112/project/CMakeFiles/PhobosDemo.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
