@@ -23,11 +23,6 @@ public:
     renderCollisionHulls = true;
 
     m_hud = new Hud(renderer->getWidth(), renderer->getHeight(), getUIManager());
-
-    // m_hud->setScore(100);
-    // m_hud->setLevel(1);
-    // m_hud->setLife(1.0f);
-    // m_hud->setHeat(1.0f);
   }
 
   ~Level()

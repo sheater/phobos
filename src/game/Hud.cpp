@@ -50,27 +50,3 @@ void Hud::update(float timeDelta)
       heat > 0.75f ? blinkPhase : 1.0f);
   m_heatLabel->text = "HEAT: " + std::to_string(int(heat * 100.0f)) + " %";
 }
-
-// void Hud::setScore(unsigned int score)
-// {
-//   // m_scoreLabel->text = "SCORE: " + std::to_string(score);
-// }
-
-// void Hud::setLife(float life)
-// {
-//   float mult = glm::clamp(life / 0.25f, 0.0f, 1.0f);
-//   m_lifeLabel->color = glm::vec4(1.0f, 1.0f * mult, 1.0f * mult, 1.0f);
-//   m_lifeLabel->text = "LIFE: " + std::to_string(int(life * 100.0f)) + " %";
-// }
-
-// void Hud::setHeat(float heat)
-// {
-//   float mult = 1.0f - glm::clamp((heat - 0.75f) / 0.25f, 0.0f, 1.0f);
-//   m_heatLabel->color = glm::vec4(1.0f, 1.0f * mult, 1.0f * mult, 1.0f);
-//   m_heatLabel->text = "HEAT: " + std::to_string(int(heat * 100.0f)) + " %";
-// }
-
-// void Hud::setLevel(unsigned int level)
-// {
-//   // m_levelLabel->text = "LEVEL: " + std::to_string(level);
-// }
