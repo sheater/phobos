@@ -9,14 +9,17 @@ class Hud
 public:
   Hud(unsigned int width, unsigned int height, UIManager *uiMgr);
 
-  void setScore(unsigned int score);
-  void setLife(float life);
-  void setHeat(float heat);
-  void setLevel(unsigned int level);
+  unsigned int level;
+  unsigned int score;
+  float life = 1.0f;
+  float heat = 1.0f;
+
+  void update(float timeDelta);
 
 private:
+  float m_blinkCounter = 0.0f;
+
   UIManager *m_uiMgr;
-  
 
   UIImage* m_lifeImage;
   UILabel* m_lifeLabel;

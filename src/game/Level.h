@@ -12,10 +12,10 @@ public:
   Level(Renderer *renderer, AssetsManager *assetsMgr, InputHandler *inputHandler)
       : Scene(renderer, assetsMgr, inputHandler)
   {
-    Player *player = new Player(this);
+    m_player = new Player(this);
     Background *background = new Background(this);
 
-    attachNode(player);
+    attachNode(m_player);
     attachNode(background);
 
     m_enemyGenerateTimer = 0.0f;
@@ -24,10 +24,10 @@ public:
 
     m_hud = new Hud(renderer->getWidth(), renderer->getHeight(), getUIManager());
 
-    m_hud->setScore(100);
-    m_hud->setLevel(1);
-    m_hud->setLife(1.0f);
-    m_hud->setHeat(1.0f);
+    // m_hud->setScore(100);
+    // m_hud->setLevel(1);
+    // m_hud->setLife(1.0f);
+    // m_hud->setHeat(1.0f);
   }
 
   ~Level()
@@ -46,6 +46,9 @@ public:
     }
 
     Scene::update(timeDelta);
+
+    m_hud->heat = m_player->getWeaponHeat();
+    m_hud->update(timeDelta);
   }
 
   inline Hud *getHud()
@@ -55,5 +58,6 @@ public:
 
 private:
   float m_enemyGenerateTimer;
+  Player *m_player;
   Hud *m_hud;
 };

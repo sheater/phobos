@@ -11,6 +11,8 @@
 #define PLAYER_TILT_SPEED 1.0f
 #define PLAYER_TILT_MAX_ANGLE -45.0f
 #define PLAYER_SHOOT_RATE 0.25f
+#define PLAYER_WEAPON_HEATING_RATE 0.1f
+#define PLAYER_WEAPON_COOLDOWN_RATE 0.2f
 
 enum PlayerKeyboardActions
 {
@@ -27,6 +29,7 @@ private:
   float m_tiltAngle;
   float m_sparkTimer;
   float m_shootTimer;
+  float m_heat;
   Texture *m_sparkTexture;
 
 public:
@@ -35,6 +38,7 @@ public:
   {
     m_sparkTimer = 0.0f;
     m_shootTimer = 0.0f;
+    m_heat = 0.0f;
 
     AssetsManager *assetsMgr = getScene()->getAssetsManager();
     m_sparkTexture = static_cast<Texture *>(assetsMgr->getAsset("assets/textures/spark.png"));
@@ -51,6 +55,8 @@ public:
     return glm::scale(transform, glm::vec3(0.0012f));
     // return glm::scale(transform, glm::vec3(0.01f));
   }
+
+  inline float getWeaponHeat() { return m_heat; }
 
   void update(float timeDelta)
   {
@@ -70,6 +76,10 @@ public:
       moveVec.x = PLAYER_SPEED * timeDelta;
 
     m_shootTimer += timeDelta;
+    m_heat -= PLAYER_WEAPON_COOLDOWN_RATE * timeDelta;
+    if (m_heat < 0.0f)
+      m_heat = 0.0f;
+
     if (input->isActionKeyPressed(PLAYER_ACTION_FIRE))
       shoot();
 
@@ -116,8 +126,14 @@ public:
 
   void shoot()
   {
-    if (m_shootTimer < PLAYER_SHOOT_RATE)
+    if (m_shootTimer < PLAYER_SHOOT_RATE || m_heat >= 1.0f)
       return;
+
+    m_heat += PLAYER_WEAPON_HEATING_RATE;
+    if (m_heat >= 1.0f) {
+      m_heat = 1.0f;
+      return;
+    }
 
     m_shootTimer = 0;
 
