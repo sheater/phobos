@@ -52,11 +52,8 @@ void SceneNode::render()
   if (m_collisionHull && scene->renderCollisionHulls)
     m_collisionHull->render(scene->getRenderer());
 
-  for (std::vector<SceneNode *>::iterator it = m_nodes.begin(); it != m_nodes.end();)
-  {
+  for (std::vector<SceneNode *>::iterator it = m_nodes.begin(); it != m_nodes.end(); it++)
     (*it)->render();
-    it++;
-  }
 }
 
 void SceneNode::update(float timeDelta)

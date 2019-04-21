@@ -316,7 +316,8 @@ Asset *ColladaLoader::loadAsset(const std::string &path)
 
     mesh->geometry = geometry;
 
-    model->addMesh(mesh);
+    // model->addMesh(mesh);
+    model->meshes.push_back(mesh);
   }
 
   // TODO: library_images

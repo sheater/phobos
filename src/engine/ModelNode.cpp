@@ -2,6 +2,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #include "Scene.h"
+#include "MeshNode.h"
 #include "ModelNode.h"
 #include "BoundingBox.h"
 #include "ColladaLoader.h"
@@ -16,9 +17,19 @@ ModelNode::ModelNode(
   ColladaLoader *loader = static_cast<ColladaLoader *>(assetsMgr->getLoader(path));
 
   loader->setPreprocessTransformMatrix(preprocessTransformMatrix);
-  m_model = static_cast<Model *>(assetsMgr->getAsset(path));
+  Model *model = static_cast<Model *>(assetsMgr->getAsset(path));
 
-  createBoundingBox();
+  // FIXME: another collision hull types
+  m_collisionHull = new BoundingBox();
+
+  for (
+      std::vector<Mesh *>::iterator it = model->meshes.begin();
+      it != model->meshes.end();
+      it++)
+  {
+    MeshNode *node = new MeshNode(*it, scene);
+    attachNode(node);
+  }
 }
 
 ModelNode::~ModelNode()
@@ -27,31 +38,20 @@ ModelNode::~ModelNode()
     delete m_collisionHull;
 }
 
-void ModelNode::render()
+void ModelNode::update(float timeDelta)
 {
-  if (!m_model)
-    return;
-
-  glm::mat4 finalTransform = getAbsoluteTransform();
-
-  SceneNode::render();
-  m_model->render(finalTransform);
-}
-
-void ModelNode::createBoundingBox()
-{
-  BoundingBox *bbox = new BoundingBox();
+  SceneNode::update(timeDelta);
+  m_collisionHull->reset();
 
   for (
-      std::vector<Mesh *>::iterator it = m_model->m_meshes.begin();
-      it != m_model->m_meshes.end();
+      std::vector<SceneNode *>::iterator it = m_nodes.begin();
+      it != m_nodes.end();
       it++)
   {
-    BoundingBox *other = (*it)->createBoundingBox();
+    CollisionHull* hull = (*it)->getCollisionHull();
+    if (!hull)
+      continue;
 
-    bbox->maybeExpand(other->m_absoluteMin);
-    bbox->maybeExpand(other->m_absoluteMax);
+    m_collisionHull->expandByCollisionHull(hull);
   }
-
-  m_collisionHull = bbox;
 }

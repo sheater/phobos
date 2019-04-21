@@ -7,9 +7,5 @@
 class Model : public Asset
 {
 public:
-  void render(const glm::mat4 &transformMatrix);
-  void addMesh(Mesh* mesh);
-
-// private:
-  std::vector<Mesh *> m_meshes;
+  std::vector<Mesh *> meshes;
 };

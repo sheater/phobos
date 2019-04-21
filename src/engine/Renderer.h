@@ -23,6 +23,7 @@ public:
   void setViewport(unsigned int width, unsigned int height);
 
   VertexBuffer *createVertexBuffer(Geometry *geometry);
+  void removeVertexBuffer(VertexBuffer* vertexBuffer);
   Texture *createTexture(unsigned int width, unsigned int height, void *pixels);
 
   void clearBuffers();

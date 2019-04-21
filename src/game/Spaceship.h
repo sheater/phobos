@@ -17,7 +17,7 @@ public:
     m_direction = 0.0f;
     m_tiltAngle = 0.0f;
 
-    m_collisionHull = new BoundingBox(glm::vec3(-0.3), glm::vec3(0.3));
+    // m_collisionHull = new BoundingBox(glm::vec3(-0.3), glm::vec3(0.3));
   }
 
   void update(float timeDelta)
@@ -32,7 +32,9 @@ public:
         glm::radians(m_tiltAngle),
         glm::vec3(0.0f, 1.0f, 0.0f));
 
-    m_collisionHull->transform(getAbsoluteTransform());
+    ModelNode::update(timeDelta);
+
+    // m_collisionHull->transform(getAbsoluteTransform());
   }
 
 protected:

@@ -27,6 +27,22 @@ public:
         polygonMode(POLYGON_MODE_FILL),
         lightingModel(LIGHTING_MODEL_BASIC) {}
 
+  Material *clone()
+  {
+    Material *c = new Material();
+
+    c->ambientColor = ambientColor;
+    c->diffuseColor = diffuseColor;
+    c->specularColor = specularColor;
+
+    c->polygonMode = polygonMode;
+    c->lightingModel = lightingModel;
+
+    c->texture = texture;
+
+    return c;
+  }
+
   glm::vec4 ambientColor;
   glm::vec4 diffuseColor;
   glm::vec4 specularColor;

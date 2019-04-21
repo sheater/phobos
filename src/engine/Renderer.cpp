@@ -39,6 +39,20 @@ VertexBuffer *Renderer::createVertexBuffer(Geometry *geometry)
   return vb;
 }
 
+void Renderer::removeVertexBuffer(VertexBuffer *vertexBuffer)
+{
+  std::vector<VertexBuffer *>::iterator it = std::find(
+      m_vertexBuffers.begin(),
+      m_vertexBuffers.end(),
+      vertexBuffer);
+
+  if (it != m_vertexBuffers.end())
+  {
+    delete *it;
+    m_vertexBuffers.erase(it);
+  }
+}
+
 typedef struct
 {
   glm::vec3 position;

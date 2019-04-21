@@ -25,6 +25,7 @@ public:
 
   // void checkCollision(SceneNode *other);
   virtual void onCollision(SceneNode *other) {}
+  inline CollisionHull *getCollisionHull() { return m_collisionHull; }
 
   glm::mat4 localTransform;
 

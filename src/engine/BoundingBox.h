@@ -13,8 +13,11 @@ public:
   void render(Renderer *renderer);
   bool isCollision(CollisionHull *hull);
 
-  void maybeExpand(const glm::vec3 &position);
+  void expandByGeometry(Geometry *geometry);
+  void expandByCollisionHull(CollisionHull *hull);
+  void expandByPoint(const glm::vec3 &position);
   void transform(const glm::mat4 &matrix);
+  void reset();
 
   // private:
   glm::vec3 m_relativeMin;

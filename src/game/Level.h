@@ -20,7 +20,7 @@ public:
 
     m_enemyGenerateTimer = 0.0f;
 
-    renderCollisionHulls = true;
+    // renderCollisionHulls = true;
 
     m_hud = new Hud(renderer->getWidth(), renderer->getHeight(), getUIManager());
   }
@@ -32,13 +32,13 @@ public:
 
   void update(float timeDelta)
   {
-    m_enemyGenerateTimer += timeDelta;
-    if (m_enemyGenerateTimer > 2.0f)
-    {
-      m_enemyGenerateTimer = 0.0f;
-      Enemy *enemy = new Enemy(this);
-      attachNode(enemy);
-    }
+    // m_enemyGenerateTimer += timeDelta;
+    // if (m_enemyGenerateTimer > 2.0f)
+    // {
+    //   m_enemyGenerateTimer = 0.0f;
+    //   Enemy *enemy = new Enemy(this);
+    //   attachNode(enemy);
+    // }
 
     Scene::update(timeDelta);
 

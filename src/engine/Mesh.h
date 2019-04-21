@@ -25,27 +25,6 @@ public:
     }
   }
 
-  void render(const glm::mat4 &transformMatrix)
-  {
-    const glm::mat4 finalModelMatrix = transformMatrix * transform;
-    vertexBuffer->render(finalModelMatrix, material);
-  }
-
-  BoundingBox *createBoundingBox()
-  {
-    BoundingBox *bbox = new BoundingBox();
-
-    for (
-        std::vector<glm::vec3>::iterator it = geometry->positions.begin();
-        it != geometry->positions.end();
-        it++)
-    {
-      bbox->maybeExpand(*it);
-    }
-
-    return bbox;
-  }
-
   Geometry *geometry; // for collisions
   VertexBuffer *vertexBuffer;
   Material *material;
