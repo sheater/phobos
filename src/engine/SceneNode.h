@@ -23,14 +23,14 @@ public:
   void move(const glm::vec3 &vec);
   void rotate(float angle, const glm::vec3 &vec);
 
-  // void checkCollision(SceneNode *other);
-  virtual void onCollision(SceneNode *other) {}
+  virtual void onCollision(SceneNode *collider) {}
+  void grabCollisionHulls(std::vector<CollisionHull *> &hulls);
+  void grabChildrenCollisionHulls(std::vector<CollisionHull *> &hulls);
   inline CollisionHull *getCollisionHull() { return m_collisionHull; }
 
   glm::mat4 localTransform;
 
 protected:
-  friend class SceneNode;
   friend class Scene;
 
   glm::mat4 getAbsoluteTransform();

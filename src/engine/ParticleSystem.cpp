@@ -143,7 +143,7 @@ void ParticleSystem::releaseParticle(Particle *particle)
   std::vector<Particle *>::iterator it = std::find(m_particles.begin(), m_particles.end(), particle);
   if (it != m_particles.end())
   {
-    delete *it;
+    delete particle;
     m_particles.erase(it);
   }
 }

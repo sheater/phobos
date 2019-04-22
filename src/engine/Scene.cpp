@@ -42,10 +42,11 @@ void Scene::update(float timeDelta)
   SceneNode::update(timeDelta);
   m_particleSystem->update(timeDelta);
 
-  // checkCollisions();
+  checkCollisions();
 
   m_fpsUpdateCounter += timeDelta;
-  if (m_fpsUpdateCounter > FPS_UPDATE_THRESHOLD) {
+  if (m_fpsUpdateCounter > FPS_UPDATE_THRESHOLD)
+  {
     m_fpsUpdateCounter = 0.0f;
     m_fpsLabel->text = "FPS: " + std::to_string(int(1.0f / timeDelta));
   }
@@ -53,12 +54,32 @@ void Scene::update(float timeDelta)
 
 void Scene::checkCollisions()
 {
-  // TODO: collision system
-  // for (
-  //     std::vector<SceneNode *>::iterator it = m_nodes.begin();
-  //     it != m_nodes.end();
-  //     it++)
-  // {
+  int ai, bi;
+  for (ai = 0; ai < m_nodes.size(); ai++)
+  {
+    SceneNode *a = m_nodes[ai];
+    CollisionHull *ahull = a->getCollisionHull();
 
-  // }
+    if (!ahull)
+      continue;
+
+    for (bi = 0; bi < m_nodes.size(); bi++)
+    {
+      SceneNode *b = m_nodes[bi];
+      // don't check collision with itself
+      if (a == b)
+        continue;
+
+      CollisionHull *bhull = b->getCollisionHull();
+
+      if (!bhull)
+        continue;
+
+      if (ahull->isCollision(bhull))
+      {
+        // FIXME: more precise collision
+        a->onCollision(b);
+      }
+    }
+  }
 }

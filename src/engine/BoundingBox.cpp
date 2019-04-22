@@ -37,20 +37,19 @@ bool BoundingBox::isCollision(CollisionHull *hull)
 {
   if (BoundingBox *box = dynamic_cast<BoundingBox *>(hull))
   {
-    const glm::vec3 &min1 = m_absoluteMin;
-    const glm::vec3 &max1 = m_absoluteMax;
-    const glm::vec3 &min2 = box->m_absoluteMin;
-    const glm::vec3 &max2 = box->m_absoluteMax;
+    const glm::vec3 &ourMin = m_absoluteMin;
+    const glm::vec3 &ourMax = m_absoluteMax;
+    const glm::vec3 &theirMin = box->m_absoluteMin;
+    const glm::vec3 &theirMax = box->m_absoluteMax;
 
-    return !(
-        (min1.x < max2.x || max1.x > min2.x) &&
-        (min1.y < max2.y || max1.y > min2.y) &&
-        (min1.z < max2.z || max1.z > min2.z));
+    bool noIntersection = (theirMax.x < ourMin.x || theirMin.x > ourMax.x ||
+                           theirMax.y < ourMin.y || theirMin.y > ourMax.y ||
+                           theirMax.z < ourMin.z || theirMin.z > ourMax.z);
+
+    return !noIntersection;
   }
   else
-  {
     throw std::runtime_error("Not implemented");
-  }
 }
 
 void BoundingBox::expandByPoint(const glm::vec3 &position)

@@ -9,7 +9,6 @@ class Hud
 public:
   Hud(unsigned int width, unsigned int height, UIManager *uiMgr);
 
-  unsigned int level;
   unsigned int score;
   float life = 1.0f;
   float heat = 1.0f;
@@ -27,5 +26,4 @@ private:
   UILabel* m_heatLabel;
 
   UILabel* m_scoreLabel;
-  UILabel* m_levelLabel;
 };

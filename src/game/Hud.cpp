@@ -23,13 +23,11 @@ Hud::Hud(unsigned int width, unsigned int height, UIManager *uiMgr)
       ->attachNode(m_heatImage)
       ->attachNode(m_heatLabel);
 
-  // m_scoreLabel = new UILabel(uiMgr, "", glm::vec2(16.0f, startY));
-  // m_scoreLabel->scale = 2.0f;
-  // uiMgr->attachNode(m_scoreLabel);
+  y += 32.0f;
 
-  // m_levelLabel = new UILabel(uiMgr, "", glm::vec2(16.0f, startY + 3 * labelHeight));
-  // m_levelLabel->scale = 2.0f;
-  // uiMgr->attachNode(m_levelLabel);
+  m_scoreLabel = new UILabel(uiMgr, "", glm::vec2(16.0f, y));
+  m_scoreLabel->scale = 2.0f;
+  uiMgr->attachNode(m_scoreLabel);
 }
 
 void Hud::update(float timeDelta)
@@ -49,4 +47,6 @@ void Hud::update(float timeDelta)
       1.0f, 1.0f * heatmult, 1.0f * heatmult,
       heat > 0.75f ? blinkPhase : 1.0f);
   m_heatLabel->text = "HEAT: " + std::to_string(int(heat * 100.0f)) + " %";
+
+  m_scoreLabel->text = "SCORE: " + std::to_string(score);
 }

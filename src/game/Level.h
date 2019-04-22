@@ -32,17 +32,18 @@ public:
 
   void update(float timeDelta)
   {
-    // m_enemyGenerateTimer += timeDelta;
-    // if (m_enemyGenerateTimer > 2.0f)
-    // {
-    //   m_enemyGenerateTimer = 0.0f;
-    //   Enemy *enemy = new Enemy(this);
-    //   attachNode(enemy);
-    // }
+    m_enemyGenerateTimer += timeDelta;
+    if (m_enemyGenerateTimer > 2.0f)
+    {
+      m_enemyGenerateTimer = 0.0f;
+      Enemy *enemy = new Enemy(this);
+      attachNode(enemy);
+    }
 
     Scene::update(timeDelta);
 
     m_hud->heat = m_player->getWeaponHeat();
+    m_hud->score = m_player->getScore();
     m_hud->update(timeDelta);
   }
 

@@ -30,7 +30,7 @@ void SceneNode::releaseNode(SceneNode *node)
   std::vector<SceneNode *>::iterator it = std::find(m_nodes.begin(), m_nodes.end(), node);
   if (it != m_nodes.end())
   {
-    delete *it;
+    delete node;
     m_nodes.erase(it);
   }
 }
@@ -61,33 +61,22 @@ void SceneNode::update(float timeDelta)
   int i, j;
   // NOTE: cannot use iterators due to iterators invalidation when array is reallocated
   for (i = 0; i < m_nodes.size(); i++)
-  {
     m_nodes[i]->update(timeDelta);
-
-  //   // m_nodes[i]->checkCollision();
-
-  //   for (j = 0; j < m_nodes.size(); j++)
-  //   {
-  //     if (i == j)
-  //       continue;
-
-  //     checkCollision(m_nodes[j]);
-  //     // isCollision(m_nodes[j])
-  //   }
-  }
 }
 
-// void SceneNode::checkCollision(SceneNode *other)
-// {
-//   if (m_collisionHull->isCollision(other->m_collisionHull))
-//     onCollision(other);
+void SceneNode::grabCollisionHulls(std::vector<CollisionHull *> &hulls)
+{
+  if (m_collisionHull)
+    hulls.push_back(m_collisionHull);
 
-//   for (
-//       std::vector<SceneNode *>::iterator it = m_nodes.begin();
-//       it != m_nodes.end();
-//       it++)
-//     it->checkCollision(other);
-// }
+  grabChildrenCollisionHulls(hulls);
+}
+
+void SceneNode::grabChildrenCollisionHulls(std::vector<CollisionHull *> &hulls)
+{
+  for (std::vector<SceneNode *>::iterator it = m_nodes.begin(); it != m_nodes.end(); it++)
+    (*it)->grabCollisionHulls(hulls);
+}
 
 glm::mat4 SceneNode::getAbsoluteTransform()
 {

@@ -6,8 +6,6 @@
 #include "Application.h"
 #include "ColladaLoader.h"
 #include "TextureLoader.h"
-#include "ModelNode.h"
-#include "BoxNode.h"
 
 void on_resize(GLFWwindow *window, int width, int height);
 void on_mouse_move(GLFWwindow *window, double x, double y);
