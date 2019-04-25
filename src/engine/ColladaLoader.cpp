@@ -277,7 +277,6 @@ Asset *ColladaLoader::loadAsset(const std::string &path)
       if (geometryIt->id == it->geometryId)
       {
         geometry = geometryIt->geometry;
-        // geometry->transformVertices(m_preprocessTransformMatrix);
         break;
       }
     }
@@ -288,8 +287,7 @@ Asset *ColladaLoader::loadAsset(const std::string &path)
     }
 
     mesh->vertexBuffer = m_assetsMgr->getRenderer()->createVertexBuffer(geometry);
-    mesh->transform = it->transformMatrix; //* m_preprocessTransformMatrix;
-    mesh->transform = it->transformMatrix * m_preprocessTransformMatrix;
+    mesh->transform = m_preprocessTransformMatrix * it->transformMatrix;
 
     ColladaMaterial *materialPtr = nullptr;
     for (

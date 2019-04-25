@@ -17,7 +17,7 @@ public:
   void onMousePressed(GLFWwindow *window, int button, int action, int mods);
   void onKeyPressed(GLFWwindow *window, int key, int scancode, int action, int mods);
 
-  void run(Scene* scene);
+  int run(Scene* scene);
 
   inline Renderer *getRenderer() { return m_renderer; }
   inline AssetsManager *getAssetsManager() { return m_assetsMgr; }

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdlib.h>
+#include <time.h>
 
 #include "Scene.h"
 
@@ -13,12 +15,16 @@ Scene::Scene(
       m_assetsMgr(assetsMgr),
       m_inputHandler(inputHandler)
 {
+  srand(time(NULL));
+
   m_scene = this;
   m_uiMgr = new UIManager(m_renderer, m_assetsMgr);
   m_particleSystem = new ParticleSystem(m_renderer);
 
   m_fpsLabel = new UILabel(m_uiMgr, "", glm::vec2(16.0f, renderer->getHeight() - 24.0f));
   m_uiMgr->attachNode(m_fpsLabel);
+  m_state = SCENE_STATE_RUNNING;
+  m_exitCode = SCENE_NO_EXIT;
 }
 
 Scene::~Scene()
@@ -35,6 +41,13 @@ void Scene::render()
 
   m_renderer->setProjectionType(PROJECTION_TYPE_ORTHO);
   m_uiMgr->render();
+}
+
+void Scene::exitScene(int code)
+{
+  std::cout << "Scene::exitScene" << std::endl;
+  m_state = SCENE_STATE_EXIT;
+  m_exitCode = code;
 }
 
 void Scene::update(float timeDelta)

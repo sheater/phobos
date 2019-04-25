@@ -1,5 +1,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <GL/glew.h>
+#include <iostream>
 
 #include "Renderer.h"
 
@@ -10,18 +11,22 @@ Renderer::Renderer(unsigned int width, unsigned int height)
 
   setViewport(width, height);
 
-  GpuProgramFactory *programFactory = new GpuProgramFactory();
-  programFactory->attachShader(Shader::createFromFile("shaders/main.vert", GL_VERTEX_SHADER));
-  programFactory->attachShader(Shader::createFromFile("shaders/main.frag", GL_FRAGMENT_SHADER));
-  m_baseProgram = programFactory->createProgram();
-  delete programFactory;
+  loadGpuProgram(GPU_PROGRAM_NO_SHADING, "shaders/noShading");
+  loadGpuProgram(GPU_PROGRAM_FLAT_SHADING, "shaders/flatShading");
+  loadGpuProgram(GPU_PROGRAM_PHONG_SHADING, "shaders/phongShading");
+  loadGpuProgram(GPU_PROGRAM_PARTICLES, "shaders/particles");
+  loadGpuProgram(GPU_PROGRAM_UI, "shaders/ui");
 
   m_viewMatrix = glm::lookAt(glm::vec3(0, 0, 0), glm::vec3(0, 0, -1), glm::vec3(0, 1, 0));
+  m_currentGpuProgram = nullptr;
+  // FIXME: default light
+  m_currentLight = new Light();
 }
 
 Renderer::~Renderer()
 {
-  delete m_baseProgram;
+  if (m_currentLight)
+    delete m_currentLight;
 
   for (
       std::vector<VertexBuffer *>::iterator it = m_vertexBuffers.begin();
@@ -29,6 +34,14 @@ Renderer::~Renderer()
       it++)
   {
     delete *it;
+  }
+
+  for (
+      std::map<GpuProgramType, GpuProgram *>::iterator it = m_gpuPrograms.begin();
+      it != m_gpuPrograms.end();
+      it++)
+  {
+    delete it->second;
   }
 }
 
@@ -53,62 +66,99 @@ void Renderer::removeVertexBuffer(VertexBuffer *vertexBuffer)
   }
 }
 
-typedef struct
+GpuProgram *Renderer::bindGpuProgram(GpuProgramType type)
 {
-  glm::vec3 position;
-  glm::vec4 color;
-} Light;
+  std::map<GpuProgramType, GpuProgram *>::iterator it = m_gpuPrograms.find(type);
+  if (it == m_gpuPrograms.end())
+    throw std::runtime_error("Unable to find GPU program");
 
-void Renderer::useBaseProgram(const glm::mat4 &modelMatrix, Material *material)
-{
-  m_baseProgram->use();
+  m_currentGpuProgram = it->second;
 
-  const glm::mat4 modelInvTransMatrix = glm::inverse(glm::transpose(modelMatrix));
+  m_currentGpuProgram->use();
 
-  m_baseProgram->setUniformMatrix("projectionMat", m_projectionMatrix);
-  m_baseProgram->setUniformMatrix("viewMat", m_viewMatrix);
-  m_baseProgram->setUniformMatrix("modelMat", modelMatrix);
-  m_baseProgram->setUniformMatrix("modelInvTransMat", modelInvTransMatrix);
+  m_currentGpuProgram->setUniformMatrix("projectionMat", m_projectionMatrix);
+  m_currentGpuProgram->setUniformMatrix("viewMat", m_viewMatrix);
 
-  Light light;
-
-  light.position = glm::vec3(0.0f, 0.0f, 2.5f);
-  light.color = glm::vec4(1.0f, 0.9f, 0.9f, 1.0f);
-
-  m_baseProgram->setUniformVec3("lightPos", light.position);
-  m_baseProgram->setUniformVec4("lightColor", light.color);
-
-  glm::vec4 diffuseColor;
-  GLenum polygonMode;
-  if (material)
+  switch (type)
   {
-    diffuseColor = material->diffuseColor;
+  case GPU_PROGRAM_NO_SHADING:
+    break;
 
-    switch (material->polygonMode)
-    {
-    case POLYGON_MODE_POINTS:
-      polygonMode = GL_POINT;
-      break;
+  case GPU_PROGRAM_FLAT_SHADING:
+  case GPU_PROGRAM_PHONG_SHADING:
+    m_currentGpuProgram->setUniformVec3("lightPos", m_currentLight->position);
+    m_currentGpuProgram->setUniformVec4("lightColor", m_currentLight->color);
 
-    case POLYGON_MODE_LINES:
-      polygonMode = GL_LINE;
-      break;
+    break;
 
-    case POLYGON_MODE_FILL:
-      polygonMode = GL_FILL;
-      break;
-    }
-  }
-  else
-  {
-    diffuseColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-    polygonMode = GL_FILL;
+  case GPU_PROGRAM_PARTICLES:
+    break;
+
+  case GPU_PROGRAM_UI:
+    break;
   }
 
-  glPolygonMode(GL_FRONT_AND_BACK, polygonMode);
-
-  m_baseProgram->setUniformVec4("materialDiffuseColor", diffuseColor);
+  return m_currentGpuProgram;
 }
+
+void Renderer::loadGpuProgram(GpuProgramType type, const std::string &path)
+{
+  GpuProgramFactory *programFactory = new GpuProgramFactory();
+
+  Shader *vertexShader = Shader::createFromFile(path + "/vertex.glsl", GL_VERTEX_SHADER);
+  Shader *fragmentShader = Shader::createFromFile(path + "/fragment.glsl", GL_FRAGMENT_SHADER);
+
+                               programFactory->attachShader(vertexShader);
+  programFactory->attachShader(fragmentShader);
+
+  GpuProgram *program = programFactory->createProgram();
+  m_gpuPrograms.insert(std::pair<GpuProgramType, GpuProgram *>(type, program));
+
+  delete programFactory;
+}
+
+// void Renderer::useBaseProgram(const glm::mat4 &modelMatrix, Material *material)
+// {
+//   m_baseProgram->use();
+
+//   const glm::mat4 modelInvTransMatrix = glm::inverse(glm::transpose(modelMatrix));
+
+//   m_baseProgram->setUniformMatrix("projectionMat", m_projectionMatrix);
+//   m_baseProgram->setUniformMatrix("viewMat", m_viewMatrix);
+//   m_baseProgram->setUniformMatrix("modelMat", modelMatrix);
+//   m_baseProgram->setUniformMatrix("modelInvTransMat", modelInvTransMatrix);
+
+//   glm::vec4 diffuseColor;
+//   GLenum polygonMode;
+//   if (material)
+//   {
+//     diffuseColor = material->diffuseColor;
+
+//     switch (material->polygonMode)
+//     {
+//     case POLYGON_MODE_POINTS:
+//       polygonMode = GL_POINT;
+//       break;
+
+//     case POLYGON_MODE_LINES:
+//       polygonMode = GL_LINE;
+//       break;
+
+//     case POLYGON_MODE_FILL:
+//       polygonMode = GL_FILL;
+//       break;
+//     }
+//   }
+//   else
+//   {
+//     diffuseColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+//     polygonMode = GL_FILL;
+//   }
+
+//   glPolygonMode(GL_FRONT_AND_BACK, polygonMode);
+
+//   m_baseProgram->setUniformVec4("materialDiffuseColor", diffuseColor);
+// }
 
 void Renderer::updateProjectionMatrix()
 {
@@ -153,6 +203,17 @@ void Renderer::flush()
   glFlush();
 
   checkError();
+}
+
+void Renderer::setModelViewMatrix(const glm::mat4 &matrix)
+{
+  if (m_currentGpuProgram)
+  {
+    const glm::mat4 invTransMatrix = glm::inverse(glm::transpose(matrix));
+
+    m_currentGpuProgram->setUniformMatrix("modelMat", matrix);
+    m_currentGpuProgram->setUniformMatrix("modelInvTransMat", invTransMatrix);
+  }
 }
 
 void Renderer::checkError()

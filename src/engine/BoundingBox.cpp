@@ -24,9 +24,13 @@ void BoundingBox::render(Renderer *renderer)
       glm::mat4(1.0f),
       glm::vec3(m_absoluteMin + size * 0.5f));
   Material *material = new Material();
+  material->lightingModel = LIGHTING_MODEL_NONE;
   material->polygonMode = POLYGON_MODE_LINES;
 
-  vertexBuffer->render(transform, material);
+  // vertexBuffer->render(transform, material);
+  renderer->setModelViewMatrix(transform);
+  material->bind(renderer);
+  vertexBuffer->render();
   renderer->removeVertexBuffer(vertexBuffer);
 
   delete geometry;

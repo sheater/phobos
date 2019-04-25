@@ -2,6 +2,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <stdlib.h>
 #include <iostream>
+#include <time.h>
 
 #include "Application.h"
 #include "ColladaLoader.h"
@@ -75,11 +76,13 @@ Application::~Application()
   glfwTerminate();
 }
 
-void Application::run(Scene *scene)
+int Application::run(Scene *scene)
 {
   double currentTime = 0;
   double prevTime = 0;
   double timeDelta = 0;
+
+  int exitCode;
 
   while (!glfwWindowShouldClose(m_window))
   {
@@ -88,6 +91,8 @@ void Application::run(Scene *scene)
 
     m_inputHandler->dispatch(m_window);
     scene->update(timeDelta);
+    if (scene->m_state == SCENE_STATE_EXIT)
+      return scene->m_exitCode;
 
     m_renderer->clearBuffers();
     scene->render();

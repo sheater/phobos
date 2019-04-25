@@ -2,15 +2,26 @@
 
 #include <OpenGL/gl.h>
 #include <glm/glm.hpp>
+#include <map>
 
 #include "GpuProgram.h"
 #include "VertexBuffer.h"
 #include "Texture.h"
+#include "Light.h"
 
 enum ProjectionType
 {
   PROJECTION_TYPE_PERSPECTIVE = 0,
   PROJECTION_TYPE_ORTHO
+};
+
+enum GpuProgramType
+{
+  GPU_PROGRAM_NO_SHADING = 0,
+  GPU_PROGRAM_FLAT_SHADING,
+  GPU_PROGRAM_PHONG_SHADING,
+  GPU_PROGRAM_PARTICLES,
+  GPU_PROGRAM_UI
 };
 
 class Renderer
@@ -23,7 +34,7 @@ public:
   void setViewport(unsigned int width, unsigned int height);
 
   VertexBuffer *createVertexBuffer(Geometry *geometry);
-  void removeVertexBuffer(VertexBuffer* vertexBuffer);
+  void removeVertexBuffer(VertexBuffer *vertexBuffer);
   Texture *createTexture(unsigned int width, unsigned int height, void *pixels);
 
   void clearBuffers();
@@ -33,6 +44,9 @@ public:
   inline unsigned int getHeight() { return m_height; }
   inline glm::mat4 getProjectionMatrix() { return m_projectionMatrix; }
   inline glm::mat4 getViewMatrix() { return m_viewMatrix; }
+  void setModelViewMatrix(const glm::mat4 &matrix);
+
+  GpuProgram *bindGpuProgram(GpuProgramType type);
 
   inline void setProjectionType(ProjectionType type)
   {
@@ -43,6 +57,7 @@ public:
 private:
   void checkError();
   void updateProjectionMatrix();
+  void loadGpuProgram(GpuProgramType type, const std::string &path);
 
   unsigned int m_width;
   unsigned int m_height;
@@ -51,6 +66,7 @@ private:
   glm::mat4x4 m_viewMatrix;
 
   std::vector<VertexBuffer *> m_vertexBuffers;
-
-  GpuProgram *m_baseProgram;
+  std::map<GpuProgramType, GpuProgram *> m_gpuPrograms;
+  GpuProgram *m_currentGpuProgram;
+  Light *m_currentLight;
 };

@@ -12,7 +12,7 @@ class SceneNode
 {
 public:
   SceneNode(Scene *scene);
-  ~SceneNode();
+  virtual ~SceneNode();
 
   virtual void render();
   virtual void update(float timeDelta);

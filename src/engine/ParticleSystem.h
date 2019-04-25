@@ -19,7 +19,6 @@ public:
   void releaseParticle(Particle* particle);
 
 private:
-  void loadGpuProgram();
   void createArrayObject();
 
   GLuint m_vao;

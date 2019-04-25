@@ -1,4 +1,5 @@
 #include <glm/gtc/matrix_transform.hpp>
+#include <iostream>
 
 #include "SceneNode.h"
 #include "Scene.h"

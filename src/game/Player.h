@@ -14,15 +14,6 @@
 #define PLAYER_WEAPON_HEATING_RATE 0.1f
 #define PLAYER_WEAPON_COOLDOWN_RATE 0.2f
 
-enum PlayerKeyboardActions
-{
-  PLAYER_ACTION_MOVE_UP = 0,
-  PLAYER_ACTION_MOVE_DOWN,
-  PLAYER_ACTION_MOVE_LEFT,
-  PLAYER_ACTION_MOVE_RIGHT,
-  PLAYER_ACTION_FIRE,
-};
-
 class Player : public Spaceship
 {
 private:

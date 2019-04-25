@@ -1,11 +1,12 @@
 #include "MeshNode.h"
 #include "BoundingBox.h"
+#include "Scene.h"
 
 MeshNode::MeshNode(Mesh *mesh, Scene *scene)
-    : m_originalMesh(mesh), m_material(nullptr), SceneNode(scene)
+    : m_originalMesh(mesh), material(nullptr), SceneNode(scene)
 {
   if (m_originalMesh->material)
-    m_material = m_originalMesh->material->clone();
+    material = m_originalMesh->material->clone();
 
   localTransform = m_originalMesh->transform;
 
@@ -16,7 +17,10 @@ MeshNode::MeshNode(Mesh *mesh, Scene *scene)
 
 void MeshNode::render()
 {
-  m_originalMesh->vertexBuffer->render(getAbsoluteTransform(), m_material);
+  Renderer* renderer = getScene()->getRenderer();
+  material->bind(renderer);
+  renderer->setModelViewMatrix(getAbsoluteTransform());
+  m_originalMesh->vertexBuffer->render();
 
   SceneNode::render();
 }

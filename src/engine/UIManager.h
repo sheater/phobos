@@ -41,7 +41,6 @@ public:
   }
 
 private:
-  void loadGpuProgram();
   void createArrayObject();
 
   Renderer *m_renderer;

@@ -6,6 +6,8 @@
 #include "Background.h"
 #include "Hud.h"
 
+#define LEVEL_BACK_TO_INTRO 1
+
 class Level : public Scene
 {
 public:

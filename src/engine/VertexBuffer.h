@@ -10,7 +10,8 @@ class Renderer;
 class VertexBuffer
 {
 public:
-  void render(const glm::mat4 &transformMatrix, Material *material = nullptr);
+  // void render(const glm::mat4 &transformMatrix, Material *material = nullptr);
+  void render();
 
 private:
   friend class Renderer;

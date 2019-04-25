@@ -41,17 +41,20 @@ ModelNode::~ModelNode()
 void ModelNode::update(float timeDelta)
 {
   SceneNode::update(timeDelta);
-  m_collisionHull->reset();
 
-  for (
-      std::vector<SceneNode *>::iterator it = m_nodes.begin();
-      it != m_nodes.end();
-      it++)
-  {
-    CollisionHull* hull = (*it)->getCollisionHull();
-    if (!hull)
-      continue;
+  if (m_collisionHull) {
+    m_collisionHull->reset();
 
-    m_collisionHull->expandByCollisionHull(hull);
+    for (
+        std::vector<SceneNode *>::iterator it = m_nodes.begin();
+        it != m_nodes.end();
+        it++)
+    {
+      CollisionHull* hull = (*it)->getCollisionHull();
+      if (!hull)
+        continue;
+
+      m_collisionHull->expandByCollisionHull(hull);
+    }
   }
 }

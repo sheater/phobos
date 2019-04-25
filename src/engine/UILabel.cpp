@@ -5,7 +5,7 @@
 UILabel::UILabel(
     UIManager *uiMgr,
     const std::string &initialText,
-    const glm::vec2 &initialPosition = glm::vec2(1.0f))
+    const glm::vec2 &initialPosition)
     : text(initialText),
       scale(1.0f),
       UINode(initialPosition, uiMgr)

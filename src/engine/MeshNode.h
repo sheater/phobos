@@ -11,7 +11,8 @@ public:
   void render();
   void update(float timeDelta);
 
-private:
-  Material *m_material;
+  Material *material;
+
+private:  
   Mesh *m_originalMesh;
 };

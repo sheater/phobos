@@ -2,7 +2,7 @@
 
 #include <OpenGL/gl.h>
 #include <vector>
-#include <iostream>
+#include <string>
 #include <glm/glm.hpp>
 
 class Shader
@@ -25,8 +25,6 @@ class GpuProgram
 public:
   ~GpuProgram();
 
-  void use();
-
   void setUniformMatrix(const std::string &name, const glm::mat4 &matrix);
   void setUniformVec2(const std::string &name, const glm::vec2 &vec);
   void setUniformVec3(const std::string &name, const glm::vec3 &vec);
@@ -36,7 +34,10 @@ public:
 private:
   GpuProgram(GLuint id);
 
+  void use();
+
   friend class GpuProgramFactory;
+  friend class Renderer;
 
   GLuint m_id;
 };

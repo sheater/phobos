@@ -10,6 +10,14 @@
 #include "UIManager.h"
 #include "UILabel.h"
 
+#define SCENE_NO_EXIT -1
+
+enum SceneState
+{
+  SCENE_STATE_RUNNING = 0,
+  SCENE_STATE_EXIT
+};
+
 class Scene : public SceneNode
 {
 public:
@@ -21,6 +29,7 @@ public:
 
   void render();
   void update(float timeDelta);
+  void exitScene(int code);
 
   inline Renderer *getRenderer()
   {
@@ -53,6 +62,8 @@ protected:
   void checkCollisions();
 
 private:
+  friend class Application;
+
   Renderer *m_renderer;
   AssetsManager *m_assetsMgr;
   InputHandler *m_inputHandler;
@@ -61,4 +72,6 @@ private:
 
   UILabel* m_fpsLabel;
   float m_fpsUpdateCounter;
+  SceneState m_state;
+  int m_exitCode;
 };

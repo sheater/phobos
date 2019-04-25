@@ -56,7 +56,8 @@ void Projectile::onCollision(SceneNode *collider)
   if (Spaceship *ship = dynamic_cast<Spaceship *>(collider))
   {
     getScene()->releaseNode(this);
-    getScene()->releaseNode(collider);
+    // getScene()->releaseNode(collider);
+    ship->explode();
 
     if (Player *player = dynamic_cast<Player *>(m_shooter))
     {

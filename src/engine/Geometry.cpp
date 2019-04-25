@@ -118,8 +118,7 @@ void Geometry::transformVertices(const glm::mat4& transform)
 {
   for (std::vector<glm::vec3>::iterator it = positions.begin(); it != positions.end(); it++)
   {
-    // glm::vec3 vec = transform * *it;
-    // it->set(vec);
-    *it = glm::vec3(transform * glm::vec4(*it, 1.0f));
+    // *it = glm::vec3(transform * glm::vec4(*it, 1.0f));
+    *it = glm::mat3(transform) * *it;
   }
 }

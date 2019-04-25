@@ -1,8 +1,9 @@
 #include "../engine/Scene.h"
 #include "Player.h"
+#include "actions.h"
 
 Player::Player(Scene *scene)
-    : Spaceship(scene, "assets/models/spaceship2/model.dae", getPreprocessTransform())
+    : Spaceship(scene, "assets/models/spaceship/model.dae", getPreprocessTransform())
 {
   m_sparkTimer = 0.0f;
   m_shootTimer = 0.0f;
@@ -18,11 +19,11 @@ glm::mat4 Player::getPreprocessTransform()
   glm::mat4 transform = glm::translate(glm::mat4(1.0f), glm::vec3(0.08f, 0.0f, 0.0f));
 
   transform = glm::rotate(
-      transform, glm::radians(90.0f),
+      transform, glm::radians(180.0f),
       glm::vec3(0.0f, 0.0f, 1.0f));
 
-  return glm::scale(transform, glm::vec3(0.0012f));
-  // return glm::scale(transform, glm::vec3(0.01f));
+  // return glm::scale(transform, glm::vec3(0.0012f));
+  return glm::scale(transform, glm::vec3(0.3f));
 }
 
 void Player::update(float timeDelta)

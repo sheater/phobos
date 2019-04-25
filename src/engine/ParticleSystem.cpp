@@ -6,17 +6,7 @@
 
 ParticleSystem::ParticleSystem(Renderer *renderer) : m_renderer(renderer)
 {
-  loadGpuProgram();
   createArrayObject();
-}
-
-void ParticleSystem::loadGpuProgram()
-{
-  GpuProgramFactory *programFactory = new GpuProgramFactory();
-  programFactory->attachShader(Shader::createFromFile("shaders/particle.vert", GL_VERTEX_SHADER));
-  programFactory->attachShader(Shader::createFromFile("shaders/particle.frag", GL_FRAGMENT_SHADER));
-  m_gpuProgram = programFactory->createProgram();
-  delete programFactory;
 }
 
 void ParticleSystem::createArrayObject()
@@ -84,7 +74,8 @@ ParticleSystem::~ParticleSystem()
 
 void ParticleSystem::render()
 {
-  m_gpuProgram->use();
+  // m_gpuProgram->use();
+  GpuProgram* gpuProgram = m_renderer->bindGpuProgram(GPU_PROGRAM_PARTICLES);
 
   glBindVertexArray(m_vao);
 
@@ -93,8 +84,8 @@ void ParticleSystem::render()
 
   glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
-  m_gpuProgram->setUniformMatrix("projectionMat", m_renderer->getProjectionMatrix());
-  m_gpuProgram->setUniformMatrix("viewMat", m_renderer->getViewMatrix());
+  // m_gpuProgram->setUniformMatrix("projectionMat", m_renderer->getProjectionMatrix());
+  // m_gpuProgram->setUniformMatrix("viewMat", m_renderer->getViewMatrix());
 
   for (
       std::vector<Particle *>::iterator it = m_particles.begin();
@@ -113,9 +104,12 @@ void ParticleSystem::render()
 
     float opacity = (*it)->life == INFINITY ? 1.0f : (*it)->life;
 
-    m_gpuProgram->setUniformMatrix("modelMat", modelMatrix);
-    m_gpuProgram->setUniformVec4("color", (*it)->color);
-    m_gpuProgram->setUniformFloat("opacity", opacity);
+    m_renderer->setModelViewMatrix(modelMatrix);
+    gpuProgram->setUniformVec4("color", (*it)->color);
+    gpuProgram->setUniformFloat("opacity", opacity);
+    // m_gpuProgram->setUniformMatrix("modelMat", modelMatrix);
+    // m_gpuProgram->setUniformVec4("color", (*it)->color);
+    // m_gpuProgram->setUniformFloat("opacity", opacity);
 
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, (void *)0);
   }

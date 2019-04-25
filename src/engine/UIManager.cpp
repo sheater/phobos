@@ -6,19 +6,10 @@
 UIManager::UIManager(Renderer *renderer, AssetsManager *assetsMgr)
     : m_renderer(renderer), m_assetsMgr(assetsMgr)
 {
-  loadGpuProgram();
   createArrayObject();
 
   m_font = new Font(assetsMgr, "assets/textures/font.png");
-}
-
-void UIManager::loadGpuProgram()
-{
-  GpuProgramFactory *pf = new GpuProgramFactory();
-  pf->attachShader(Shader::createFromFile("shaders/ui.vert", GL_VERTEX_SHADER));
-  pf->attachShader(Shader::createFromFile("shaders/ui.frag", GL_FRAGMENT_SHADER));
-  m_gpuProgram = pf->createProgram();
-  delete pf;
+  m_gpuProgram = nullptr;
 }
 
 void UIManager::createArrayObject()
@@ -83,8 +74,6 @@ UIManager::~UIManager()
   {
     delete *it;
   }
-
-  delete m_gpuProgram;
 }
 
 UIManager *UIManager::attachNode(UINode *node)
@@ -108,8 +97,7 @@ UIManager *UIManager::releaseNode(UINode *node)
 
 void UIManager::render()
 {
-  m_gpuProgram->use();
-  m_gpuProgram->setUniformMatrix("projectionMat", m_renderer->getProjectionMatrix());
+  m_gpuProgram = m_renderer->bindGpuProgram(GPU_PROGRAM_UI);
 
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

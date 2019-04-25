@@ -77,10 +77,8 @@ VertexBuffer::~VertexBuffer()
   glDeleteVertexArrays(1, &m_vao);
 }
 
-void VertexBuffer::render(const glm::mat4 &transformMatrix, Material *material)
+void VertexBuffer::render()
 {
-  m_renderer->useBaseProgram(transformMatrix, material);
-
   glBindVertexArray(m_vao);
   if (m_numIndices)
   {
