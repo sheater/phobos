@@ -30,7 +30,7 @@ public:
         opacity(1.0f),
         texture(nullptr),
         polygonMode(POLYGON_MODE_FILL),
-        lightingModel(LIGHTING_MODEL_FLAT) {}
+        lightingModel(LIGHTING_MODEL_PHONG) {}
 
   Material *clone();
   void bind(Renderer* renderer);

@@ -7,6 +7,9 @@
 #include "Application.h"
 #include "ColladaLoader.h"
 #include "TextureLoader.h"
+#include "AudioEngine.h"
+#include "VorbisLoader.h"
+#include "WaveLoader.h"
 
 void on_resize(GLFWwindow *window, int width, int height);
 void on_mouse_move(GLFWwindow *window, double x, double y);
@@ -57,8 +60,11 @@ Application::Application(unsigned int width, unsigned int height)
   m_assetsMgr = new AssetsManager(m_renderer);
   m_assetsMgr->addLoader(new ColladaLoader());
   m_assetsMgr->addLoader(new TextureLoader());
+  m_assetsMgr->addLoader(new VorbisLoader());
+  m_assetsMgr->addLoader(new WaveLoader());
 
   m_inputHandler = new InputHandler();
+  m_audioEngine = new AudioEngine();
 
   glfwSetWindowUserPointer(m_window, this);
   glfwSetWindowSizeCallback(m_window, on_resize);
@@ -69,11 +75,15 @@ Application::Application(unsigned int width, unsigned int height)
 
 Application::~Application()
 {
+  std::cout << "Application::~Application(): begin" << std::endl;
+  delete m_audioEngine;
   delete m_inputHandler;
   delete m_assetsMgr;
   delete m_renderer;
 
   glfwTerminate();
+
+  std::cout << "Application::~Application(): end" << std::endl;
 }
 
 int Application::run(Scene *scene)
@@ -83,6 +93,8 @@ int Application::run(Scene *scene)
   double timeDelta = 0;
 
   int exitCode;
+
+  std::cout << "Application::run(): main loop" << std::endl;
 
   while (!glfwWindowShouldClose(m_window))
   {
@@ -105,6 +117,8 @@ int Application::run(Scene *scene)
 #endif
     prevTime = currentTime;
   }
+
+  std::cout << "Application::run(): end" << std::endl;
 }
 
 void Application::onResize(GLFWwindow *window, int width, int height)

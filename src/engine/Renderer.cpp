@@ -4,29 +4,22 @@
 
 #include "Renderer.h"
 
-Renderer::Renderer(unsigned int width, unsigned int height)
+Renderer::Renderer(unsigned int width, unsigned int height) : m_currentGpuProgram(nullptr)
 {
   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
   glEnable(GL_DEPTH_TEST);
 
   setViewport(width, height);
 
-  loadGpuProgram(GPU_PROGRAM_NO_SHADING, "shaders/noShading");
-  loadGpuProgram(GPU_PROGRAM_FLAT_SHADING, "shaders/flatShading");
-  loadGpuProgram(GPU_PROGRAM_PHONG_SHADING, "shaders/phongShading");
-  loadGpuProgram(GPU_PROGRAM_PARTICLES, "shaders/particles");
-  loadGpuProgram(GPU_PROGRAM_UI, "shaders/ui");
-
   m_viewMatrix = glm::lookAt(glm::vec3(0, 0, 0), glm::vec3(0, 0, -1), glm::vec3(0, 1, 0));
-  m_currentGpuProgram = nullptr;
-  // FIXME: default light
-  m_currentLight = new Light();
+
+  loadGpuPrograms();
+  createLightBufferObject();
 }
 
 Renderer::~Renderer()
 {
-  if (m_currentLight)
-    delete m_currentLight;
+  deleteLightBufferObject();
 
   for (
       std::vector<VertexBuffer *>::iterator it = m_vertexBuffers.begin();
@@ -66,6 +59,69 @@ void Renderer::removeVertexBuffer(VertexBuffer *vertexBuffer)
   }
 }
 
+#define MAX_LIGHTS 24
+// #define LIGHTS_UBO_SIZE sizeof(int) + sizeof(Light) * MAX_LIGHTS
+#define LIGHTS_UBO_SIZE 16 + 16 * 2 * MAX_LIGHTS
+
+void Renderer::addLight(Light *light)
+{
+  if (m_lights.size() == MAX_LIGHTS - 1)
+    return;
+
+  m_lights.push_back(light);
+}
+
+void Renderer::removeLight(const Light *light)
+{
+  std::vector<Light *>::iterator it = std::find(m_lights.begin(), m_lights.end(), light);
+  if (it != m_lights.end())
+  {
+    m_lights.erase(it);
+  }
+}
+
+void Renderer::createLightBufferObject()
+{
+  glGenBuffers(1, &m_lightBufferObject);
+  glBindBuffer(GL_UNIFORM_BUFFER, m_lightBufferObject);
+  glBufferData(GL_UNIFORM_BUFFER, LIGHTS_UBO_SIZE, nullptr, GL_DYNAMIC_DRAW);
+  glBindBuffer(GL_UNIFORM_BUFFER, 0);
+  glBindBufferBase(GL_UNIFORM_BUFFER, 0, m_lightBufferObject);
+}
+
+void Renderer::deleteLightBufferObject()
+{
+  for (
+      std::vector<Light *>::iterator it = m_lights.begin();
+      it != m_lights.end();
+      it++)
+  {
+    delete *it;
+  }
+
+  glDeleteBuffers(1, &m_lightBufferObject);
+}
+
+void Renderer::updateLightBufferObject()
+{
+  int numLights = m_lights.size();
+
+  glm::vec4 color = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
+  glm::vec3 position = glm::vec3(0.0f);
+
+  glBindBuffer(GL_UNIFORM_BUFFER, m_lightBufferObject);
+  glBufferSubData(GL_UNIFORM_BUFFER, 0, 4, &numLights);
+  for (int i = 0; i < m_lights.size(); i++)
+  {
+    int offset = 16 + i * 32;
+    Light* light = m_lights[i];
+
+    glBufferSubData(GL_UNIFORM_BUFFER, offset, 16, &light->color);
+    glBufferSubData(GL_UNIFORM_BUFFER, offset + 16, 16, &light->position);
+  }
+  glBindBuffer(GL_UNIFORM_BUFFER, 0);
+}
+
 GpuProgram *Renderer::bindGpuProgram(GpuProgramType type)
 {
   std::map<GpuProgramType, GpuProgram *>::iterator it = m_gpuPrograms.find(type);
@@ -75,90 +131,41 @@ GpuProgram *Renderer::bindGpuProgram(GpuProgramType type)
   m_currentGpuProgram = it->second;
 
   m_currentGpuProgram->use();
-
   m_currentGpuProgram->setUniformMatrix("projectionMat", m_projectionMatrix);
   m_currentGpuProgram->setUniformMatrix("viewMat", m_viewMatrix);
-
-  switch (type)
-  {
-  case GPU_PROGRAM_NO_SHADING:
-    break;
-
-  case GPU_PROGRAM_FLAT_SHADING:
-  case GPU_PROGRAM_PHONG_SHADING:
-    m_currentGpuProgram->setUniformVec3("lightPos", m_currentLight->position);
-    m_currentGpuProgram->setUniformVec4("lightColor", m_currentLight->color);
-
-    break;
-
-  case GPU_PROGRAM_PARTICLES:
-    break;
-
-  case GPU_PROGRAM_UI:
-    break;
-  }
 
   return m_currentGpuProgram;
 }
 
-void Renderer::loadGpuProgram(GpuProgramType type, const std::string &path)
+void Renderer::loadGpuPrograms()
+{
+  loadGpuProgram(GPU_PROGRAM_NO_SHADING, "shaders/noShading");
+  loadGpuProgram(GPU_PROGRAM_PARTICLES, "shaders/particles");
+  loadGpuProgram(GPU_PROGRAM_UI, "shaders/ui");
+  GpuProgram *flatShadingProgram = loadGpuProgram(GPU_PROGRAM_FLAT_SHADING, "shaders/flatShading");
+  GpuProgram *phongShadingProgram = loadGpuProgram(GPU_PROGRAM_PHONG_SHADING, "shaders/phongShading");
+
+  flatShadingProgram->setBindingPoint("lightData", 0);
+  phongShadingProgram->setBindingPoint("lightData", 0);
+}
+
+GpuProgram *Renderer::loadGpuProgram(GpuProgramType type, const std::string &path)
 {
   GpuProgramFactory *programFactory = new GpuProgramFactory();
 
   Shader *vertexShader = Shader::createFromFile(path + "/vertex.glsl", GL_VERTEX_SHADER);
   Shader *fragmentShader = Shader::createFromFile(path + "/fragment.glsl", GL_FRAGMENT_SHADER);
 
-                               programFactory->attachShader(vertexShader);
+  programFactory->attachShader(vertexShader);
   programFactory->attachShader(fragmentShader);
 
   GpuProgram *program = programFactory->createProgram();
   m_gpuPrograms.insert(std::pair<GpuProgramType, GpuProgram *>(type, program));
 
   delete programFactory;
+
+  return program;
 }
-
-// void Renderer::useBaseProgram(const glm::mat4 &modelMatrix, Material *material)
-// {
-//   m_baseProgram->use();
-
-//   const glm::mat4 modelInvTransMatrix = glm::inverse(glm::transpose(modelMatrix));
-
-//   m_baseProgram->setUniformMatrix("projectionMat", m_projectionMatrix);
-//   m_baseProgram->setUniformMatrix("viewMat", m_viewMatrix);
-//   m_baseProgram->setUniformMatrix("modelMat", modelMatrix);
-//   m_baseProgram->setUniformMatrix("modelInvTransMat", modelInvTransMatrix);
-
-//   glm::vec4 diffuseColor;
-//   GLenum polygonMode;
-//   if (material)
-//   {
-//     diffuseColor = material->diffuseColor;
-
-//     switch (material->polygonMode)
-//     {
-//     case POLYGON_MODE_POINTS:
-//       polygonMode = GL_POINT;
-//       break;
-
-//     case POLYGON_MODE_LINES:
-//       polygonMode = GL_LINE;
-//       break;
-
-//     case POLYGON_MODE_FILL:
-//       polygonMode = GL_FILL;
-//       break;
-//     }
-//   }
-//   else
-//   {
-//     diffuseColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-//     polygonMode = GL_FILL;
-//   }
-
-//   glPolygonMode(GL_FRONT_AND_BACK, polygonMode);
-
-//   m_baseProgram->setUniformVec4("materialDiffuseColor", diffuseColor);
-// }
 
 void Renderer::updateProjectionMatrix()
 {
@@ -196,6 +203,8 @@ void Renderer::setViewport(unsigned int width, unsigned int height)
 void Renderer::clearBuffers()
 {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+  updateLightBufferObject();
 }
 
 void Renderer::flush()

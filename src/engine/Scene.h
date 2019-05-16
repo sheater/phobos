@@ -18,18 +18,22 @@ enum SceneState
   SCENE_STATE_EXIT
 };
 
-class Scene : public SceneNode
+class Scene //: public SceneNode
 {
 public:
   Scene(
       Renderer *renderer,
       AssetsManager *assetsMgr,
       InputHandler *inputHandler);
-  ~Scene();
+  virtual ~Scene();
 
   void render();
   void update(float timeDelta);
   void exitScene(int code);
+
+  // shorthands
+  inline void attachNode(SceneNode *node) { m_root->attachNode(node); }
+  inline void releaseNode(SceneNode *node) { m_root->releaseNode(node); }
 
   inline Renderer *getRenderer()
   {
@@ -64,6 +68,7 @@ protected:
 private:
   friend class Application;
 
+  SceneNode* m_root;
   Renderer *m_renderer;
   AssetsManager *m_assetsMgr;
   InputHandler *m_inputHandler;

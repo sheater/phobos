@@ -30,6 +30,7 @@ public:
   void setUniformVec3(const std::string &name, const glm::vec3 &vec);
   void setUniformVec4(const std::string &name, const glm::vec4 &vec);
   void setUniformFloat(const std::string &name, float value);
+  void setBindingPoint(const std::string &name, int index);
 
 private:
   GpuProgram(GLuint id);

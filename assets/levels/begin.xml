@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+  <row distance="1">
+    <enemy type="shuttle" align="-10" />
+    <enemy type="shuttle" align="10" />
+  </row>
+  <row distance="2">
+    <enemy type="shuttle" align="-8" />
+    <enemy type="shuttle" align="8" />
+  </row>
+  <row distance="3">
+    <enemy type="shuttle" align="-6" />
+    <enemy type="shuttle" align="6" />
+  </row>
+  <row distance="4">
+    <enemy type="shuttle" align="-4" />
+    <enemy type="shuttle" align="4" />
+  </row>
+  <row distance="5">
+    <enemy type="shuttle" align="-2" />
+    <enemy type="shuttle" align="2" />
+  </row>
+  <row distance="6">
+    <enemy type="shuttle" align="0" />
+  </row>
+
+
+  <row distance="10">
+    <enemy type="shuttle" align="0" />
+  </row>
+  <row distance="11">
+    <enemy type="shuttle" align="-2" />
+    <enemy type="shuttle" align="2" />
+  </row>
+  <row distance="12">
+    <enemy type="shuttle" align="-4" />
+    <enemy type="shuttle" align="4" />
+  </row>
+  <row distance="13">
+    <enemy type="shuttle" align="-6" />
+    <enemy type="shuttle" align="6" />
+  </row>
+  <row distance="14">
+    <enemy type="shuttle" align="-8" />
+    <enemy type="shuttle" align="8" />
+  </row>
+  <row distance="15">
+    <enemy type="shuttle" align="-10" />
+    <enemy type="shuttle" align="10" />
+  </row>
+
+  <row distance="18">
+    <enemy type="shuttle" align="-10" />
+    <enemy type="shuttle" align="10" />
+  </row>
+  <row distance="20">
+    <enemy type="shuttle" align="-10" />
+    <enemy type="shuttle" align="0" />
+    <enemy type="shuttle" align="10" />
+  </row>
+
+  <row distance="30">
+    <enemy type="shuttle" align="0" />
+  </row>
+  <row distance="31">
+    <enemy type="shuttle" align="-2" />
+    <enemy type="shuttle" align="2" />
+  </row>
+  <row distance="32">
+    <enemy type="shuttle" align="-4" />
+    <enemy type="shuttle" align="4" />
+  </row>
+  <row distance="33">
+    <enemy type="shuttle" align="-6" />
+    <enemy type="shuttle" align="6" />
+  </row>
+  <row distance="34">
+    <enemy type="shuttle" align="-8" />
+    <enemy type="shuttle" align="8" />
+  </row>
+  <row distance="35">
+    <enemy type="shuttle" align="-10" />
+    <enemy type="shuttle" align="10" />
+  </row>
+
+  <row distance="40">
+    <enemy type="shuttle" align="0" />
+    <enemy type="shuttle" align="-3" />
+    <enemy type="shuttle" align="3" />
+    <enemy type="shuttle" align="-6" />
+    <enemy type="shuttle" align="6" />
+    <enemy type="shuttle" align="-9" />
+    <enemy type="shuttle" align="9" />
+  </row>
+
+  <row distance="50">
+    <enemy type="shuttle" align="0" />
+    <enemy type="shuttle" align="-3" />
+    <enemy type="shuttle" align="3" />
+    <enemy type="shuttle" align="-6" />
+    <enemy type="shuttle" align="6" />
+    <enemy type="shuttle" align="-9" />
+    <enemy type="shuttle" align="9" />
+  </row>
+
+  <row distance="60">
+    <enemy type="shuttle" align="0" />
+    <enemy type="shuttle" align="-3" />
+    <enemy type="shuttle" align="3" />
+    <enemy type="shuttle" align="-6" />
+    <enemy type="shuttle" align="6" />
+    <enemy type="shuttle" align="-9" />
+    <enemy type="shuttle" align="9" />
+  </row>
+
+  <row distance="70">
+    <enemy type="shuttle" align="0" />
+    <enemy type="shuttle" align="-3" />
+    <enemy type="shuttle" align="3" />
+    <enemy type="shuttle" align="-6" />
+    <enemy type="shuttle" align="6" />
+    <enemy type="shuttle" align="-9" />
+    <enemy type="shuttle" align="9" />
+  </row>
+
+  <row distance="80">
+    <enemy type="shuttle" align="0" />
+    <enemy type="shuttle" align="-3" />
+    <enemy type="shuttle" align="3" />
+    <enemy type="shuttle" align="-6" />
+    <enemy type="shuttle" align="6" />
+    <enemy type="shuttle" align="-9" />
+    <enemy type="shuttle" align="9" />
+  </row>
+</map>

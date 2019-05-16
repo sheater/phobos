@@ -92,6 +92,12 @@ void GpuProgram::setUniformFloat(const std::string &name, float value)
   glUniform1f(location, value);
 }
 
+void GpuProgram::setBindingPoint(const std::string &name, int index)
+{
+  unsigned int blockIndex = glGetUniformBlockIndex(m_id, name.c_str());
+  glUniformBlockBinding(m_id, blockIndex, index);
+}
+
 GpuProgramFactory::~GpuProgramFactory()
 {
   for (std::vector<Shader *>::iterator it = m_shaders.begin(); it != m_shaders.end(); it++)

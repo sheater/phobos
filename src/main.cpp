@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "engine/Application.h"
+#include "engine/Sound.h"
 #include "game/Level.h"
 #include "game/Intro.h"
 #include "game/actions.h"
@@ -24,24 +25,35 @@ int main(void)
 
     int sceneExitCode;
 
-    Intro *intro = new Intro(app->getRenderer(), app->getAssetsManager(), input);
+    // Sound* music = static_cast<Sound *>(app->getAssetsManager()->getAsset("assets/music/theme.ogg"));
 
-    while (true)
-    {
-      std::cout << "Intro scene" << std::endl;
-      if (app->run(intro) != INTRO_EXIT_PLAY_GAME)
-        break;
+    // music->play();
 
-      std::cout << "Level scene" << std::endl;
-      Level *level = new Level(app->getRenderer(), app->getAssetsManager(), input);
-      sceneExitCode = app->run(level);
-      delete level;
+    // while (true)
+    // {
+    //   Intro *intro = new Intro(app->getRenderer(), app->getAssetsManager(), input);
 
-      if (sceneExitCode != LEVEL_BACK_TO_INTRO)
-        break;
-    }
+    //   std::cout << "Intro scene" << std::endl;
+    //   if (app->run(intro) != INTRO_EXIT_PLAY_GAME)
+    //     break;
 
-    delete intro;
+    //   delete intro;
+
+    std::cout << "main(): new Level" << std::endl;
+    Level *level = new Level(
+        "assets/levels/begin.xml",
+        app->getRenderer(),
+        app->getAssetsManager(),
+        input);
+
+    std::cout << "main(): app->run" << std::endl;
+    sceneExitCode = app->run(level);
+    delete level;
+
+    //   if (sceneExitCode != LEVEL_BACK_TO_INTRO)
+    //     break;
+    // }
+
     delete app;
   }
   catch (std::exception &ex)

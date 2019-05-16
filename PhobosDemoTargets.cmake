@@ -49,11 +49,11 @@ set_target_properties(tinyxml2 PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "/Users/stepanskovajsa/fi/pv112/project/libs/tinyxml2"
 )
 
-# Import target "tinyxml2" for configuration ""
-set_property(TARGET tinyxml2 APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
+# Import target "tinyxml2" for configuration "RelWithDebInfo"
+set_property(TARGET tinyxml2 APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(tinyxml2 PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/Users/stepanskovajsa/fi/pv112/project/libs/tinyxml2/libtinyxml2.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
+  IMPORTED_LOCATION_RELWITHDEBINFO "/Users/stepanskovajsa/fi/pv112/project/libs/tinyxml2/libtinyxml2.a"
   )
 
 # This file does not depend on other imported targets which have

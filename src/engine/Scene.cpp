@@ -10,14 +10,14 @@ Scene::Scene(
     Renderer *renderer,
     AssetsManager *assetsMgr,
     InputHandler *inputHandler)
-    : SceneNode(this),
+    : //SceneNode(this),
       m_renderer(renderer),
       m_assetsMgr(assetsMgr),
       m_inputHandler(inputHandler)
 {
   srand(time(NULL));
 
-  m_scene = this;
+  // m_scene = this;
   m_uiMgr = new UIManager(m_renderer, m_assetsMgr);
   m_particleSystem = new ParticleSystem(m_renderer);
 
@@ -25,18 +25,25 @@ Scene::Scene(
   m_uiMgr->attachNode(m_fpsLabel);
   m_state = SCENE_STATE_RUNNING;
   m_exitCode = SCENE_NO_EXIT;
+
+  m_root = new SceneNode(this);
 }
 
 Scene::~Scene()
 {
+  std::cout << "Scene::~Scene(): begin" << std::endl;
+  delete m_root;
+
   delete m_particleSystem;
   delete m_uiMgr;
+
+  std::cout << "Scene::~Scene(): end" << std::endl;
 }
 
 void Scene::render()
 {
   m_renderer->setProjectionType(PROJECTION_TYPE_PERSPECTIVE);
-  SceneNode::render();
+  m_root->render();
   m_particleSystem->render();
 
   m_renderer->setProjectionType(PROJECTION_TYPE_ORTHO);
@@ -45,14 +52,13 @@ void Scene::render()
 
 void Scene::exitScene(int code)
 {
-  std::cout << "Scene::exitScene" << std::endl;
   m_state = SCENE_STATE_EXIT;
   m_exitCode = code;
 }
 
 void Scene::update(float timeDelta)
 {
-  SceneNode::update(timeDelta);
+  m_root->update(timeDelta);
   m_particleSystem->update(timeDelta);
 
   checkCollisions();
@@ -68,17 +74,17 @@ void Scene::update(float timeDelta)
 void Scene::checkCollisions()
 {
   int ai, bi;
-  for (ai = 0; ai < m_nodes.size(); ai++)
+  for (ai = 0; ai < m_root->m_nodes.size(); ai++)
   {
-    SceneNode *a = m_nodes[ai];
+    SceneNode *a = m_root->m_nodes[ai];
     CollisionHull *ahull = a->getCollisionHull();
 
     if (!ahull)
       continue;
 
-    for (bi = 0; bi < m_nodes.size(); bi++)
+    for (bi = 0; bi < m_root->m_nodes.size(); bi++)
     {
-      SceneNode *b = m_nodes[bi];
+      SceneNode *b = m_root->m_nodes[bi];
       // don't check collision with itself
       if (a == b)
         continue;

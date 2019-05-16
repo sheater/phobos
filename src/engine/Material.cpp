@@ -34,7 +34,7 @@ void Material::bind(Renderer* renderer)
 
   GpuProgram* program = renderer->bindGpuProgram(programType);
 
-  program->setUniformFloat("opacity", opacity);
+  program->setUniformFloat("opacity", opacity < 0.0f ? 0.0f : opacity);
 
   if (lightingModel == LIGHTING_MODEL_FLAT || lightingModel == LIGHTING_MODEL_PHONG)
   {

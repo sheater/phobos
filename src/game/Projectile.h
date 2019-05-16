@@ -4,6 +4,7 @@
 
 #include "../engine/ParticleSystem.h"
 #include "../engine/SceneNode.h"
+#include "../engine/Light.h"
 #include "Spaceship.h"
 
 #define PROJECTILE_SPEED 4.0f
@@ -17,6 +18,7 @@ private:
   Texture *m_fireballTexture;
   Spaceship *m_shooter;
   Particle *m_particle;
+  Light *m_light;
   glm::vec3 m_position;
   float m_direction;
 
@@ -25,5 +27,5 @@ public:
   ~Projectile();
 
   void update(float timeDelta);
-  void onCollision(SceneNode* collider);
+  void onCollision(SceneNode *collider);
 };

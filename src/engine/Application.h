@@ -5,6 +5,7 @@
 #include "Scene.h"
 #include "InputHandler.h"
 #include "ParticleSystem.h"
+#include "AudioEngine.h"
 
 class Application
 {
@@ -17,12 +18,12 @@ public:
   void onMousePressed(GLFWwindow *window, int button, int action, int mods);
   void onKeyPressed(GLFWwindow *window, int key, int scancode, int action, int mods);
 
-  int run(Scene* scene);
+  int run(Scene *scene);
 
   inline Renderer *getRenderer() { return m_renderer; }
   inline AssetsManager *getAssetsManager() { return m_assetsMgr; }
   inline InputHandler *getInputHandler() { return m_inputHandler; }
-  // inline Scene *getScene() { return m_scene; }
+  inline AudioEngine *getAudioEngine() { return m_audioEngine; }
 
 private:
   unsigned int m_width;
@@ -32,5 +33,5 @@ private:
   Renderer *m_renderer;
   AssetsManager *m_assetsMgr;
   InputHandler *m_inputHandler;
-  // Scene *m_scene;
+  AudioEngine *m_audioEngine;
 };

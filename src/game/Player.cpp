@@ -12,6 +12,7 @@ Player::Player(Scene *scene)
 
   AssetsManager *assetsMgr = getScene()->getAssetsManager();
   m_sparkTexture = static_cast<Texture *>(assetsMgr->getAsset("assets/textures/spark.png"));
+  m_shotSound = static_cast<Sound *>(assetsMgr->getAsset("assets/sounds/missile.wav"));
 }
 
 glm::mat4 Player::getPreprocessTransform()
@@ -103,6 +104,8 @@ void Player::shoot()
     m_heat = 1.0f;
     return;
   }
+
+  m_shotSound->play();
 
   m_shootTimer = 0;
 

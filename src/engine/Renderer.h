@@ -45,6 +45,8 @@ public:
   inline glm::mat4 getProjectionMatrix() { return m_projectionMatrix; }
   inline glm::mat4 getViewMatrix() { return m_viewMatrix; }
   void setModelViewMatrix(const glm::mat4 &matrix);
+  void addLight(Light *light);
+  void removeLight(const Light *light);
 
   GpuProgram *bindGpuProgram(GpuProgramType type);
 
@@ -57,7 +59,13 @@ public:
 private:
   void checkError();
   void updateProjectionMatrix();
-  void loadGpuProgram(GpuProgramType type, const std::string &path);
+  void createLightBufferObject();
+  void deleteLightBufferObject();
+  void updateLightBufferObject();
+  void loadGpuPrograms();
+  GpuProgram *loadGpuProgram(GpuProgramType type, const std::string &path);
+
+  GLuint m_lightBufferObject;
 
   unsigned int m_width;
   unsigned int m_height;
@@ -68,5 +76,5 @@ private:
   std::vector<VertexBuffer *> m_vertexBuffers;
   std::map<GpuProgramType, GpuProgram *> m_gpuPrograms;
   GpuProgram *m_currentGpuProgram;
-  Light *m_currentLight;
+  std::vector<Light *> m_lights;
 };

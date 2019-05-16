@@ -2,12 +2,13 @@
 
 #include "../engine/utils.h"
 #include "../engine/BoundingBox.h"
+#include "../engine/Sound.h"
 #include "Spaceship.h"
 #include "Projectile.h"
 
 #define PLAYER_SPEED 2.0f
 #define PLAYER_VERTICAL_POSITION_THRESHOLD 1.8f
-#define PLAYER_HORIZONTAL_POSITION_THRESHOLD 2.2f
+#define PLAYER_HORIZONTAL_POSITION_THRESHOLD 2.5f
 #define PLAYER_TILT_SPEED 1.0f
 #define PLAYER_TILT_MAX_ANGLE -45.0f
 #define PLAYER_SHOOT_RATE 0.25f
@@ -23,6 +24,7 @@ private:
   float m_heat;
   unsigned int m_score;
   Texture *m_sparkTexture;
+  Sound *m_shotSound;
 
 public:
   Player(Scene *scene);

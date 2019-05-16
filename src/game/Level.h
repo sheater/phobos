@@ -1,5 +1,7 @@
 #pragma once
 
+#include <tinyxml2.h>
+
 #include "../engine/Scene.h"
 #include "Player.h"
 #include "Enemy.h"
@@ -8,46 +10,20 @@
 
 #define LEVEL_BACK_TO_INTRO 1
 
+using namespace tinyxml2;
+
 class Level : public Scene
 {
 public:
-  Level(Renderer *renderer, AssetsManager *assetsMgr, InputHandler *inputHandler)
-      : Scene(renderer, assetsMgr, inputHandler)
-  {
-    m_player = new Player(this);
-    Background *background = new Background(this);
+  Level(
+      const std::string &path,
+      Renderer *renderer,
+      AssetsManager *assetsMgr,
+      InputHandler *inputHandler);
 
-    attachNode(m_player);
-    attachNode(background);
+  ~Level();
 
-    m_enemyGenerateTimer = 0.0f;
-
-    // renderCollisionHulls = true;
-
-    m_hud = new Hud(renderer->getWidth(), renderer->getHeight(), getUIManager());
-  }
-
-  ~Level()
-  {
-    delete m_hud;
-  }
-
-  void update(float timeDelta)
-  {
-    m_enemyGenerateTimer += timeDelta;
-    if (m_enemyGenerateTimer > 2.0f)
-    {
-      m_enemyGenerateTimer = 0.0f;
-      Enemy *enemy = new Enemy(this);
-      attachNode(enemy);
-    }
-
-    Scene::update(timeDelta);
-
-    m_hud->heat = m_player->getWeaponHeat();
-    m_hud->score = m_player->getScore();
-    m_hud->update(timeDelta);
-  }
+  void update(float timeDelta);
 
   inline Hud *getHud()
   {
@@ -55,6 +31,9 @@ public:
   }
 
 private:
+  void loadLevel(const std::string& path);
+  void parseRowElement(XMLElement* element);
+
   float m_enemyGenerateTimer;
   Player *m_player;
   Hud *m_hud;

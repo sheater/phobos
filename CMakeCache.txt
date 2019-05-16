@@ -14,6 +14,192 @@
 # EXTERNAL cache entries
 ########################
 
+//The ALSA (asound) include directory
+ALSA_INCLUDE_DIR:PATH=ALSA_INCLUDE_DIR-NOTFOUND
+
+//The ALSA (asound) library
+ALSA_LIBRARY:FILEPATH=ALSA_LIBRARY-NOTFOUND
+
+//Install AmbDec preset files
+ALSOFT_AMBDEC_PRESETS:BOOL=ON
+
+//Enable CoreAudio backend
+ALSOFT_BACKEND_COREAUDIO:BOOL=ON
+
+//Enable SDL2 backend
+ALSOFT_BACKEND_SDL2:BOOL=OFF
+
+//Enable Wave Writer backend
+ALSOFT_BACKEND_WAVE:BOOL=ON
+
+//Install alsoft.conf sample configuration file
+ALSOFT_CONFIG:BOOL=ON
+
+//Enable SSE support
+ALSOFT_CPUEXT_SSE:BOOL=ON
+
+//Enable SSE2 support
+ALSOFT_CPUEXT_SSE2:BOOL=ON
+
+//Enable SSE3 support
+ALSOFT_CPUEXT_SSE3:BOOL=ON
+
+//Enable SSE4.1 support
+ALSOFT_CPUEXT_SSE4_1:BOOL=ON
+
+//Check for the dlopen API for loading optional libs
+ALSOFT_DLOPEN:BOOL=ON
+
+//Embed the HRTF data files (increases library footprint)
+ALSOFT_EMBED_HRTF_DATA:BOOL=ON
+
+//Build and install example programs
+ALSOFT_EXAMPLES:BOOL=ON
+
+//Install HRTF definition files
+ALSOFT_HRTF_DEFS:BOOL=ON
+
+//Install headers and libraries
+ALSOFT_INSTALL:BOOL=ON
+
+//Path to prebuilt native tools (leave blank to auto-build)
+ALSOFT_NATIVE_TOOLS_PATH:STRING=
+
+//Disable building the alsoft-config utility
+ALSOFT_NO_CONFIG_UTIL:BOOL=OFF
+
+//Use Qt4 instead of Qt5 for alsoft-config
+ALSOFT_NO_QT5:BOOL=OFF
+
+//Require ALSA backend
+ALSOFT_REQUIRE_ALSA:BOOL=OFF
+
+//Require CoreAudio backend
+ALSOFT_REQUIRE_COREAUDIO:BOOL=OFF
+
+//Require DirectSound backend
+ALSOFT_REQUIRE_DSOUND:BOOL=OFF
+
+//Require JACK backend
+ALSOFT_REQUIRE_JACK:BOOL=OFF
+
+//Require ARM Neon support
+ALSOFT_REQUIRE_NEON:BOOL=OFF
+
+//Require OpenSL backend
+ALSOFT_REQUIRE_OPENSL:BOOL=OFF
+
+//Require OSS backend
+ALSOFT_REQUIRE_OSS:BOOL=OFF
+
+//Require PortAudio backend
+ALSOFT_REQUIRE_PORTAUDIO:BOOL=OFF
+
+//Require PulseAudio backend
+ALSOFT_REQUIRE_PULSEAUDIO:BOOL=OFF
+
+//Require QSA backend
+ALSOFT_REQUIRE_QSA:BOOL=OFF
+
+//Require SDL2 backend
+ALSOFT_REQUIRE_SDL2:BOOL=OFF
+
+//Require SndIO backend
+ALSOFT_REQUIRE_SNDIO:BOOL=OFF
+
+//Require Solaris backend
+ALSOFT_REQUIRE_SOLARIS:BOOL=OFF
+
+//Require SSE support
+ALSOFT_REQUIRE_SSE:BOOL=OFF
+
+//Require SSE2 support
+ALSOFT_REQUIRE_SSE2:BOOL=OFF
+
+//Require SSE3 support
+ALSOFT_REQUIRE_SSE3:BOOL=OFF
+
+//Require SSE4.1 support
+ALSOFT_REQUIRE_SSE4_1:BOOL=OFF
+
+//Require WASAPI backend
+ALSOFT_REQUIRE_WASAPI:BOOL=OFF
+
+//Require Windows Multimedia backend
+ALSOFT_REQUIRE_WINMM:BOOL=OFF
+
+//Force -static-libgcc for static GCC runtimes
+ALSOFT_STATIC_LIBGCC:BOOL=OFF
+
+//Static link libstdc++
+ALSOFT_STATIC_STDCXX:BOOL=OFF
+
+//Build and install test programs
+ALSOFT_TESTS:BOOL=ON
+
+//Build and install utility programs
+ALSOFT_UTILS:BOOL=ON
+
+//Treat compile warnings as errors
+ALSOFT_WERROR:BOOL=OFF
+
+//The AudioIO include directory
+AUDIOIO_INCLUDE_DIR:PATH=AUDIOIO_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+AUDIOTOOLBOX_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AudioToolbox.framework
+
+//The AVCODEC CFLAGS.
+AVCODEC_DEFINITIONS:STRING=
+
+//Path to a file.
+AVCODEC_INCLUDE_DIRS:PATH=/opt/local/include
+
+//Path to a library.
+AVCODEC_LIBRARIES:FILEPATH=/opt/local/lib/libavcodec.dylib
+
+//The AVCODEC version number.
+AVCODEC_VERSION:STRING=58.35.100
+
+//The AVDEVICE CFLAGS.
+AVDEVICE_DEFINITIONS:STRING=
+
+//Path to a file.
+AVDEVICE_INCLUDE_DIRS:PATH=/opt/local/include
+
+//Path to a library.
+AVDEVICE_LIBRARIES:FILEPATH=/opt/local/lib/libavdevice.dylib
+
+//The AVDEVICE version number.
+AVDEVICE_VERSION:STRING=58.5.100
+
+//The AVFORMAT CFLAGS.
+AVFORMAT_DEFINITIONS:STRING=
+
+//Path to a file.
+AVFORMAT_INCLUDE_DIRS:PATH=/opt/local/include
+
+//Path to a library.
+AVFORMAT_LIBRARIES:FILEPATH=/opt/local/lib/libavformat.dylib
+
+//The AVFORMAT version number.
+AVFORMAT_VERSION:STRING=58.20.100
+
+//The AVUTIL CFLAGS.
+AVUTIL_DEFINITIONS:STRING=
+
+//Path to a file.
+AVUTIL_INCLUDE_DIRS:PATH=/opt/local/include
+
+//Path to a library.
+AVUTIL_LIBRARIES:FILEPATH=/opt/local/lib/libavutil.dylib
+
+//The AVUTIL version number.
+AVUTIL_VERSION:STRING=56.22.100
+
+//Build Framework bundle for OSX
+BUILD_FRAMEWORK:BOOL=OFF
+
 //Build shared library
 BUILD_SHARED_LIBS:BOOL=OFF
 
@@ -32,9 +218,9 @@ BZRCOMMAND:FILEPATH=BZRCOMMAND-NOTFOUND
 //Path to a program.
 CMAKE_AR:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ar
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+//Choose the type of build, options are: Debug Release RelWithDebInfo
+// MinSizeRel.
+CMAKE_BUILD_TYPE:STRING=RelWithDebInfo
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -74,6 +260,9 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
 //Flags used by the C compiler during RELWITHDEBINFO builds.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+//Library postfix for debug builds. Normally left blank.
+CMAKE_DEBUG_POSTFIX:STRING=
 
 //Flags used by the linker during all build types.
 CMAKE_EXE_LINKER_FLAGS:STRING=
@@ -259,6 +448,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 COCOA_FRAMEWORK:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework
 
 //Path to a library.
+COREAUDIO_FRAMEWORK:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreAudio.framework
+
+//Path to a library.
 CORE_FOUNDATION_FRAMEWORK:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreFoundation.framework
 
 //Path to a library.
@@ -270,6 +462,66 @@ COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
 
 //Extra command line flags to pass to the coverage tool
 COVERAGE_EXTRA_FLAGS:STRING=-l
+
+//Enable to build OSX bundles
+CPACK_BINARY_BUNDLE:BOOL=OFF
+
+//Enable to build Debian packages
+CPACK_BINARY_DEB:BOOL=OFF
+
+//Enable to build OSX Drag And Drop package
+CPACK_BINARY_DRAGNDROP:BOOL=OFF
+
+//Enable to build FreeBSD packages
+CPACK_BINARY_FREEBSD:BOOL=OFF
+
+//Enable to build IFW packages
+CPACK_BINARY_IFW:BOOL=OFF
+
+//Enable to build NSIS packages
+CPACK_BINARY_NSIS:BOOL=OFF
+
+//Enable to build OSX X11 packages
+CPACK_BINARY_OSXX11:BOOL=OFF
+
+//Enable to build PackageMaker packages
+CPACK_BINARY_PACKAGEMAKER:BOOL=OFF
+
+//Enable to build productbuild packages
+CPACK_BINARY_PRODUCTBUILD:BOOL=OFF
+
+//Enable to build RPM packages
+CPACK_BINARY_RPM:BOOL=OFF
+
+//Enable to build STGZ packages
+CPACK_BINARY_STGZ:BOOL=ON
+
+//Enable to build TBZ2 packages
+CPACK_BINARY_TBZ2:BOOL=OFF
+
+//Enable to build TGZ packages
+CPACK_BINARY_TGZ:BOOL=ON
+
+//Enable to build TXZ packages
+CPACK_BINARY_TXZ:BOOL=OFF
+
+//Enable to build RPM source packages
+CPACK_SOURCE_RPM:BOOL=OFF
+
+//Enable to build TBZ2 source packages
+CPACK_SOURCE_TBZ2:BOOL=ON
+
+//Enable to build TGZ source packages
+CPACK_SOURCE_TGZ:BOOL=ON
+
+//Enable to build TXZ source packages
+CPACK_SOURCE_TXZ:BOOL=ON
+
+//Enable to build TZ source packages
+CPACK_SOURCE_TZ:BOOL=ON
+
+//Enable to build ZIP source packages
+CPACK_SOURCE_ZIP:BOOL=OFF
 
 //How many times to retry timed-out CTest submissions.
 CTEST_SUBMIT_RETRY_COUNT:STRING=3
@@ -286,6 +538,15 @@ CVS_UPDATE_OPTIONS:STRING=-d -A -P
 //Maximum time allowed before CTest will kill the test.
 DART_TESTING_TIMEOUT:STRING=1500
 
+//The FFmpeg cflags.
+FFMPEG_DEFINITIONS:STRING=
+
+//The FFmpeg include directories.
+FFMPEG_INCLUDE_DIRS:STRING=/opt/local/include
+
+//The FFmpeg libraries.
+FFMPEG_LIBRARIES:STRING=/opt/local/lib/libavformat.dylib;/opt/local/lib/libavcodec.dylib;/opt/local/lib/libavutil.dylib;/opt/local/lib/libswscale.dylib;/opt/local/lib/libswresample.dylib;/usr/lib/libz.dylib
+
 //Value Computed by CMake
 FreeImage_BINARY_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/FreeImage
 
@@ -297,6 +558,9 @@ FreeImage_SOURCE_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/FreeImag
 
 //Path to a program.
 GITCOMMAND:FILEPATH=/usr/local/bin/git
+
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/local/bin/git
 
 //Value Computed by CMake
 GLFW_BINARY_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/glfw
@@ -376,8 +640,23 @@ GLM_TEST_FORCE_PURE:BOOL=OFF
 //Path to a program.
 HGCOMMAND:FILEPATH=HGCOMMAND-NOTFOUND
 
+//Install CMake package configiguration module
+INSTALL_CMAKE_PACKAGE_MODULE:BOOL=ON
+
+//Install documentation
+INSTALL_DOCS:BOOL=ON
+
+//Install ogg.pc file
+INSTALL_PKG_CONFIG_MODULE:BOOL=ON
+
 //Path to a library.
 IOKIT_FRAMEWORK:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/IOKit.framework
+
+//The JACK include directory
+JACK_INCLUDE_DIR:PATH=JACK_INCLUDE_DIR-NOTFOUND
+
+//The JACK library
+JACK_LIBRARY:FILEPATH=JACK_LIBRARY-NOTFOUND
 
 //Takes an empty string or 64. Directory where lib will be installed:
 // lib or lib64
@@ -392,6 +671,21 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
+//The MySOFA include directory
+MYSOFA_INCLUDE_DIR:PATH=MYSOFA_INCLUDE_DIR-NOTFOUND
+
+//The MySOFA library
+MYSOFA_LIBRARY:FILEPATH=MYSOFA_LIBRARY-NOTFOUND
+
+//The math library for MySOFA
+MYSOFA_M_LIBRARY:FILEPATH=/usr/lib/libm.dylib
+
+//Path to a file.
+OGG_INCLUDE_DIRS:PATH=/opt/local/include
+
+//Path to a library.
+OGG_LIBRARIES:FILEPATH=/opt/local/lib/libogg.dylib
+
 //Include for OpenGL on OS X
 OPENGL_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework
 
@@ -401,8 +695,50 @@ OPENGL_gl_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.
 //GLU library for OS X (usually same as OpenGL library)
 OPENGL_glu_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework
 
+//The OSS include directory
+OSS_INCLUDE_DIR:PATH=OSS_INCLUDE_DIR-NOTFOUND
+
+//Optional OSS library
+OSS_LIBRARY:FILEPATH=OSS_LIBRARY-NOTFOUND
+
+//Value Computed by CMake
+OpenAL_BINARY_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/openal-soft
+
+//Dependencies for the target
+OpenAL_LIB_DEPENDS:STATIC=general;-pthread;general;/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AudioToolbox.framework;general;/System/Library/Frameworks/ApplicationServices.framework;general;/System/Library/Frameworks/AudioUnit.framework;general;/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/CoreAudio.framework;general;pthread;general;dl;general;m;
+
+//Value Computed by CMake
+OpenAL_SOURCE_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/openal-soft
+
 //Path to a program.
 P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/opt/local/bin/pkg-config
+
+//The PortAudio include directory
+PORTAUDIO_INCLUDE_DIR:PATH=PORTAUDIO_INCLUDE_DIR-NOTFOUND
+
+//The PortAudio library
+PORTAUDIO_LIBRARY:FILEPATH=PORTAUDIO_LIBRARY-NOTFOUND
+
+//The POSTPROC CFLAGS.
+POSTPROC_DEFINITIONS:STRING=
+
+//Path to a file.
+POSTPROC_INCLUDE_DIRS:PATH=/opt/local/include
+
+//Path to a library.
+POSTPROC_LIBRARIES:FILEPATH=/opt/local/lib/libpostproc.dylib
+
+//The POSTPROC version number.
+POSTPROC_VERSION:STRING=55.3.100
+
+//The PulseAudio include directory
+PULSEAUDIO_INCLUDE_DIR:PATH=PULSEAUDIO_INCLUDE_DIR-NOTFOUND
+
+//The PulseAudio library
+PULSEAUDIO_LIBRARY:FILEPATH=PULSEAUDIO_LIBRARY-NOTFOUND
 
 //Value Computed by CMake
 PhobosDemo_BINARY_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project
@@ -410,12 +746,35 @@ PhobosDemo_BINARY_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project
 //Value Computed by CMake
 PhobosDemo_SOURCE_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project
 
+QT_QMAKE_EXECUTABLE:FILEPATH=NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=Qt5Widgets_DIR-NOTFOUND
+
 //Path to scp command, used by CTest for submitting results to
 // a Dart server
 SCPCOMMAND:FILEPATH=/usr/bin/scp
 
+//Path to a library.
+SDL2MAIN_LIBRARY:FILEPATH=/opt/local/lib/libSDL2main.a
+
+//Path to a library.
+SDL2_CORE_LIBRARY:FILEPATH=/opt/local/lib/libSDL2.dylib
+
+//Path to a file.
+SDL2_INCLUDE_DIR:PATH=/opt/local/include/SDL2
+
+//SDL_sound extra flags
+SDL_SOUND_EXTRAS:STRING=
+
+//Path to a file.
+SDL_SOUND_INCLUDE_DIR:PATH=SDL_SOUND_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+SDL_SOUND_LIBRARY:FILEPATH=SDL_SOUND_LIBRARY-NOTFOUND
+
 //Name of the computer/site where compile is being run
-SITE:STRING=Stepans-MacBook-Pro-2.local
+SITE:STRING=Stepans-MBP-2
 
 //Path to the SLURM sbatch executable
 SLURM_SBATCH_COMMAND:FILEPATH=SLURM_SBATCH_COMMAND-NOTFOUND
@@ -423,14 +782,65 @@ SLURM_SBATCH_COMMAND:FILEPATH=SLURM_SBATCH_COMMAND-NOTFOUND
 //Path to the SLURM srun executable
 SLURM_SRUN_COMMAND:FILEPATH=SLURM_SRUN_COMMAND-NOTFOUND
 
+//The SoundIO include directory
+SOUNDIO_INCLUDE_DIR:PATH=SOUNDIO_INCLUDE_DIR-NOTFOUND
+
+//The SoundIO library
+SOUNDIO_LIBRARY:FILEPATH=SOUNDIO_LIBRARY-NOTFOUND
+
 //Path to a program.
 SVNCOMMAND:FILEPATH=/usr/bin/svn
+
+//The SWRESAMPLE CFLAGS.
+SWRESAMPLE_DEFINITIONS:STRING=
+
+//Path to a file.
+SWRESAMPLE_INCLUDE_DIRS:PATH=/opt/local/include
+
+//Path to a library.
+SWRESAMPLE_LIBRARIES:FILEPATH=/opt/local/lib/libswresample.dylib
+
+//The SWRESAMPLE version number.
+SWRESAMPLE_VERSION:STRING=3.3.100
+
+//The SWSCALE CFLAGS.
+SWSCALE_DEFINITIONS:STRING=
+
+//Path to a file.
+SWSCALE_INCLUDE_DIRS:PATH=/opt/local/include
+
+//Path to a library.
+SWSCALE_LIBRARIES:FILEPATH=/opt/local/lib/libswscale.dylib
+
+//The SWSCALE version number.
+SWSCALE_VERSION:STRING=5.3.100
 
 //Path to a file.
 VULKAN_INCLUDE_DIR:PATH=VULKAN_INCLUDE_DIR-NOTFOUND
 
 //Path to a library.
 VULKAN_LIBRARY:FILEPATH=VULKAN_LIBRARY-NOTFOUND
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/usr/lib/libz.dylib
+
+//Path to a library.
+_FFmpeg_HAVE_LIBZ:FILEPATH=/usr/lib/libz.dylib
+
+//Value Computed by CMake
+alsoft-config_BINARY_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/openal-soft/utils/alsoft-config
+
+//Value Computed by CMake
+alsoft-config_SOURCE_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/openal-soft/utils/alsoft-config
+
+//Dependencies for the target
+ex-common_LIB_DEPENDS:STATIC=general;OpenAL;
 
 //Dependencies for target
 glew_LIB_DEPENDS:STATIC=
@@ -448,6 +858,15 @@ glm_SOURCE_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/glm
 glm_static_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake
+libogg_BINARY_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/ogg
+
+//Value Computed by CMake
+libogg_SOURCE_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/ogg
+
+//Dependencies for target
+ogg_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
 tinyxml2_BINARY_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/tinyxml2
 
 //Dependencies for target
@@ -456,11 +875,64 @@ tinyxml2_LIB_DEPENDS:STATIC=
 //Value Computed by CMake
 tinyxml2_SOURCE_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/tinyxml2
 
+//Value Computed by CMake
+vorbis_BINARY_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/vorbis
+
+//Dependencies for the target
+vorbis_LIB_DEPENDS:STATIC=general;/opt/local/lib/libogg.dylib;
+
+//Value Computed by CMake
+vorbis_SOURCE_DIR:STATIC=/Users/stepanskovajsa/fi/pv112/project/libs/vorbis
+
+//Dependencies for the target
+vorbisenc_LIB_DEPENDS:STATIC=general;/opt/local/lib/libogg.dylib;general;vorbis;
+
+//Dependencies for the target
+vorbisfile_LIB_DEPENDS:STATIC=general;/opt/local/lib/libogg.dylib;general;vorbis;
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: ALSA_INCLUDE_DIR
+ALSA_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ALSA_LIBRARY
+ALSA_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AUDIOIO_INCLUDE_DIR
+AUDIOIO_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVCODEC_DEFINITIONS
+AVCODEC_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVCODEC_INCLUDE_DIRS
+AVCODEC_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVCODEC_LIBRARIES
+AVCODEC_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVCODEC_VERSION
+AVCODEC_VERSION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVDEVICE_DEFINITIONS
+AVDEVICE_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVDEVICE_INCLUDE_DIRS
+AVDEVICE_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVDEVICE_LIBRARIES
+AVDEVICE_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVDEVICE_VERSION
+AVDEVICE_VERSION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVFORMAT_DEFINITIONS
+AVFORMAT_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVFORMAT_INCLUDE_DIRS
+AVFORMAT_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVFORMAT_LIBRARIES
+AVFORMAT_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVFORMAT_VERSION
+AVFORMAT_VERSION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVUTIL_DEFINITIONS
+AVUTIL_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVUTIL_INCLUDE_DIRS
+AVUTIL_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVUTIL_LIBRARIES
+AVUTIL_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: AVUTIL_VERSION
+AVUTIL_VERSION-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BZRCOMMAND
 BZRCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -591,7 +1063,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -642,6 +1114,46 @@ CORE_VIDEO_FRAMEWORK-ADVANCED:INTERNAL=1
 COVERAGE_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
 COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_BUNDLE
+CPACK_BINARY_BUNDLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_DEB
+CPACK_BINARY_DEB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_DRAGNDROP
+CPACK_BINARY_DRAGNDROP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_FREEBSD
+CPACK_BINARY_FREEBSD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_IFW
+CPACK_BINARY_IFW-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_NSIS
+CPACK_BINARY_NSIS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_OSXX11
+CPACK_BINARY_OSXX11-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_PACKAGEMAKER
+CPACK_BINARY_PACKAGEMAKER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_PRODUCTBUILD
+CPACK_BINARY_PRODUCTBUILD-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_RPM
+CPACK_BINARY_RPM-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_STGZ
+CPACK_BINARY_STGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TBZ2
+CPACK_BINARY_TBZ2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TGZ
+CPACK_BINARY_TGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_BINARY_TXZ
+CPACK_BINARY_TXZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_RPM
+CPACK_SOURCE_RPM-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TBZ2
+CPACK_SOURCE_TBZ2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TGZ
+CPACK_SOURCE_TGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TXZ
+CPACK_SOURCE_TXZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TZ
+CPACK_SOURCE_TZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_ZIP
+CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
 CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
@@ -652,12 +1164,32 @@ CVSCOMMAND-ADVANCED:INTERNAL=1
 CVS_UPDATE_OPTIONS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FFMPEG_DEFINITIONS
+FFMPEG_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FFMPEG_INCLUDE_DIRS
+FFMPEG_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: FFMPEG_LIBRARIES
+FFMPEG_LIBRARIES-ADVANCED:INTERNAL=1
+//Details about finding FFmpeg
+FIND_PACKAGE_MESSAGE_DETAILS_FFmpeg:INTERNAL=[/opt/local/lib/libavformat.dylib;/opt/local/lib/libavcodec.dylib;/opt/local/lib/libavutil.dylib;/opt/local/lib/libswscale.dylib;/opt/local/lib/libswresample.dylib;/usr/lib/libz.dylib][/opt/local/include][/opt/local/lib/libavformat.dylib][/opt/local/include][/opt/local/lib/libavcodec.dylib][/opt/local/include][/opt/local/lib/libavutil.dylib][/opt/local/include][/opt/local/lib/libswscale.dylib][/opt/local/include][/opt/local/lib/libswresample.dylib][/opt/local/include][v()]
+//Details about finding Git
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/local/bin/git][v2.16.1()]
+//Details about finding OGG
+FIND_PACKAGE_MESSAGE_DETAILS_OGG:INTERNAL=[/opt/local/include][/opt/local/lib/libogg.dylib][v()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework][/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework][c ][v()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/opt/local/bin/pkg-config][v0.29.2()]
+//Details about finding SDL2
+FIND_PACKAGE_MESSAGE_DETAILS_SDL2:INTERNAL=[/opt/local/lib/libSDL2main.a;/opt/local/lib/libSDL2.dylib;-framework Cocoa][/opt/local/include/SDL2][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/usr/lib/libz.dylib][/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include][v1.2.11()]
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Build the GLFW documentation
 GLFW_BUILD_DOCS:INTERNAL=OFF
 //Build the GLFW example programs
@@ -666,38 +1198,531 @@ GLFW_BUILD_EXAMPLES:INTERNAL=OFF
 GLFW_BUILD_TESTS:INTERNAL=OFF
 //Generate installation target
 GLFW_INSTALL:INTERNAL=OFF
+//Have symbol aligned_alloc
+HAVE_ALIGNED_ALLOC:INTERNAL=
+//Have include arm_neon.h
+HAVE_ARM_NEON_H:INTERNAL=
+//Test HAVE_ATTRIBUTE_ALIGNED
+HAVE_ATTRIBUTE_ALIGNED:INTERNAL=1
+//Have include cpuid.h
+HAVE_CPUID_H:INTERNAL=1
+//Have include dirent.h
+HAVE_DIRENT_H:INTERNAL=1
+//Have include dlfcn.h
+HAVE_DLFCN_H:INTERNAL=1
+//Have include emmintrin.h
+HAVE_EMMINTRIN_H:INTERNAL=1
+//Have include fenv.h
+HAVE_FENV_H:INTERNAL=1
+//Have include float.h
+HAVE_FLOAT_H:INTERNAL=1
+//Test HAVE_FNO_MATH_ERRNO
+HAVE_FNO_MATH_ERRNO:INTERNAL=1
+//Test HAVE_GCC_DEFAULT_VISIBILITY
+HAVE_GCC_DEFAULT_VISIBILITY:INTERNAL=1
+//Test HAVE_GCC_DESTRUCTOR
+HAVE_GCC_DESTRUCTOR:INTERNAL=1
+//Test HAVE_GCC_FORMAT
+HAVE_GCC_FORMAT:INTERNAL=1
+//Test HAVE_GCC_GET_CPUID
+HAVE_GCC_GET_CPUID:INTERNAL=1
+//Test HAVE_GCC_PROTECTED_VISIBILITY
+HAVE_GCC_PROTECTED_VISIBILITY:INTERNAL=
+//Have symbol getopt
+HAVE_GETOPT:INTERNAL=1
+//Have symbol gettimeofday
+HAVE_GETTIMEOFDAY:INTERNAL=1
+//Have include guiddef.h
+HAVE_GUIDDEF_H:INTERNAL=
+//Have include ieeefp.h
+HAVE_IEEEFP_H:INTERNAL=
+//Have include initguid.h
+HAVE_INITGUID_H:INTERNAL=
+//Have include intrin.h
+HAVE_INTRIN_H:INTERNAL=
+//Test HAVE_LIBATOMIC
+HAVE_LIBATOMIC:INTERNAL=
+//Have library dl
+HAVE_LIBDL:INTERNAL=1
+//Have library log
+HAVE_LIBLOG:INTERNAL=
+//Have library m
+HAVE_LIBM:INTERNAL=1
+//Have library pthread
+HAVE_LIBPTHREAD:INTERNAL=1
+//Have library rt
+HAVE_LIBRT:INTERNAL=
+//Have include malloc.h
+HAVE_MALLOC_H:INTERNAL=
+//Test HAVE_MFPU_NEON_SWITCH
+HAVE_MFPU_NEON_SWITCH:INTERNAL=1
+//Test HAVE_MSSE2_SWITCH
+HAVE_MSSE2_SWITCH:INTERNAL=1
+//Test HAVE_MSSE3_SWITCH
+HAVE_MSSE3_SWITCH:INTERNAL=1
+//Test HAVE_MSSE4_1_SWITCH
+HAVE_MSSE4_1_SWITCH:INTERNAL=1
+//Have symbol nanosleep
+HAVE_NANOSLEEP:INTERNAL=1
+//Have include pmmintrin.h
+HAVE_PMMINTRIN_H:INTERNAL=1
+//Have symbol posix_memalign
+HAVE_POSIX_MEMALIGN:INTERNAL=1
+//Have symbol posix_memalign
+HAVE_POSIX_MEMALIGN_DEFAULT:INTERNAL=1
+//Have symbol proc_pidpath
+HAVE_PROC_PIDPATH:INTERNAL=1
+//Test HAVE_PTHREAD
+HAVE_PTHREAD:INTERNAL=1
+//Have include pthread.h
+HAVE_PTHREAD_H:INTERNAL=1
+//Have includes pthread.h;pthread_np.h
+HAVE_PTHREAD_NP_H:INTERNAL=
+//Have symbol pthread_setname_np
+HAVE_PTHREAD_SETNAME_NP:INTERNAL=1
+//Have symbol pthread_setschedparam
+HAVE_PTHREAD_SETSCHEDPARAM:INTERNAL=1
+//Result of TRY_COMPILE
+HAVE_SIZEOF_LONG:INTERNAL=TRUE
+//Result of TRY_COMPILE
+HAVE_SIZEOF_LONG_LONG:INTERNAL=TRUE
+//Have includes SLES/OpenSLES.h;SLES/OpenSLES_Android.h
+HAVE_SLES_OPENSLES_ANDROID_H:INTERNAL=
+//Have include smmintrin.h
+HAVE_SMMINTRIN_H:INTERNAL=1
+//Test HAVE_SSE_INTRINSICS
+HAVE_SSE_INTRINSICS:INTERNAL=1
+//Have function stat
+HAVE_STAT:INTERNAL=1
+//Have include stddef.h
+HAVE_STDDEF_H:INTERNAL=1
+//Have include stdint.h
+HAVE_STDINT_H:INTERNAL=1
+//Test HAVE_STD_C11
+HAVE_STD_C11:INTERNAL=1
+//Test HAVE_STD_CXX11
+HAVE_STD_CXX11:INTERNAL=1
+//Have function strcasecmp
+HAVE_STRCASECMP:INTERNAL=1
+//Have include strings.h
+HAVE_STRINGS_H:INTERNAL=1
+//Have function strncasecmp
+HAVE_STRNCASECMP:INTERNAL=1
+//Have symbol sysconf
+HAVE_SYSCONF:INTERNAL=1
+//Have include sys/sysconf.h
+HAVE_SYS_SYSCONF_H:INTERNAL=
+//Have include sys/types.h
+HAVE_SYS_TYPES_H:INTERNAL=1
+//Test HAVE_VISIBILITY_HIDDEN_SWITCH
+HAVE_VISIBILITY_HIDDEN_SWITCH:INTERNAL=1
+//Have include windows.h
+HAVE_WINDOWS_H:INTERNAL=
+//Test HAVE_W_EXTRA
+HAVE_W_EXTRA:INTERNAL=1
+//Have include xmmintrin.h
+HAVE_XMMINTRIN_H:INTERNAL=1
+//Have symbol _aligned_malloc
+HAVE__ALIGNED_MALLOC:INTERNAL=
+//Test HAVE___RESTRICT
+HAVE___RESTRICT:INTERNAL=1
 //ADVANCED property for variable: HGCOMMAND
 HGCOMMAND-ADVANCED:INTERNAL=1
+//Have include inttypes.h
+INCLUDE_INTTYPES_H:INTERNAL=1
+//Have include stdint.h
+INCLUDE_STDINT_H:INTERNAL=1
+//Have include sys/types.h
+INCLUDE_SYS_TYPES_H:INTERNAL=1
 //ADVANCED property for variable: IOKIT_FRAMEWORK
 IOKIT_FRAMEWORK-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JACK_INCLUDE_DIR
+JACK_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JACK_LIBRARY
+JACK_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
 MAKECOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_COMMAND
 MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MYSOFA_INCLUDE_DIR
+MYSOFA_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MYSOFA_LIBRARY
+MYSOFA_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_INCLUDE_DIR
 OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_gl_LIBRARY
 OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_glu_LIBRARY
 OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OSS_INCLUDE_DIR
+OSS_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OSS_LIBRARY
+OSS_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: P4COMMAND
 P4COMMAND-ADVANCED:INTERNAL=1
+PC_AVCODEC_CFLAGS:INTERNAL=-I/opt/local/include
+PC_AVCODEC_CFLAGS_I:INTERNAL=
+PC_AVCODEC_CFLAGS_OTHER:INTERNAL=
+PC_AVCODEC_FOUND:INTERNAL=1
+PC_AVCODEC_INCLUDEDIR:INTERNAL=/opt/local/include
+PC_AVCODEC_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_AVCODEC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lavcodec
+PC_AVCODEC_LDFLAGS_OTHER:INTERNAL=
+PC_AVCODEC_LIBDIR:INTERNAL=/opt/local/lib
+PC_AVCODEC_LIBRARIES:INTERNAL=avcodec
+PC_AVCODEC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_AVCODEC_LIBS:INTERNAL=
+PC_AVCODEC_LIBS_L:INTERNAL=
+PC_AVCODEC_LIBS_OTHER:INTERNAL=
+PC_AVCODEC_LIBS_PATHS:INTERNAL=
+PC_AVCODEC_PREFIX:INTERNAL=/opt/local
+PC_AVCODEC_STATIC_CFLAGS:INTERNAL=-I/opt/local/include
+PC_AVCODEC_STATIC_CFLAGS_I:INTERNAL=
+PC_AVCODEC_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_AVCODEC_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_AVCODEC_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lavcodec;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-liconv;-lm;-llzma;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lintl;-Wl,-framework;-Wl,CoreFoundation;-lcairo;-lz;-framework;AudioToolbox;-lmp3lame;-lm;-lopenjp2;-lopus;-lspeex;-ltheoraenc;-ltheoradec;-logg;-lvorbis;-lvorbisenc;-lx264;-lx265;-lxvidcore;-pthread;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices;-lswresample;-lm;-lsoxr;-lavutil;-pthread;-lm;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_AVCODEC_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-framework;-Wl,CoreFoundation;-framework;AudioToolbox;-pthread;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices;-pthread;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_AVCODEC_STATIC_LIBDIR:INTERNAL=
+PC_AVCODEC_STATIC_LIBRARIES:INTERNAL=avcodec;vpx;m;vpx;m;vpx;m;vpx;m;iconv;m;lzma;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;intl;cairo;z;mp3lame;m;openjp2;opus;speex;theoraenc;theoradec;ogg;vorbis;vorbisenc;x264;x265;xvidcore;swresample;m;soxr;avutil;m
+PC_AVCODEC_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_AVCODEC_STATIC_LIBS:INTERNAL=
+PC_AVCODEC_STATIC_LIBS_L:INTERNAL=
+PC_AVCODEC_STATIC_LIBS_OTHER:INTERNAL=
+PC_AVCODEC_STATIC_LIBS_PATHS:INTERNAL=
+PC_AVCODEC_VERSION:INTERNAL=58.35.100
+PC_AVCODEC_libavcodec_INCLUDEDIR:INTERNAL=
+PC_AVCODEC_libavcodec_LIBDIR:INTERNAL=
+PC_AVCODEC_libavcodec_PREFIX:INTERNAL=
+PC_AVCODEC_libavcodec_VERSION:INTERNAL=
+PC_AVDEVICE_CFLAGS:INTERNAL=-I/opt/local/include
+PC_AVDEVICE_CFLAGS_I:INTERNAL=
+PC_AVDEVICE_CFLAGS_OTHER:INTERNAL=
+PC_AVDEVICE_FOUND:INTERNAL=1
+PC_AVDEVICE_INCLUDEDIR:INTERNAL=/opt/local/include
+PC_AVDEVICE_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_AVDEVICE_LDFLAGS:INTERNAL=-L/opt/local/lib;-lavdevice
+PC_AVDEVICE_LDFLAGS_OTHER:INTERNAL=
+PC_AVDEVICE_LIBDIR:INTERNAL=/opt/local/lib
+PC_AVDEVICE_LIBRARIES:INTERNAL=avdevice
+PC_AVDEVICE_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_AVDEVICE_LIBS:INTERNAL=
+PC_AVDEVICE_LIBS_L:INTERNAL=
+PC_AVDEVICE_LIBS_OTHER:INTERNAL=
+PC_AVDEVICE_LIBS_PATHS:INTERNAL=
+PC_AVDEVICE_PREFIX:INTERNAL=/opt/local
+PC_AVDEVICE_STATIC_CFLAGS:INTERNAL=-I/opt/local/include
+PC_AVDEVICE_STATIC_CFLAGS_I:INTERNAL=
+PC_AVDEVICE_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_AVDEVICE_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_AVDEVICE_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lavdevice;-framework;Foundation;-lm;-framework;AVFoundation;-framework;CoreVideo;-framework;CoreMedia;-pthread;-framework;CoreGraphics;-lSDL2;-lavfilter;-framework;OpenGL;-pthread;-lm;-lfribidi;-lass;-framework;CoreImage;-framework;AppKit;-Wl,-framework,OpenCL;-lfontconfig;-lfreetype;-lswscale;-lm;-lpostproc;-lm;-lavformat;-lm;-lbz2;-lmodplug;-lbluray;-lz;-lgnutls;-lavcodec;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-liconv;-lm;-llzma;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lintl;-Wl,-framework;-Wl,CoreFoundation;-lcairo;-lz;-framework;AudioToolbox;-lmp3lame;-lm;-lopenjp2;-lopus;-lspeex;-ltheoraenc;-ltheoradec;-logg;-lvorbis;-lvorbisenc;-lx264;-lx265;-lxvidcore;-pthread;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices;-lswresample;-lm;-lsoxr;-lavresample;-lm;-lavutil;-pthread;-lm;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_AVDEVICE_STATIC_LDFLAGS_OTHER:INTERNAL=-framework;Foundation;-framework;AVFoundation;-framework;CoreVideo;-framework;CoreMedia;-pthread;-framework;CoreGraphics;-framework;OpenGL;-pthread;-framework;CoreImage;-framework;AppKit;-Wl,-framework,OpenCL;-Wl,-framework;-Wl,CoreFoundation;-framework;AudioToolbox;-pthread;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices;-pthread;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_AVDEVICE_STATIC_LIBDIR:INTERNAL=
+PC_AVDEVICE_STATIC_LIBRARIES:INTERNAL=avdevice;m;SDL2;avfilter;m;fribidi;ass;fontconfig;freetype;swscale;m;postproc;m;avformat;m;bz2;modplug;bluray;z;gnutls;avcodec;vpx;m;vpx;m;vpx;m;vpx;m;iconv;m;lzma;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;intl;cairo;z;mp3lame;m;openjp2;opus;speex;theoraenc;theoradec;ogg;vorbis;vorbisenc;x264;x265;xvidcore;swresample;m;soxr;avresample;m;avutil;m
+PC_AVDEVICE_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_AVDEVICE_STATIC_LIBS:INTERNAL=
+PC_AVDEVICE_STATIC_LIBS_L:INTERNAL=
+PC_AVDEVICE_STATIC_LIBS_OTHER:INTERNAL=
+PC_AVDEVICE_STATIC_LIBS_PATHS:INTERNAL=
+PC_AVDEVICE_VERSION:INTERNAL=58.5.100
+PC_AVDEVICE_libavdevice_INCLUDEDIR:INTERNAL=
+PC_AVDEVICE_libavdevice_LIBDIR:INTERNAL=
+PC_AVDEVICE_libavdevice_PREFIX:INTERNAL=
+PC_AVDEVICE_libavdevice_VERSION:INTERNAL=
+PC_AVFORMAT_CFLAGS:INTERNAL=-I/opt/local/include
+PC_AVFORMAT_CFLAGS_I:INTERNAL=
+PC_AVFORMAT_CFLAGS_OTHER:INTERNAL=
+PC_AVFORMAT_FOUND:INTERNAL=1
+PC_AVFORMAT_INCLUDEDIR:INTERNAL=/opt/local/include
+PC_AVFORMAT_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_AVFORMAT_LDFLAGS:INTERNAL=-L/opt/local/lib;-lavformat
+PC_AVFORMAT_LDFLAGS_OTHER:INTERNAL=
+PC_AVFORMAT_LIBDIR:INTERNAL=/opt/local/lib
+PC_AVFORMAT_LIBRARIES:INTERNAL=avformat
+PC_AVFORMAT_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_AVFORMAT_LIBS:INTERNAL=
+PC_AVFORMAT_LIBS_L:INTERNAL=
+PC_AVFORMAT_LIBS_OTHER:INTERNAL=
+PC_AVFORMAT_LIBS_PATHS:INTERNAL=
+PC_AVFORMAT_PREFIX:INTERNAL=/opt/local
+PC_AVFORMAT_STATIC_CFLAGS:INTERNAL=-I/opt/local/include
+PC_AVFORMAT_STATIC_CFLAGS_I:INTERNAL=
+PC_AVFORMAT_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_AVFORMAT_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_AVFORMAT_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lavformat;-lm;-lbz2;-lmodplug;-lbluray;-lz;-lgnutls;-lavcodec;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-liconv;-lm;-llzma;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lintl;-Wl,-framework;-Wl,CoreFoundation;-lcairo;-lz;-framework;AudioToolbox;-lmp3lame;-lm;-lopenjp2;-lopus;-lspeex;-ltheoraenc;-ltheoradec;-logg;-lvorbis;-lvorbisenc;-lx264;-lx265;-lxvidcore;-pthread;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices;-lswresample;-lm;-lsoxr;-lavutil;-pthread;-lm;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_AVFORMAT_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-framework;-Wl,CoreFoundation;-framework;AudioToolbox;-pthread;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices;-pthread;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_AVFORMAT_STATIC_LIBDIR:INTERNAL=
+PC_AVFORMAT_STATIC_LIBRARIES:INTERNAL=avformat;m;bz2;modplug;bluray;z;gnutls;avcodec;vpx;m;vpx;m;vpx;m;vpx;m;iconv;m;lzma;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;intl;cairo;z;mp3lame;m;openjp2;opus;speex;theoraenc;theoradec;ogg;vorbis;vorbisenc;x264;x265;xvidcore;swresample;m;soxr;avutil;m
+PC_AVFORMAT_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_AVFORMAT_STATIC_LIBS:INTERNAL=
+PC_AVFORMAT_STATIC_LIBS_L:INTERNAL=
+PC_AVFORMAT_STATIC_LIBS_OTHER:INTERNAL=
+PC_AVFORMAT_STATIC_LIBS_PATHS:INTERNAL=
+PC_AVFORMAT_VERSION:INTERNAL=58.20.100
+PC_AVFORMAT_libavformat_INCLUDEDIR:INTERNAL=
+PC_AVFORMAT_libavformat_LIBDIR:INTERNAL=
+PC_AVFORMAT_libavformat_PREFIX:INTERNAL=
+PC_AVFORMAT_libavformat_VERSION:INTERNAL=
+PC_AVUTIL_CFLAGS:INTERNAL=-I/opt/local/include
+PC_AVUTIL_CFLAGS_I:INTERNAL=
+PC_AVUTIL_CFLAGS_OTHER:INTERNAL=
+PC_AVUTIL_FOUND:INTERNAL=1
+PC_AVUTIL_INCLUDEDIR:INTERNAL=/opt/local/include
+PC_AVUTIL_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_AVUTIL_LDFLAGS:INTERNAL=-L/opt/local/lib;-lavutil
+PC_AVUTIL_LDFLAGS_OTHER:INTERNAL=
+PC_AVUTIL_LIBDIR:INTERNAL=/opt/local/lib
+PC_AVUTIL_LIBRARIES:INTERNAL=avutil
+PC_AVUTIL_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_AVUTIL_LIBS:INTERNAL=
+PC_AVUTIL_LIBS_L:INTERNAL=
+PC_AVUTIL_LIBS_OTHER:INTERNAL=
+PC_AVUTIL_LIBS_PATHS:INTERNAL=
+PC_AVUTIL_PREFIX:INTERNAL=/opt/local
+PC_AVUTIL_STATIC_CFLAGS:INTERNAL=-I/opt/local/include
+PC_AVUTIL_STATIC_CFLAGS_I:INTERNAL=
+PC_AVUTIL_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_AVUTIL_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_AVUTIL_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lavutil;-pthread;-lm;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_AVUTIL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_AVUTIL_STATIC_LIBDIR:INTERNAL=
+PC_AVUTIL_STATIC_LIBRARIES:INTERNAL=avutil;m
+PC_AVUTIL_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_AVUTIL_STATIC_LIBS:INTERNAL=
+PC_AVUTIL_STATIC_LIBS_L:INTERNAL=
+PC_AVUTIL_STATIC_LIBS_OTHER:INTERNAL=
+PC_AVUTIL_STATIC_LIBS_PATHS:INTERNAL=
+PC_AVUTIL_VERSION:INTERNAL=56.22.100
+PC_AVUTIL_libavutil_INCLUDEDIR:INTERNAL=
+PC_AVUTIL_libavutil_LIBDIR:INTERNAL=
+PC_AVUTIL_libavutil_PREFIX:INTERNAL=
+PC_AVUTIL_libavutil_VERSION:INTERNAL=
+PC_OGG_CFLAGS:INTERNAL=-I/opt/local/include
+PC_OGG_CFLAGS_I:INTERNAL=
+PC_OGG_CFLAGS_OTHER:INTERNAL=
+PC_OGG_FOUND:INTERNAL=1
+PC_OGG_INCLUDEDIR:INTERNAL=/opt/local/include
+PC_OGG_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_OGG_LDFLAGS:INTERNAL=-L/opt/local/lib;-logg
+PC_OGG_LDFLAGS_OTHER:INTERNAL=
+PC_OGG_LIBDIR:INTERNAL=/opt/local/lib
+PC_OGG_LIBRARIES:INTERNAL=ogg
+PC_OGG_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_OGG_LIBS:INTERNAL=
+PC_OGG_LIBS_L:INTERNAL=
+PC_OGG_LIBS_OTHER:INTERNAL=
+PC_OGG_LIBS_PATHS:INTERNAL=
+PC_OGG_PREFIX:INTERNAL=/opt/local
+PC_OGG_STATIC_CFLAGS:INTERNAL=-I/opt/local/include
+PC_OGG_STATIC_CFLAGS_I:INTERNAL=
+PC_OGG_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_OGG_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_OGG_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-logg
+PC_OGG_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_OGG_STATIC_LIBDIR:INTERNAL=
+PC_OGG_STATIC_LIBRARIES:INTERNAL=ogg
+PC_OGG_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_OGG_STATIC_LIBS:INTERNAL=
+PC_OGG_STATIC_LIBS_L:INTERNAL=
+PC_OGG_STATIC_LIBS_OTHER:INTERNAL=
+PC_OGG_STATIC_LIBS_PATHS:INTERNAL=
+PC_OGG_VERSION:INTERNAL=1.3.3
+PC_OGG_ogg_INCLUDEDIR:INTERNAL=
+PC_OGG_ogg_LIBDIR:INTERNAL=
+PC_OGG_ogg_PREFIX:INTERNAL=
+PC_OGG_ogg_VERSION:INTERNAL=
+PC_POSTPROC_CFLAGS:INTERNAL=-I/opt/local/include
+PC_POSTPROC_CFLAGS_I:INTERNAL=
+PC_POSTPROC_CFLAGS_OTHER:INTERNAL=
+PC_POSTPROC_FOUND:INTERNAL=1
+PC_POSTPROC_INCLUDEDIR:INTERNAL=/opt/local/include
+PC_POSTPROC_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_POSTPROC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lpostproc
+PC_POSTPROC_LDFLAGS_OTHER:INTERNAL=
+PC_POSTPROC_LIBDIR:INTERNAL=/opt/local/lib
+PC_POSTPROC_LIBRARIES:INTERNAL=postproc
+PC_POSTPROC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_POSTPROC_LIBS:INTERNAL=
+PC_POSTPROC_LIBS_L:INTERNAL=
+PC_POSTPROC_LIBS_OTHER:INTERNAL=
+PC_POSTPROC_LIBS_PATHS:INTERNAL=
+PC_POSTPROC_PREFIX:INTERNAL=/opt/local
+PC_POSTPROC_STATIC_CFLAGS:INTERNAL=-I/opt/local/include
+PC_POSTPROC_STATIC_CFLAGS_I:INTERNAL=
+PC_POSTPROC_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_POSTPROC_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_POSTPROC_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lpostproc;-lm;-lavutil;-pthread;-lm;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_POSTPROC_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_POSTPROC_STATIC_LIBDIR:INTERNAL=
+PC_POSTPROC_STATIC_LIBRARIES:INTERNAL=postproc;m;avutil;m
+PC_POSTPROC_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_POSTPROC_STATIC_LIBS:INTERNAL=
+PC_POSTPROC_STATIC_LIBS_L:INTERNAL=
+PC_POSTPROC_STATIC_LIBS_OTHER:INTERNAL=
+PC_POSTPROC_STATIC_LIBS_PATHS:INTERNAL=
+PC_POSTPROC_VERSION:INTERNAL=55.3.100
+PC_POSTPROC_libpostproc_INCLUDEDIR:INTERNAL=
+PC_POSTPROC_libpostproc_LIBDIR:INTERNAL=
+PC_POSTPROC_libpostproc_PREFIX:INTERNAL=
+PC_POSTPROC_libpostproc_VERSION:INTERNAL=
+PC_SWRESAMPLE_CFLAGS:INTERNAL=-I/opt/local/include
+PC_SWRESAMPLE_CFLAGS_I:INTERNAL=
+PC_SWRESAMPLE_CFLAGS_OTHER:INTERNAL=
+PC_SWRESAMPLE_FOUND:INTERNAL=1
+PC_SWRESAMPLE_INCLUDEDIR:INTERNAL=/opt/local/include
+PC_SWRESAMPLE_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_SWRESAMPLE_LDFLAGS:INTERNAL=-L/opt/local/lib;-lswresample
+PC_SWRESAMPLE_LDFLAGS_OTHER:INTERNAL=
+PC_SWRESAMPLE_LIBDIR:INTERNAL=/opt/local/lib
+PC_SWRESAMPLE_LIBRARIES:INTERNAL=swresample
+PC_SWRESAMPLE_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_SWRESAMPLE_LIBS:INTERNAL=
+PC_SWRESAMPLE_LIBS_L:INTERNAL=
+PC_SWRESAMPLE_LIBS_OTHER:INTERNAL=
+PC_SWRESAMPLE_LIBS_PATHS:INTERNAL=
+PC_SWRESAMPLE_PREFIX:INTERNAL=/opt/local
+PC_SWRESAMPLE_STATIC_CFLAGS:INTERNAL=-I/opt/local/include
+PC_SWRESAMPLE_STATIC_CFLAGS_I:INTERNAL=
+PC_SWRESAMPLE_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_SWRESAMPLE_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_SWRESAMPLE_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lswresample;-lm;-lsoxr;-lavutil;-pthread;-lm;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_SWRESAMPLE_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_SWRESAMPLE_STATIC_LIBDIR:INTERNAL=
+PC_SWRESAMPLE_STATIC_LIBRARIES:INTERNAL=swresample;m;soxr;avutil;m
+PC_SWRESAMPLE_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_SWRESAMPLE_STATIC_LIBS:INTERNAL=
+PC_SWRESAMPLE_STATIC_LIBS_L:INTERNAL=
+PC_SWRESAMPLE_STATIC_LIBS_OTHER:INTERNAL=
+PC_SWRESAMPLE_STATIC_LIBS_PATHS:INTERNAL=
+PC_SWRESAMPLE_VERSION:INTERNAL=3.3.100
+PC_SWRESAMPLE_libswresample_INCLUDEDIR:INTERNAL=
+PC_SWRESAMPLE_libswresample_LIBDIR:INTERNAL=
+PC_SWRESAMPLE_libswresample_PREFIX:INTERNAL=
+PC_SWRESAMPLE_libswresample_VERSION:INTERNAL=
+PC_SWSCALE_CFLAGS:INTERNAL=-I/opt/local/include
+PC_SWSCALE_CFLAGS_I:INTERNAL=
+PC_SWSCALE_CFLAGS_OTHER:INTERNAL=
+PC_SWSCALE_FOUND:INTERNAL=1
+PC_SWSCALE_INCLUDEDIR:INTERNAL=/opt/local/include
+PC_SWSCALE_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_SWSCALE_LDFLAGS:INTERNAL=-L/opt/local/lib;-lswscale
+PC_SWSCALE_LDFLAGS_OTHER:INTERNAL=
+PC_SWSCALE_LIBDIR:INTERNAL=/opt/local/lib
+PC_SWSCALE_LIBRARIES:INTERNAL=swscale
+PC_SWSCALE_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_SWSCALE_LIBS:INTERNAL=
+PC_SWSCALE_LIBS_L:INTERNAL=
+PC_SWSCALE_LIBS_OTHER:INTERNAL=
+PC_SWSCALE_LIBS_PATHS:INTERNAL=
+PC_SWSCALE_PREFIX:INTERNAL=/opt/local
+PC_SWSCALE_STATIC_CFLAGS:INTERNAL=-I/opt/local/include
+PC_SWSCALE_STATIC_CFLAGS_I:INTERNAL=
+PC_SWSCALE_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_SWSCALE_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include
+PC_SWSCALE_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lswscale;-lm;-lavutil;-pthread;-lm;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_SWSCALE_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-Wl,-framework,OpenCL;-framework;VideoToolbox;-framework;CoreFoundation;-framework;CoreMedia;-framework;CoreVideo;-framework;CoreServices
+PC_SWSCALE_STATIC_LIBDIR:INTERNAL=
+PC_SWSCALE_STATIC_LIBRARIES:INTERNAL=swscale;m;avutil;m
+PC_SWSCALE_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
+PC_SWSCALE_STATIC_LIBS:INTERNAL=
+PC_SWSCALE_STATIC_LIBS_L:INTERNAL=
+PC_SWSCALE_STATIC_LIBS_OTHER:INTERNAL=
+PC_SWSCALE_STATIC_LIBS_PATHS:INTERNAL=
+PC_SWSCALE_VERSION:INTERNAL=5.3.100
+PC_SWSCALE_libswscale_INCLUDEDIR:INTERNAL=
+PC_SWSCALE_libswscale_LIBDIR:INTERNAL=
+PC_SWSCALE_libswscale_PREFIX:INTERNAL=
+PC_SWSCALE_libswscale_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PORTAUDIO_INCLUDE_DIR
+PORTAUDIO_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PORTAUDIO_LIBRARY
+PORTAUDIO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: POSTPROC_DEFINITIONS
+POSTPROC_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: POSTPROC_INCLUDE_DIRS
+POSTPROC_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: POSTPROC_LIBRARIES
+POSTPROC_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: POSTPROC_VERSION
+POSTPROC_VERSION-ADVANCED:INTERNAL=1
+//Test PTHREAD_SETNAME_NP_ONE_PARAM
+PTHREAD_SETNAME_NP_ONE_PARAM:INTERNAL=1
+//Test PTHREAD_SETNAME_NP_THREE_PARAMS
+PTHREAD_SETNAME_NP_THREE_PARAMS:INTERNAL=
+//ADVANCED property for variable: PULSEAUDIO_INCLUDE_DIR
+PULSEAUDIO_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PULSEAUDIO_LIBRARY
+PULSEAUDIO_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SCPCOMMAND
 SCPCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SDL_SOUND_EXTRAS
+SDL_SOUND_EXTRAS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
+//CHECK_TYPE_SIZE: sizeof(long)
+SIZEOF_LONG:INTERNAL=8
+//CHECK_TYPE_SIZE: sizeof(long long)
+SIZEOF_LONG_LONG:INTERNAL=8
 //ADVANCED property for variable: SLURM_SBATCH_COMMAND
 SLURM_SBATCH_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SLURM_SRUN_COMMAND
 SLURM_SRUN_COMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SOUNDIO_INCLUDE_DIR
+SOUNDIO_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SOUNDIO_LIBRARY
+SOUNDIO_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SVNCOMMAND
 SVNCOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWRESAMPLE_DEFINITIONS
+SWRESAMPLE_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWRESAMPLE_INCLUDE_DIRS
+SWRESAMPLE_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWRESAMPLE_LIBRARIES
+SWRESAMPLE_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWRESAMPLE_VERSION
+SWRESAMPLE_VERSION-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWSCALE_DEFINITIONS
+SWSCALE_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWSCALE_INCLUDE_DIRS
+SWSCALE_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWSCALE_LIBRARIES
+SWSCALE_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SWSCALE_VERSION
+SWSCALE_VERSION-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VULKAN_INCLUDE_DIR
 VULKAN_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VULKAN_LIBRARY
 VULKAN_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//_FILE_OFFSET_BITS macro needed for large files
+_FILE_OFFSET_BITS:INTERNAL=
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Result of TRY_COMPILE
+__WITHOUT_FILE_OFFSET_BITS_64:INTERNAL=TRUE
+__pkg_config_arguments_PC_AVCODEC:INTERNAL=libavcodec
+__pkg_config_arguments_PC_AVDEVICE:INTERNAL=libavdevice
+__pkg_config_arguments_PC_AVFORMAT:INTERNAL=libavformat
+__pkg_config_arguments_PC_AVUTIL:INTERNAL=libavutil
+__pkg_config_arguments_PC_OGG:INTERNAL=QUIET;ogg
+__pkg_config_arguments_PC_POSTPROC:INTERNAL=libpostproc
+__pkg_config_arguments_PC_SWRESAMPLE:INTERNAL=libswresample
+__pkg_config_arguments_PC_SWSCALE:INTERNAL=libswscale
+__pkg_config_checked_PC_AVCODEC:INTERNAL=1
+__pkg_config_checked_PC_AVDEVICE:INTERNAL=1
+__pkg_config_checked_PC_AVFORMAT:INTERNAL=1
+__pkg_config_checked_PC_AVUTIL:INTERNAL=1
+__pkg_config_checked_PC_OGG:INTERNAL=1
+__pkg_config_checked_PC_POSTPROC:INTERNAL=1
+__pkg_config_checked_PC_SWRESAMPLE:INTERNAL=1
+__pkg_config_checked_PC_SWSCALE:INTERNAL=1
+prefix_result:INTERNAL=/opt/local/lib
 

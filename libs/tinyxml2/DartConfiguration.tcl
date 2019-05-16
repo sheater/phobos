@@ -11,7 +11,7 @@ BuildDirectory: /Users/stepanskovajsa/fi/pv112/project/libs/tinyxml2
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: Stepans-MacBook-Pro-2.local
+Site: Stepans-MBP-2
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Darwin-c++
@@ -73,7 +73,7 @@ UpdateType:
 
 # Compiler info
 Compiler: /Library/Developer/CommandLineTools/usr/bin/c++
-CompilerVersion: 10.0.0.10001044
+CompilerVersion: 10.0.1.10010046
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
