@@ -23,7 +23,6 @@ glm::mat4 Player::getPreprocessTransform()
       transform, glm::radians(180.0f),
       glm::vec3(0.0f, 0.0f, 1.0f));
 
-  // return glm::scale(transform, glm::vec3(0.0012f));
   return glm::scale(transform, glm::vec3(0.3f));
 }
 

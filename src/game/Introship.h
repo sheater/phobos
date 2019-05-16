@@ -6,7 +6,6 @@ class Introship : public ModelNode
 {
 public:
   Introship(Scene *scene)
-      // : ModelNode(scene, "assets/models/spaceship/model.dae", getPreprocessTransform())
       : ModelNode(scene, "assets/models/spaceship3/model.dae", getPreprocessTransform())
   {
     m_movement = 0.0f;
@@ -20,7 +19,6 @@ public:
         transform, glm::radians(180.0f),
         glm::vec3(0.0f, 0.0f, 1.0f));
 
-    // return glm::scale(transform, glm::vec3(0.5f)); // spaceship
     return glm::scale(transform, glm::vec3(0.001f)); // spaceship3
   }
 

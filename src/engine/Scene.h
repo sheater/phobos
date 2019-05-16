@@ -27,8 +27,8 @@ public:
       InputHandler *inputHandler);
   virtual ~Scene();
 
+  virtual void update(float timeDelta);
   void render();
-  void update(float timeDelta);
   void exitScene(int code);
 
   // shorthands

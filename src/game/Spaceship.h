@@ -8,6 +8,7 @@
 #include "../engine/MeshNode.h"
 #include "../engine/utils.h"
 #include "../engine/Texture.h"
+#include "../engine/Sound.h"
 
 #define EXPLOSION_PARTICLE_SPEED 0.8f
 
@@ -44,4 +45,5 @@ protected:
   float m_explosionDuration; // FIXME: useless for now
   std::map<MeshNode *, MeshExplosionState> m_explosionState;
   Texture *m_explosionTexture;
+  Sound *m_explosionSound;
 };

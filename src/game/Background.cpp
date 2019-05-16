@@ -51,7 +51,7 @@ void Background::update(float timeDelta)
       position.y -= timeDelta * it->speed;
       if (position.y < -BACKGROUND_VERTICAL_THRESHOLD)
       {
-        position.y = BACKGROUND_VERTICAL_THRESHOLD;
+        position.y += 2 * BACKGROUND_VERTICAL_THRESHOLD;
       }
     }
   }

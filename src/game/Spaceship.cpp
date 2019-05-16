@@ -15,6 +15,7 @@ Spaceship::Spaceship(
 
   AssetsManager *assetsMgr = getScene()->getAssetsManager();
   m_explosionTexture = static_cast<Texture *>(assetsMgr->getAsset("assets/textures/explosion.png"));
+  m_explosionSound = static_cast<Sound *>(assetsMgr->getAsset("assets/sounds/kaboom.wav"));
 }
 
 void Spaceship::update(float timeDelta)
@@ -68,6 +69,8 @@ void Spaceship::explode()
   m_collisionHull = nullptr;
   m_state = SPACESHIP_STATE_EXPLOSION;
   m_explosionDuration = 0.0f;
+
+  m_explosionSound->play();
 
   for (
       std::vector<SceneNode *>::iterator it = m_nodes.begin();

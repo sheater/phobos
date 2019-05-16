@@ -22,9 +22,6 @@ Level::Level(
   m_hud = new Hud(renderer->getWidth(), renderer->getHeight(), getUIManager());
 
   loadLevel(path);
-
-  // base light
-  getRenderer()->addLight(new Light());
 }
 
 Level::~Level()

@@ -35,8 +35,11 @@ public:
   {
     InputHandler *input = getInputHandler();
 
-    if (input->isActionKeyPressed(PLAYER_ACTION_FIRE))
+    std::cout << "up";
+    if (input->isActionKeyPressed(PLAYER_ACTION_FIRE)) {
+      std::cout << "Exit intro" << std::endl;
       exitScene(INTRO_EXIT_PLAY_GAME);
+    }
 
     Scene::update(timeDelta);
   }

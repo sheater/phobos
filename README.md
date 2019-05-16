@@ -5,7 +5,7 @@
 This project is written especially for subject PV112 at Masaryk University. It is kinda space shooter like game but currently unplayable due to missing game rules, more enemies, bonuses, etc. Main purpose is to present some OpenGL skills and have fun with development of this.
 Maybe in future this will be refactored, extended, ported to Vulkan or something. Please don't throw stones at me.
 
-## Complete features
+## Features
 ### Engine capabilities
 - Loading models from COLLADA files
 - Loading textures with FreeImage lib
@@ -20,6 +20,7 @@ Maybe in future this will be refactored, extended, ported to Vulkan or something
 - Flat shading model rendering
 
 ### Game features
+- Intro screen
 - Loading level from XML file
 - Moving enemies
 - Player can shoot
