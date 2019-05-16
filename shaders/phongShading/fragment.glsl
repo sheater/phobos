@@ -18,6 +18,7 @@ layout (std140) uniform lightData {
     Light lights[MAX_LIGHTS];
 };
 
+uniform mat4 viewMat;
 uniform vec4 materialAmbientColor;
 uniform vec4 materialDiffuseColor;
 uniform sampler2D ourTexture;
@@ -30,15 +31,12 @@ void main()
     for (int i = 0; i < numLights; i++)
     {
         vec3 norm = normalize(Normal);
-        vec3 distVec = lights[i].position - FragPos;
-        vec3 lightDir = normalize(distVec);
+        vec3 lightDir = normalize(lights[i].position - FragPos);
 
         float cosTheta = max(dot(norm, lightDir), 0.0);
-
         lightsColor += cosTheta * lights[i].color;
     }
 
     vec4 diffuseColor = materialDiffuseColor * lightsColor;
-
     FragColor = (materialAmbientColor + diffuseColor) * opacity;
 }

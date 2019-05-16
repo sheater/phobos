@@ -26,6 +26,7 @@ uniform vec4 materialDiffuseColor;
 uniform sampler2D ourTexture;
 uniform float opacity;
 
+// FIXME: currently broken
 void main()
 {
     vec3 norm = normalize(Normal);

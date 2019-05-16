@@ -19,6 +19,5 @@ void main()
     FragPos = vec3(viewMat * vec4(vertexPos, 1.0));
     TexCoord = vertexTexcoord;
 
-    // Normal = vec3(modelInvTransMat * vec4(vertexNormal, 1.0));
     Normal = vec3(projectionMat * modelInvTransMat * vec4(vertexNormal, 1.0));
 }
