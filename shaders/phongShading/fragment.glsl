@@ -9,8 +9,10 @@ in vec3 Normal;
 in vec2 TexCoord;
 
 struct Light {
-    vec4 color;
-    vec3 position;
+    vec4 ambientColor;
+    vec4 diffuseColor;
+    vec4 specularColor;
+    vec4 position;
 };
 
 layout (std140) uniform lightData {
@@ -21,22 +23,42 @@ layout (std140) uniform lightData {
 uniform mat4 viewMat;
 uniform vec4 materialAmbientColor;
 uniform vec4 materialDiffuseColor;
+uniform vec4 materialSpecularColor;
 uniform sampler2D ourTexture;
 uniform float opacity;
 
+const vec3 cameraPosition = vec3(0.0f);
+
 void main()
 {
-    vec4 lightsColor = vec4(0);
+    vec3 colorSum = vec3(0);
+    vec3 norm = normalize(Normal);
 
     for (int i = 0; i < numLights; i++)
     {
-        vec3 norm = normalize(Normal);
-        vec3 lightDir = normalize(lights[i].position - FragPos);
+        Light light = lights[i];
+        vec3 light_vector = light.position.xyz - FragPos; //* light.position.w;
+		vec3 L = normalize(light_vector);
+		vec3 N = norm;
+		vec3 E = -normalize(cameraPosition - FragPos); 
+		vec3 H = normalize(L + E);
 
-        float cosTheta = max(dot(norm, lightDir), 0.0);
-        lightsColor += cosTheta * lights[i].color;
+		float NdotL = max(dot(N, L), 0.0); // for diffuse
+		float NdotH = max(dot(N, H), 0.000001); // for specular
+
+		float distance2 = light.position.w == 1.0 ? pow(length(light_vector), 2) : 1.0;
+
+		vec3 ambient = materialAmbientColor.rgb * light.ambientColor.rgb;
+		vec3 diffuse = materialDiffuseColor.rgb * light.diffuseColor.rgb;
+		vec3 specular = materialSpecularColor.rgb * light.specularColor.rgb;
+
+		vec3 color = ambient.rgb
+			+ NdotL * diffuse.rgb;
+			+ pow(NdotH, materialSpecularColor.w) * specular;
+		color /= distance2;
+
+		colorSum += color;
     }
 
-    vec4 diffuseColor = materialDiffuseColor * lightsColor;
-    FragColor = (materialAmbientColor + diffuseColor) * opacity;
+    FragColor = vec4(colorSum, opacity);
 }
