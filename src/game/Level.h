@@ -19,7 +19,8 @@ public:
       const std::string &path,
       Renderer *renderer,
       AssetsManager *assetsMgr,
-      InputHandler *inputHandler);
+      InputHandler *inputHandler,
+      AudioEngine *audioEngine);
 
   ~Level();
 
@@ -31,8 +32,8 @@ public:
   }
 
 private:
-  void loadLevel(const std::string& path);
-  void parseRowElement(XMLElement* element);
+  void loadLevel(const std::string &path);
+  void parseRowElement(XMLElement *element);
 
   float m_enemyGenerateTimer;
   Player *m_player;

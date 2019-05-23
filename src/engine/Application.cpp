@@ -76,9 +76,10 @@ Application::Application(unsigned int width, unsigned int height)
 Application::~Application()
 {
   std::cout << "Application::~Application(): begin" << std::endl;
-  delete m_audioEngine;
+
   delete m_inputHandler;
   delete m_assetsMgr;
+  delete m_audioEngine;
   delete m_renderer;
 
   glfwTerminate();

@@ -12,8 +12,12 @@
 class Intro : public Scene
 {
 public:
-  Intro(Renderer *renderer, AssetsManager *assetsMgr, InputHandler *inputHandler)
-      : Scene(renderer, assetsMgr, inputHandler)
+  Intro(
+      Renderer *renderer,
+      AssetsManager *assetsMgr,
+      InputHandler *inputHandler,
+      AudioEngine *audioEngine)
+      : Scene(renderer, assetsMgr, inputHandler, audioEngine)
   {
     Background *background = new Background(this);
     Introship *ship = new Introship(this);
@@ -35,8 +39,8 @@ public:
   {
     InputHandler *input = getInputHandler();
 
-    std::cout << "up";
-    if (input->isActionKeyPressed(PLAYER_ACTION_FIRE)) {
+    if (input->isActionKeyPressed(PLAYER_ACTION_FIRE))
+    {
       std::cout << "Exit intro" << std::endl;
       exitScene(INTRO_EXIT_PLAY_GAME);
     }

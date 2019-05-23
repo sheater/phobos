@@ -10,8 +10,8 @@ public:
   Sound(int format, int size, int freq, unsigned char *data);
   ~Sound();
 
-  void play();
-
 private:
+  friend class AudioEngine;
+
   ALuint m_buffer;
 };

@@ -70,7 +70,7 @@ void Spaceship::explode()
   m_state = SPACESHIP_STATE_EXPLOSION;
   m_explosionDuration = 0.0f;
 
-  m_explosionSound->play();
+  getScene()->getAudioEngine()->playSound(m_explosionSound);
 
   for (
       std::vector<SceneNode *>::iterator it = m_nodes.begin();

@@ -4,7 +4,7 @@
 #include "VorbisLoader.h"
 #include "Sound.h"
 
-#define BUFFER_SIZE 4096
+#define BUFFER_SIZE 4096 * 16
 
 bool VorbisLoader::isSuitableExtension(const std::string &extension)
 {
@@ -53,5 +53,5 @@ Asset *VorbisLoader::loadAsset(const std::string &path)
 
   // return new Sound(format, static_cast<ALsizei>(buffer.size()), pInfo->rate, static_cast<unsigned char*>(buffer[0]));
   // return new Sound(format, static_cast<ALsizei>(buffer.size()), (int)pInfo->rate, &buffer[0]);
-  return new Sound(format, static_cast<ALsizei>(buffer.size()), 22000, &buffer[0]);
+  return new Sound(format, static_cast<ALsizei>(buffer.size()), 44100, &buffer[0]);
 }

@@ -9,11 +9,12 @@
 Scene::Scene(
     Renderer *renderer,
     AssetsManager *assetsMgr,
-    InputHandler *inputHandler)
-    : //SceneNode(this),
-      m_renderer(renderer),
+    InputHandler *inputHandler,
+    AudioEngine *audioEngine)
+    : m_renderer(renderer),
       m_assetsMgr(assetsMgr),
-      m_inputHandler(inputHandler)
+      m_inputHandler(inputHandler),
+      m_audioEngine(audioEngine)
 {
   srand(time(NULL));
 

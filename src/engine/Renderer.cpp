@@ -60,7 +60,6 @@ void Renderer::removeVertexBuffer(VertexBuffer *vertexBuffer)
 }
 
 #define MAX_LIGHTS 24
-// #define LIGHTS_UBO_SIZE sizeof(int) + sizeof(Light) * MAX_LIGHTS
 #define LIGHTS_UBO_SIZE 16 + 16 * 2 * MAX_LIGHTS
 
 void Renderer::addLight(Light *light)
@@ -113,11 +112,10 @@ void Renderer::updateLightBufferObject()
   glBufferSubData(GL_UNIFORM_BUFFER, 0, 4, &numLights);
   for (int i = 0; i < m_lights.size(); i++)
   {
-    int offset = 16 + i * 32;
+    int offset = 16 + i * sizeof(Light);
     Light* light = m_lights[i];
 
-    glBufferSubData(GL_UNIFORM_BUFFER, offset, 16, &light->color);
-    glBufferSubData(GL_UNIFORM_BUFFER, offset + 16, 16, &light->position);
+    glBufferSubData(GL_UNIFORM_BUFFER, offset, sizeof(Light), light);
   }
   glBindBuffer(GL_UNIFORM_BUFFER, 0);
 }

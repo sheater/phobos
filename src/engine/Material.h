@@ -23,14 +23,7 @@ class Renderer;
 class Material
 {
 public:
-  Material()
-      : ambientColor(glm::vec4(0.2f, 0.2f, 0.2f, 1.0f)),
-        diffuseColor(glm::vec4(1.0f, 1.0f, 1.0f, 1.0f)),
-        specularColor(glm::vec4(1.0f, 1.0f, 1.0f, 1.0f)),
-        opacity(1.0f),
-        texture(nullptr),
-        polygonMode(POLYGON_MODE_FILL),
-        lightingModel(LIGHTING_MODEL_PHONG) {}
+  Material();
 
   Material *clone();
   void bind(Renderer* renderer);

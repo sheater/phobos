@@ -9,8 +9,8 @@
 #define PLAYER_SPEED 2.0f
 #define PLAYER_VERTICAL_POSITION_THRESHOLD 1.8f
 #define PLAYER_HORIZONTAL_POSITION_THRESHOLD 2.5f
-#define PLAYER_TILT_SPEED 1.0f
-#define PLAYER_TILT_MAX_ANGLE -45.0f
+#define PLAYER_TILT_SPEED 130.0f
+#define PLAYER_TILT_MAX_ANGLE 35.0f
 #define PLAYER_SHOOT_RATE 0.25f
 #define PLAYER_WEAPON_HEATING_RATE 0.1f
 #define PLAYER_WEAPON_COOLDOWN_RATE 0.2f
@@ -18,7 +18,6 @@
 class Player : public Spaceship
 {
 private:
-  float m_tiltAngle;
   float m_sparkTimer;
   float m_shootTimer;
   float m_heat;

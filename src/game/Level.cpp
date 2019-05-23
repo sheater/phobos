@@ -6,8 +6,9 @@ Level::Level(
     const std::string &path,
     Renderer *renderer,
     AssetsManager *assetsMgr,
-    InputHandler *inputHandler)
-    : Scene(renderer, assetsMgr, inputHandler)
+    InputHandler *inputHandler,
+    AudioEngine *audioEngine)
+    : Scene(renderer, assetsMgr, inputHandler, audioEngine)
 {
   m_player = new Player(this);
   Background *background = new Background(this);
@@ -64,8 +65,9 @@ void Level::parseRowElement(XMLElement *element)
     std::string name = rowEl->Name();
     float align = atof(rowEl->Attribute("align"));
 
-    if (name == "enemy") {
-      Enemy* enemy = new Enemy(this, glm::vec2(align / 10.0f * 2.5f, y));
+    if (name == "enemy")
+    {
+      Enemy *enemy = new Enemy(this, glm::vec2(align / 10.0f * 2.5f, y));
       attachNode(enemy);
     }
   }

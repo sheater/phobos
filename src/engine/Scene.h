@@ -6,6 +6,7 @@
 #include "AssetsManager.h"
 #include "InputHandler.h"
 #include "ParticleSystem.h"
+#include "AudioEngine.h"
 #include "SceneNode.h"
 #include "UIManager.h"
 #include "UILabel.h"
@@ -24,7 +25,8 @@ public:
   Scene(
       Renderer *renderer,
       AssetsManager *assetsMgr,
-      InputHandler *inputHandler);
+      InputHandler *inputHandler,
+      AudioEngine *audioEngine);
   virtual ~Scene();
 
   virtual void update(float timeDelta);
@@ -55,6 +57,11 @@ public:
     return m_particleSystem;
   }
 
+  inline AudioEngine *getAudioEngine()
+  {
+    return m_audioEngine;
+  }
+
   inline UIManager *getUIManager()
   {
     return m_uiMgr;
@@ -68,14 +75,15 @@ protected:
 private:
   friend class Application;
 
-  SceneNode* m_root;
+  SceneNode *m_root;
   Renderer *m_renderer;
   AssetsManager *m_assetsMgr;
   InputHandler *m_inputHandler;
   ParticleSystem *m_particleSystem;
+  AudioEngine *m_audioEngine;
   UIManager *m_uiMgr;
 
-  UILabel* m_fpsLabel;
+  UILabel *m_fpsLabel;
   float m_fpsUpdateCounter;
   SceneState m_state;
   int m_exitCode;

@@ -14,12 +14,12 @@ SceneNode::SceneNode(Scene *scene)
 
 SceneNode::~SceneNode()
 {
-  std::cout << "SceneNode::~SceneNode(): begin" << std::endl;
+  // std::cout << "SceneNode::~SceneNode(): begin" << std::endl;
   for (std::vector<SceneNode *>::iterator it = m_nodes.begin(); it != m_nodes.end(); it++)
   {
     delete *it;
   }
-  std::cout << "SceneNode::~SceneNode(): end" << std::endl;
+  // std::cout << "SceneNode::~SceneNode(): end" << std::endl;
 }
 
 void SceneNode::attachNode(SceneNode *node)

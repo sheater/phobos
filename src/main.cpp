@@ -22,19 +22,24 @@ int main(void)
     input->bindKeyboardAction(PLAYER_ACTION_MOVE_LEFT, GLFW_KEY_LEFT);
     input->bindKeyboardAction(PLAYER_ACTION_MOVE_RIGHT, GLFW_KEY_RIGHT);
     input->bindKeyboardAction(PLAYER_ACTION_FIRE, GLFW_KEY_SPACE);
+    
+    Renderer* renderer = app->getRenderer();
+    AudioEngine* audioEngine = app->getAudioEngine();
+    AssetsManager* assetsManager = app->getAssetsManager();
 
     // base light
-    app->getRenderer()->addLight(new Light());
+    renderer->addLight(new Light());
 
     int sceneExitCode;
 
     // Sound* music = static_cast<Sound *>(app->getAssetsManager()->getAsset("assets/music/theme.ogg"));
+    // Sound* music = static_cast<Sound *>(app->getAssetsManager()->getAsset("assets/music/speech.ogg"));
 
     // music->play();
 
     while (true)
     {
-      Intro *intro = new Intro(app->getRenderer(), app->getAssetsManager(), input);
+      Intro *intro = new Intro(renderer, assetsManager, input, audioEngine);
 
       std::cout << "Intro scene" << std::endl;
       if (app->run(intro) != INTRO_EXIT_PLAY_GAME)
@@ -45,9 +50,10 @@ int main(void)
       std::cout << "main(): new Level" << std::endl;
       Level *level = new Level(
           "assets/levels/begin.xml",
-          app->getRenderer(),
-          app->getAssetsManager(),
-          input);
+          renderer,
+          assetsManager,
+          input,
+          audioEngine);
 
       std::cout << "main(): app->run" << std::endl;
       sceneExitCode = app->run(level);

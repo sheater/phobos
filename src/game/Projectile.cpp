@@ -20,7 +20,9 @@ Projectile::Projectile(Scene *scene, glm::vec3 position, float direction, Spaces
   m_collisionHull = new BoundingBox(glm::vec3(-0.05), glm::vec3(0.05));
 
   m_light = new Light();
-  m_light->color = glm::vec4(0.4f, 0.3f, 0.1f, 1.0f);
+  m_light->ambientColor = glm::vec4(0.1f, 0.1f, 0.1f, 1.0f);
+  m_light->diffuseColor = glm::vec4(0.4f, 0.3f, 0.1f, 1.0f);
+  m_light->specularColor = glm::vec4(0.5f, 0.4f, 0.2f, 1.0f);
   scene->getRenderer()->addLight(m_light);
 }
 
@@ -43,7 +45,7 @@ void Projectile::update(float timeDelta)
   position.x += cos(glm::radians(m_direction)) * shift;
   position.y += sin(glm::radians(m_direction)) * shift;
 
-  m_light->position = position;
+  m_light->setPosition(position);
 
   m_collisionHull->transform(glm::translate(glm::mat4(1.0f), position));
 

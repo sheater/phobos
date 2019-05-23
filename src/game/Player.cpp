@@ -17,7 +17,7 @@ Player::Player(Scene *scene)
 
 glm::mat4 Player::getPreprocessTransform()
 {
-  glm::mat4 transform = glm::translate(glm::mat4(1.0f), glm::vec3(0.08f, 0.0f, 0.0f));
+  glm::mat4 transform = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
 
   transform = glm::rotate(
       transform, glm::radians(180.0f),
@@ -28,6 +28,7 @@ glm::mat4 Player::getPreprocessTransform()
 
 void Player::update(float timeDelta)
 {
+  bool movingAside = false;
   glm::vec3 moveVec(0.0f);
   InputHandler *input = getScene()->getInputHandler();
 
@@ -38,10 +39,30 @@ void Player::update(float timeDelta)
     moveVec.y = -PLAYER_SPEED * timeDelta;
 
   if (input->isActionKeyPressed(PLAYER_ACTION_MOVE_LEFT))
+  {
     moveVec.x = -PLAYER_SPEED * timeDelta;
+    m_tiltAngle -= PLAYER_TILT_SPEED * timeDelta;
+    movingAside = true;
+  }
 
   if (input->isActionKeyPressed(PLAYER_ACTION_MOVE_RIGHT))
+  {
     moveVec.x = PLAYER_SPEED * timeDelta;
+    m_tiltAngle += PLAYER_TILT_SPEED * timeDelta;
+    movingAside = true;
+  }
+
+  if (!movingAside)
+  {
+    float rot = abs(m_tiltAngle) * PLAYER_TILT_SPEED * timeDelta * 0.05f;
+
+    if (m_tiltAngle > 0.01f)
+      m_tiltAngle -= rot;
+    else if (m_tiltAngle < 0.01f)
+      m_tiltAngle += rot;
+  } else {
+    m_tiltAngle = glm::clamp(m_tiltAngle, -PLAYER_TILT_MAX_ANGLE, PLAYER_TILT_MAX_ANGLE);
+  }
 
   m_shootTimer += timeDelta;
   m_heat -= PLAYER_WEAPON_COOLDOWN_RATE * timeDelta;
@@ -104,7 +125,7 @@ void Player::shoot()
     return;
   }
 
-  m_shotSound->play();
+  getScene()->getAudioEngine()->playSound(m_shotSound);
 
   m_shootTimer = 0;
 
