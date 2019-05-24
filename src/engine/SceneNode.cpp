@@ -61,9 +61,8 @@ void SceneNode::render()
 
 void SceneNode::update(float timeDelta)
 {
-  int i, j;
   // NOTE: cannot use iterators due to iterators invalidation when array is reallocated
-  for (i = 0; i < m_nodes.size(); i++)
+  for (int i = 0; i < m_nodes.size(); i++)
     m_nodes[i]->update(timeDelta);
 }
 

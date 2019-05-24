@@ -14,6 +14,8 @@ public:
   void playSound(Sound *sound);
   void update();
 
+  void clearBuffers();
+
 private:
   ALCcontext *m_context;
   ALCdevice *m_device;

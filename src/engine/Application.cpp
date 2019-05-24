@@ -77,6 +77,8 @@ Application::~Application()
 {
   std::cout << "Application::~Application(): begin" << std::endl;
 
+  m_audioEngine->clearBuffers();
+
   delete m_inputHandler;
   delete m_assetsMgr;
   delete m_audioEngine;

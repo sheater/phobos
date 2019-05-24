@@ -19,15 +19,18 @@ AudioEngine::AudioEngine()
 
 AudioEngine::~AudioEngine()
 {
+  alcMakeContextCurrent(nullptr);
+  alcDestroyContext(m_context);
+  alcCloseDevice(m_device);
+}
+
+void AudioEngine::clearBuffers()
+{
   for (std::map<ALuint, Sound *>::iterator it = m_channels.begin(); it != m_channels.end(); it++)
   {
     alSourceStop(it->first);
     alDeleteSources(1, &it->first);
   }
-
-  alcMakeContextCurrent(nullptr);
-  alcDestroyContext(m_context);
-  alcCloseDevice(m_device);
 }
 
 void AudioEngine::playSound(Sound *sound)
